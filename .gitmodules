@@ -1,0 +1,3 @@
+[submodule "emu-NeoGraph"]
+	path = emu-NeoGraph
+	url = https://github.com/ChaoGaoUCR/emu-NeoGraph.git

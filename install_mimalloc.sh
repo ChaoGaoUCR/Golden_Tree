@@ -38,7 +38,7 @@ then
     exit
 fi
 make
-
+export LD_PRELOAD=`pwd`/libmimalloc.so
 echo "################################################################################"
 echo "Mimalloc installed."
 echo "Ensure that you export LD_PRELOAD=`pwd`/libmimalloc.so"
