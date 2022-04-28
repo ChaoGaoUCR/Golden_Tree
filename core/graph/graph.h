@@ -1262,4 +1262,7 @@ template <class vertex> struct graph {
     outputFile.close();
   }
 };
+
+
+
 #endif

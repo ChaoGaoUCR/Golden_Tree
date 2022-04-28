@@ -19,12 +19,14 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#ifndef KICKSTARTER_ENGINE_H
-#define KICKSTARTER_ENGINE_H
+#ifndef GoldenTree_ENGINE_H
+#define GoldenTree_ENGINE_H
 
 #include "../common/bitsetscheduler.h"
 #include "../common/utils.h"
+// #include "../graph/IO.h"
 #include "ingestor.h"
+#include "../common/parallel.h"
 #include <vector>
 
 #define MAX_LEVEL 65535
@@ -47,7 +49,7 @@ inline void initializeVertexValue(const uintV &v,
                                   VertexValueType &v_vertex_value,
                                   const GlobalInfoType &global_info);
 
-// ======================================================================
+// // // ======================================================================
 // ACTIVATE VERTEX FOR FIRST ITERATION
 // ======================================================================
 // Return whether a vertex should be active when the processing starts. For
@@ -64,7 +66,7 @@ inline bool frontierVertex(const uintV &v, const GlobalInfoType &global_info);
 template <class VertexValueType, class EdgeDataType, class GlobalInfoType>
 inline bool edgeFunction(const uintV &u, const uintV &v,
                          const EdgeDataType &edge_data,
-                         const VertexValueType &u_value,
+                        //  const VertexValueType &u_value,
                          VertexValueType &v_value, GlobalInfoType &global_info);
 
 // ======================================================================
@@ -85,13 +87,14 @@ void printAdditionalData(ofstream &output_file, const uintV &v,
                          GlobalInfoType &info);
 
 // ======================================================================
-// KICKSTARTER ENGINE
+// GoldenTree ENGINE
 // ======================================================================
 template <class vertex, class VertexValueType, class GlobalInfoType>
-class KickStarterEngine {
+class GoldenTreeEngine {
 
 public:
   graph<vertex> &my_graph;
+  // graph<vertex> tmpGraph;
   commandLine config;
 
   // Current Graph graph
@@ -162,11 +165,12 @@ public:
   Ingestor<vertex> ingestor;
   int current_batch;
 
-  KickStarterEngine(graph<vertex> &_my_graph, GlobalInfoType &_global_info,
+  GoldenTreeEngine(graph<vertex> &_my_graph, GlobalInfoType &_global_info,
                     commandLine _config)
       : my_graph(_my_graph), global_info(_global_info), global_info_old(),
         config(_config), ingestor(_my_graph, _config), current_batch(0),
         active_vertices_bitset(my_graph.n) {
+    // &tmpGraph = new graph<vertex>;         
     n = my_graph.n;
     n_old = 0;
   }
@@ -180,7 +184,7 @@ public:
     initDependencyData();
   }
 
-  ~KickStarterEngine() {
+  ~GoldenTreeEngine() {
     freeDependencyData();
     freeTemporaryStructures();
     freeVertexSubsets();
@@ -298,6 +302,7 @@ public:
   }
 
   void run() {
+    // cout<<ingestor.number_of_batches<<endl;
     initialCompute();
     ingestor.validateAndOpenFifo();
     while (ingestor.processNextBatch()) {
@@ -306,6 +311,7 @@ public:
       deltaCompute(edge_additions, edge_deletions);
     }
   }
+
 
   void initialCompute() {
     timer t1, full_timer;
@@ -354,11 +360,65 @@ public:
     return update_successful;
   }
 
-  int traditionalIncrementalComputation() {
+
+  int edgeListIncrementalComputation(graph<vertex> &edgeGraph){
+    // cout<<"-----------------------------------------------------------------"<<endl;
+    // cout<<"inside this function"<<active_vertices_bitset.anyScheduledTasks()<<endl;
     cout<<"--------------------------"<<endl;
     cout<<"print schedule status  "<<active_vertices_bitset.anyScheduledTasks()<<endl;
     cout<<"--------------------------"<<endl;
+    while (active_vertices_bitset.anyScheduledTasks()) {
+    // cout<<"-----------------------------------------------------------------"<<endl;
+      cout<<"compute start"<<endl;
+      active_vertices_bitset.newIteration();
+      parallel_for(uintV u = 0; u < n; u++) {
+        if (active_vertices_bitset.isScheduled(u)) {
+          // process all its outNghs
 
+          intE Small_outDegree = edgeGraph.V[u].getOutDegree();
+          granular_for(i, 0, Small_outDegree, (Small_outDegree > 1024), {
+            uintV v = edgeGraph.V[u].getOutNeighbor(i);
+#ifdef EDGEDATA
+            EdgeData *edge_data = edgeGraph.V[u].getOutEdgeData(i);
+#else
+            EdgeData *edge_data = &emptyEdgeData;
+#endif
+            bool ret = reduce(u, v, *edge_data, dependency_data[u], dependency_data[v],
+                              global_info);
+            if (ret) {
+              active_vertices_bitset.schedule(v);
+            }
+          })
+          cout<<"small graph is done"<<endl;
+          intE outDegree = my_graph.V[u].getOutDegree();
+          granular_for(i, 0, outDegree, (outDegree > 1024), {
+            uintV v = my_graph.V[u].getOutNeighbor(i);
+#ifdef EDGEDATA
+            EdgeData *edge_data = my_graph.V[u].getOutEdgeData(i);
+#else
+            EdgeData *edge_data = &emptyEdgeData;
+#endif
+            bool ret = reduce(u, v, *edge_data, dependency_data[u], dependency_data[v],
+                              global_info);
+            if (ret) {
+              active_vertices_bitset.schedule(v);
+            }
+          });
+          cout<<"large graph is done"<<endl;
+
+          
+
+        }
+      }
+    }
+
+
+  }
+
+  int traditionalIncrementalComputation() {
+    cout<<"--------------------------"<<endl;
+    cout<<"print schedule status  "<<active_vertices_bitset.anyScheduledTasks()<<endl;
+    cout<<"--------------------------"<<endl;    
     while (active_vertices_bitset.anyScheduledTasks()) {
       active_vertices_bitset.newIteration();
       parallel_for(uintV u = 0; u < n; u++) {
@@ -541,12 +601,15 @@ public:
       uintV destination = edge_additions.E[i].destination;
 #ifdef EDGEDATA
       EdgeData *edge_data = edge_additions.E[i].edgeData;
-#else
+#else 
       EdgeData *edge_data = &emptyEdgeData;
 #endif
       bool ret = reduce(source, destination, *edge_data, dependency_data[source],
                         dependency_data[destination], global_info);
+      // cout<<ret<<endl;
       if (ret) {
+      cout<<ret<<endl;
+        
         all_affected_vertices[destination] = true;
       }
     }
@@ -565,6 +628,94 @@ public:
 
     cout << "Finished batch : " << full_timer.stop() << "\n";
     printOutput();
+  }
+  
+  void none_del_delta_compute(edgeArray &edge_additions){
+    timer iteration_timer, phase_timer, full_timer;
+    double misc_time, copy_time, phase_time, iteration_time;
+    full_timer.start();
+
+    // Handle newly added vertices
+    n_old = n;
+    if (edge_additions.maxVertex >= n) {
+      processVertexAddition(edge_additions.maxVertex);
+    }
+
+    // Reset values before incremental computation
+    active_vertices_bitset.reset();
+    parallel_for(uintV v = 0; v < n; v++) {
+      frontier[v] = 0;
+      // all_affected_vertices is used only for switching purposes
+      all_affected_vertices[v] = 0;
+      changed[v] = 0;
+      // Make a copy of the old dependency data
+      dependency_data_old[v] = dependency_data[v];
+    }
+    // ======================================================================
+    // PHASE 1 - Update global_info
+    // ======================================================================
+    // Pretty much nothing is going to happen here. But, maintaining consistency with GraphBolt
+    global_info_old.copy(global_info);
+    global_info.add_processUpdates(edge_additions);    
+    // ======================================================================
+    // PHASE 4 - Process additions
+    // ======================================================================
+    parallel_for(long i = 0; i < edge_additions.size; i++) {
+      uintV source = edge_additions.E[i].source;
+      uintV destination = edge_additions.E[i].destination;
+#ifdef EDGEDATA
+      EdgeData *edge_data = edge_additions.E[i].edgeData;
+#else 
+      EdgeData *edge_data = &emptyEdgeData;
+#endif
+      bool ret = reduce(source, destination, *edge_data, dependency_data[source],
+                        dependency_data[destination], global_info);
+      // cout<<ret<<endl;                        
+      if (ret) {
+        all_affected_vertices[destination] = true;
+      }
+    }
+    // ======================================================================
+    // PHASE 5 - Traditional processing
+    // ======================================================================
+    // For all affected vertices, start traditional processing
+    active_vertices_bitset.reset();
+    parallel_for(uintV v = 0; v < n; v++) {
+      if (all_affected_vertices[v] == 1) {
+        active_vertices_bitset.schedule(v);
+      }
+    }
+      graph <vertex> tmp = graph_From_edges(edge_additions, ingestor.my_graph);
+      // cout<<"tmp graph has "<<tmp.m<<endl;
+      // cout<<active_vertices_bitset.anyScheduledTasks()<<endl;
+
+      edgeListIncrementalComputation(tmp);    
+    // cout<<dependency_data[0]<<endl;
+    cout << "Finished batch : " << full_timer.stop() << "\n";
+    printOutput();    
+
+  }
+
+
+  void test(){
+    initialCompute();
+    ingestor.validateAndOpenFifo(); 
+    while (ingestor.current_batch < ingestor.number_of_batches)
+    {
+      ingestor.none_mutation_processNextBatch();
+      edgeArray &edge_additions = ingestor.getEdgeAdditions();
+      none_del_delta_compute(edge_additions);
+      
+    }
+    // initialCompute();
+    // ingestor.validateAndOpenFifo();
+    // while (ingestor.processNextBatch()) {
+    //   edgeArray &edge_additions = ingestor.getEdgeAdditions();
+    //   edgeArray &edge_deletions = ingestor.getEdgeDeletions();
+    //   // deltaCompute(edge_additions, edge_deletions);
+    //   // initialCompute();
+    //   none_del_delta_compute(edge_additions);
+    // }
   }
 };
 

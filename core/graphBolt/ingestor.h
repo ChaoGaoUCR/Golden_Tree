@@ -31,14 +31,28 @@
 /**
  * Used to extract values from the binary stream
  **/
-struct StreamEdge {
+struct StreamEdge
+{
   uintV source;
   uintV destination;
   char edgeType;
 };
 
+// template <class vertex> graph <vertex> edgeArrayToGraph(edgeArray &edge_additions){
+//     vertex *v = newA(vertex, edge_additions.maxVertex);
+//     uintV n = edge_additions.maxVertex;
+//     uintE m = edge_additions.size;
+//     intE *offsets = newA(intE, n);
+//     uintV *edges = newA(uintV, m);
+    
+// }
+
+
+
 // TODO : Determine what should be abstracted and stuff
-template <class vertex> class Ingestor {
+template <class vertex>
+class Ingestor
+{
 
 public:
   commandLine config;
@@ -67,7 +81,8 @@ public:
 
   Ingestor(graph<vertex> &_my_graph, commandLine _config)
       : my_graph(_my_graph), config(_config), n(_my_graph.n),
-        deletions_data(_my_graph.n), current_batch(0) {
+        deletions_data(_my_graph.n), current_batch(0)
+  {
 
     updated_vertices = newA(bool, n);
 
@@ -78,7 +93,8 @@ public:
     enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
     debug_flag = config.getOptionValue("-debug");
     max_batch_size = config.getOptionLongValue("-nEdges", 0);
-    if (max_batch_size == 0) {
+    if (max_batch_size == 0)
+    {
       std::cout
           << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
           << std::endl;
@@ -88,10 +104,14 @@ public:
     cout << "Number of batches: " << number_of_batches << endl;
   }
 
-  ~Ingestor() {
-    if (current_batch > number_of_batches) {
+  ~Ingestor()
+  {
+    if (current_batch > number_of_batches)
+    {
       edge_deletions.del();
-    } else {
+    }
+    else
+    {
       edge_deletions_temp.del();
     }
     edge_additions.del();
@@ -101,35 +121,43 @@ public:
       free(updated_vertices);
   }
 
-  edgeArray &getEdgeAdditions() {
+  edgeArray &getEdgeAdditions()
+  {
     cout << "Edge Additions in batch: " << edge_additions.size << endl;
     return edge_additions;
   }
 
-  edgeArray &getEdgeDeletions() {
+  edgeArray &getEdgeDeletions()
+  {
     cout << "Edge Deletions in batch: " << edge_deletions.size << endl;
     return edge_deletions;
   }
 
-  void cleanup() {
+  void cleanup()
+  {
     cout << "Current_batch: " << current_batch << endl;
-    if (current_batch > 0) {
+    if (current_batch > 0)
+    {
       edge_additions.del();
       edge_deletions.del();
       deletions_data.reset();
     }
   }
 
-  void validateAndOpenFifo() {
-    if (!stream_path) {
+  void validateAndOpenFifo()
+  {
+    if (!stream_path)
+    {
       std::cerr << "Error in command-line arguments. Please input a valid "
                    "stream_path or fileName"
                 << std::endl;
       exit(1);
     }
-    if (access(stream_path, F_OK) == -1) {
+    if (access(stream_path, F_OK) == -1)
+    {
       int res = mkfifo(stream_path, 0777);
-      if (res != 0) {
+      if (res != 0)
+      {
         std::cerr << "Could not create fifo" << std::endl;
         exit(1);
       }
@@ -143,8 +171,10 @@ public:
   getNewEdgesFromFile(ifstream &inputFile, long numEdges, graph<vertex> GA,
                       bool symmetric, bool simpleFlag, bool fixedBatchFlag,
                       bool edgeValidityFlag, bool debugFlag,
-                      bool &streamClosed) {
-    if (numEdges == 0) {
+                      bool &streamClosed)
+  {
+    if (numEdges == 0)
+    {
 #ifdef EDGEDATA
       return make_tuple(edgeArray(nullptr, nullptr, 0, 0),
                         edgeArray(nullptr, nullptr, 0, 0), 0, 0);
@@ -188,23 +218,30 @@ public:
 
     StreamEdge *edgesReceived = newA(StreamEdge, numEdges);
     cout << "Batch Size: " << numEdges << endl;
-    do {
+    do
+    {
       edgesToRead = numEdges - checkedEDCount - checkedEACount;
-      if (debugFlag) {
+      if (debugFlag)
+      {
         cout << "Edges Added: " << checkedEACount << endl;
         cout << "Edges Deleted: " << checkedEDCount << endl;
         cout << "Edges to be Read: " << edgesToRead << endl;
       }
       uncheckedEACount = 0;
       uncheckedEDCount = 0;
-      for (long i = 0; i < edgesToRead; i++) {
+      for (long i = 0; i < edgesToRead; i++)
+      {
         long long numberOfBytesAvail = inputFile.rdbuf()->in_avail();
-        if (!fixedBatchFlag && numberOfBytesAvail <= 0) {
-          if (i == 0) {
+        if (!fixedBatchFlag && numberOfBytesAvail <= 0)
+        {
+          if (i == 0)
+          {
             cout << "No Edges in Stream: Waiting for more edges or for stream "
                     "to close"
                  << endl;
-          } else {
+          }
+          else
+          {
             edgesRead = i;
             cerr << "WARNING: Not enough edges to fulfill batch size. Only "
                  << i << " edges read." << endl;
@@ -213,11 +250,13 @@ public:
         }
 
         std::getline(inputFile, line);
-        if ((line[0] == '%') || (line[0] == '#')) {
+        if ((line[0] == '%') || (line[0] == '#'))
+        {
           continue;
         }
 
-        if (!inputFile.good()) {
+        if (!inputFile.good())
+        {
           edgesRead = i;
           streamClosed = true;
           cout << "WARNING: Stream Closed. Only " << i << " edges read" << endl;
@@ -226,23 +265,28 @@ public:
         tokens.clear();
         string buf;
         stringstream ss(line);
-        while (ss >> buf) {
+        while (ss >> buf)
+        {
           tokens.push_back(buf);
         }
 #ifdef EDGEDATA
-        if (tokens.size() == 4) {
+        if (tokens.size() == 4)
+        {
           edgeType = tokens[0].at(0);
           source = stoi(tokens[1]);
           destination = stoi(tokens[2]);
 
-          if (edgeType == 'a') {
+          if (edgeType == 'a')
+          {
             new (edgeWeightEA + uncheckedEACount) EdgeData();
             edgeWeightEA[uncheckedEACount].createEdgeData(tokens[3].c_str());
             uncheckedEA[uncheckedEACount] =
                 make_pair(source, make_pair(destination,
                                             &edgeWeightEA[uncheckedEACount]));
             uncheckedEACount++;
-          } else if (edgeType == 'd') {
+          }
+          else if (edgeType == 'd')
+          {
             new (edgeWeightED + uncheckedEDCount) EdgeData();
             edgeWeightED[uncheckedEDCount].createEdgeData(tokens[3].c_str());
             uncheckedED[uncheckedEDCount] =
@@ -252,22 +296,28 @@ public:
           }
         }
 #else
-        if (tokens.size() == 3) {
+        if (tokens.size() == 3)
+        {
           edgeType = tokens[0].at(0);
           source = stoi(tokens[1]);
           destination = stoi(tokens[2]);
 
-          if (edgeType == 'a') {
+          if (edgeType == 'a')
+          {
             uncheckedEA[uncheckedEACount] = make_pair(source, destination);
             uncheckedEACount++;
-          } else if (edgeType == 'd') {
+          }
+          else if (edgeType == 'd')
+          {
             uncheckedED[uncheckedEDCount] = make_pair(source, destination);
             uncheckedEDCount++;
           }
         }
 #endif
-        else {
-          std::cout << "Incorrect input format \n" << std::endl;
+        else
+        {
+          std::cout << "Incorrect input format \n"
+                    << std::endl;
           inputFile.close();
           exit(1);
         }
@@ -287,7 +337,8 @@ public:
       bool *EDflag = newAWithZero(bool, uncheckedEDCount);
 
       // remove duplicates
-      if (simpleFlag) {
+      if (simpleFlag)
+      {
         uncheckedEACount = removeDuplicates(uncheckedEA, uncheckedEACount,
                                             symmetric, debugFlag);
 
@@ -295,12 +346,14 @@ public:
                                             symmetric, debugFlag);
       }
 
-      if (!fixedBatchFlag) {
+      if (!fixedBatchFlag)
+      {
         long eaIndex = 0;
         long edIndex = 0;
 
         // remove values that cancel out
-        while (eaIndex < uncheckedEACount && edIndex < uncheckedEDCount) {
+        while (eaIndex < uncheckedEACount && edIndex < uncheckedEDCount)
+        {
 #ifdef EDGEDATA
           if (uncheckedEA[eaIndex].first == uncheckedED[edIndex].first &&
               uncheckedEA[eaIndex].second.first ==
@@ -312,7 +365,8 @@ public:
           {
             EAflag[eaIndex] = true;
             EDflag[edIndex] = true;
-            if (debugFlag) {
+            if (debugFlag)
+            {
 #ifdef EDGEDATA
               cerr << "CANCELLED: " << uncheckedED[edIndex].first << "\t"
                    << uncheckedED[edIndex].second.first << "\t"
@@ -325,7 +379,9 @@ public:
             eaIndex++;
             edIndex++;
             cancelledEdges++;
-          } else if (uncheckedEA[eaIndex].first == uncheckedED[edIndex].first) {
+          }
+          else if (uncheckedEA[eaIndex].first == uncheckedED[edIndex].first)
+          {
 #ifdef EDGEDATA
             if (uncheckedEA[eaIndex].second.first <
                 uncheckedED[edIndex].second.first)
@@ -334,36 +390,49 @@ public:
 #endif
             {
               eaIndex++;
-            } else {
+            }
+            else
+            {
               edIndex++;
             }
-          } else if (uncheckedEA[eaIndex].first < uncheckedED[edIndex].first) {
+          }
+          else if (uncheckedEA[eaIndex].first < uncheckedED[edIndex].first)
+          {
             eaIndex++;
-          } else {
+          }
+          else
+          {
             edIndex++;
           }
         }
       }
 
       // remove all EdgeDeletions >= G.n as they don't exist in the graph
-      parallel_for(long i = 0; i < uncheckedEDCount; i++) {
+      parallel_for(long i = 0; i < uncheckedEDCount; i++)
+      {
 #ifdef EDGEDATA
         if (uncheckedED[i].first >= GA.n ||
-            uncheckedED[i].second.first >= GA.n) {
+            uncheckedED[i].second.first >= GA.n)
+        {
 #else
-        if (uncheckedED[i].first >= GA.n || uncheckedED[i].second >= GA.n) {
+        if (uncheckedED[i].first >= GA.n || uncheckedED[i].second >= GA.n)
+        {
 #endif
           EDflag[i] = true;
         }
       }
 
-      if (simpleFlag) {
+      if (simpleFlag)
+      {
         // check if edge additions edge is already in initial graph
         // we don't want the same edge from two vertices
-        parallel_for(long i = 0; i < uncheckedEACount; i++) {
-          if (EAflag[i] == false && uncheckedEA[i].first < GA.n) {
+        parallel_for(long i = 0; i < uncheckedEACount; i++)
+        {
+          if (EAflag[i] == false && uncheckedEA[i].first < GA.n)
+          {
             vertex sourceV = GA.V[uncheckedEA[i].first];
-            parallel_for(uintV j = 0; j < sourceV.getOutDegree(); j++) {
+            parallel_for(uintV j = 0; j < sourceV.getOutDegree(); j++)
+            {
 #ifdef EDGEDATA
               if (sourceV.getOutNeighbor(j) == uncheckedEA[i].second.first)
 #else
@@ -371,7 +440,8 @@ public:
 #endif
               {
                 EAflag[i] = true;
-                if (debugFlag) {
+                if (debugFlag)
+                {
 #ifdef EDGEDATA
                   cerr << "INVALID: " << uncheckedEA[i].first << "\t"
                        << uncheckedEA[i].second.first << "\t"
@@ -387,14 +457,18 @@ public:
         }
       }
 
-      if (edgeValidityFlag) {
-        parallel_for(long i = 0; i < uncheckedEDCount; i++) {
+      if (edgeValidityFlag)
+      {
+        parallel_for(long i = 0; i < uncheckedEDCount; i++)
+        {
           // check if edge deletions is valid
-          if (EDflag[i] == false) {
+          if (EDflag[i] == false)
+          {
             EDflag[i] = true;
             vertex sourceV = GA.V[uncheckedED[i].first];
             // check if this edge is present in the graph
-            parallel_for(uintV j = 0; j < sourceV.getOutDegree(); j++) {
+            parallel_for(uintV j = 0; j < sourceV.getOutDegree(); j++)
+            {
 #ifdef EDGEDATA
               if (sourceV.getOutNeighbor(j) == uncheckedED[i].second.first)
 #else
@@ -404,8 +478,10 @@ public:
                 EDflag[i] = false;
               }
             }
-            if (EDflag[i] == true) {
-              if (debugFlag) {
+            if (EDflag[i] == true)
+            {
+              if (debugFlag)
+              {
 #ifdef EDGEDATA
                 cerr << "INVALID: " << uncheckedED[i].first << "\t"
                      << uncheckedED[i].second.first << "\t"
@@ -421,8 +497,10 @@ public:
       }
 
       long maxCount = max(uncheckedEACount, uncheckedEDCount);
-      for (long index = 0; index < maxCount; index++) {
-        if (index < uncheckedEACount && !EAflag[index]) {
+      for (long index = 0; index < maxCount; index++)
+      {
+        if (index < uncheckedEACount && !EAflag[index])
+        {
           EA[checkedEACount].source = uncheckedEA[index].first;
 #ifdef EDGEDATA
           EA[checkedEACount].destination = uncheckedEA[index].second.first;
@@ -440,7 +518,8 @@ public:
           checkedEACount++;
         }
 
-        if (index < uncheckedEDCount && !EDflag[index]) {
+        if (index < uncheckedEDCount && !EDflag[index])
+        {
           ED[checkedEDCount].source = uncheckedED[index].first;
 #ifdef EDGEDATA
           ED[checkedEDCount].destination = uncheckedED[index].second.first;
@@ -456,7 +535,8 @@ public:
       }
 
       // ensure there are no duplicates within the edges to add/delete
-      if (edgeValidityFlag && simpleFlag) {
+      if (edgeValidityFlag && simpleFlag)
+      {
         quickSort(EA, checkedEACount, edgeBothCmp());
         quickSort(ED, checkedEDCount, edgeBothCmp());
         checkedEACount = removeDuplicates(EA, checkedEACount, numEdges,
@@ -467,10 +547,12 @@ public:
       free(EAflag);
       free(EDflag);
 #ifdef EDGEDATA
-      parallel_for(long i = 0; i < uncheckedEDCountOrig; i++) {
+      parallel_for(long i = 0; i < uncheckedEDCountOrig; i++)
+      {
         edgeWeightED[i].del();
       }
-      parallel_for(long i = 0; i < uncheckedEACountOrig; i++) {
+      parallel_for(long i = 0; i < uncheckedEACountOrig; i++)
+      {
         edgeWeightEA[i].del();
       }
 #endif
@@ -496,9 +578,28 @@ public:
 #endif
   }
 
-  bool processNextBatch() {
+
+
+  void print_edge_list(string prefix)
+  {
+    ofstream wf;
+    wf.open(prefix+".txt");
+
+    for(long i = 0; i < edge_additions.size; i++) {
+      uintV source = edge_additions.E[i].source;
+      uintV destination = edge_additions.E[i].destination;
+      wf<<source<<"\t"<<destination<<endl;
+    } 
+    cout<<"finished writing"<<endl;
+    wf.close();
+  }
+
+  bool processNextBatch()
+  {
+        string prefix = "stream" ;
     current_batch++;
-    if (current_batch > number_of_batches) {
+    if (current_batch > number_of_batches)
+    {
       cout << "Hit Max Batch Size" << endl;
       return false;
     }
@@ -520,7 +621,8 @@ public:
                             debug_flag, stream_closed);
     cout << "Reading Time : " << timer1.stop() << endl;
 
-    if (stream_closed && num_edges_read_from_file == 0) {
+    if (stream_closed && num_edges_read_from_file == 0)
+    {
       cout << "No Edges in Batch" << endl;
       cout << "Ending Execution" << endl;
       return false;
@@ -534,28 +636,105 @@ public:
     //      << "\n";
     edge_deletions =
         my_graph.deleteEdges(deletions_data, updated_vertices, debug_flag);
-    edge_deletions_temp.del();
     cout << "Edge deletion time : "
          << deletions_map_creation_time + timer1.next() << "\n";
+    edge_deletions_temp.del();
+    // cout << "Edge deletion time : "
+    //      << deletions_map_creation_time + timer1.next() << "\n";
 
-    timer1.start();
-    if (edge_additions.maxVertex >= n) {
+    // timer1.start();
+          ofstream wf;
+          wf.open(prefix+to_string(current_batch)+"._txt");
+        for(long i = 0; i < edge_additions.size; i++) {
+          uintV source = edge_additions.E[i].source;
+          uintV destination = edge_additions.E[i].destination;
+          wf<<source<<"\t"<<destination<<endl;
+        } 
+        cout<<"finished writing"<<endl;
+        wf.close();    
+
+    if (edge_additions.maxVertex >= n)
+    {
       long n_new = edge_additions.maxVertex + 1;
       updated_vertices = renewA(bool, updated_vertices, n_new);
-      parallel_for(uintV i = my_graph.n; i < n_new; i++) {
+      parallel_for(uintV i = my_graph.n; i < n_new; i++)
+      {
         updated_vertices[i] = 1;
       }
       // update deletions_data
       deletions_data.updateNumVertices(n_new);
     }
     my_graph.addVertices(edge_additions.maxVertex);
+    timer1.start();
     edge_additions = my_graph.addEdges(edge_additions, updated_vertices);
     cout << "Edge addition time : " << timer1.next() << "\n";
-    if ((edge_additions.size > 0) || (edge_deletions.size > 0)) {
+    if ((edge_additions.size > 0) || (edge_deletions.size > 0))
+    {
       return true;
     }
     cout << "No Edges in Stream" << endl;
     return false;
   }
+
+  void none_mutation_processNextBatch()
+  {
+    current_batch++;
+    timer timer1, timer2, fullTimer;
+    fullTimer.start();
+    long num_edges_read_from_file;
+    long num_cancelled_edges;
+    timer1.start();
+    tie(edge_additions, edge_deletions_temp, num_edges_read_from_file,
+        num_cancelled_edges) =
+        getNewEdgesFromFile(stream_file, max_batch_size, my_graph,
+                            my_graph.isSymmetric(), simple_flag,
+                            fixed_batch_flag, enforce_edge_validity_flag,
+                            debug_flag, stream_closed);
+    cout << "Reading Time : " << timer1.stop() << endl;
+
+  }
 };
+template <class vertex> 
+graph<vertex> graph_From_edges(edgeArray &edge_additions, graph <vertex> &mygraph){
+    // need mygraph for max vertex reading
+      vertex *v = newA(vertex, 0);
+      unsigned long n = 0;
+      unsigned long m = 0;
+      uintV *edges = newA(uintV, m);
+      uintV *inEdges = newA(uintV, m);
+      intE *offsets = newA(intE, n);
+      intE *toffsets = newA(intE, n);
+      AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
+      bool *updated_vertices;      
+
+      updated_vertices = newA(bool, edge_additions.maxVertex);
+      graph <vertex> tmp_graph = graph<vertex>(v, n, m, mem);
+      tmp_graph.addVertices(mygraph.n);
+      for (uintV i = 0; i < mygraph.n; i++) updated_vertices[i] = 0;      
+      tmp_graph.addEdges(edge_additions, updated_vertices);
+      // cout<<tmp_graph.m<<endl;
+      return tmp_graph;          
+}
+// template <class vertex> 
+// graph<vertex> initialgraph(edgeArray &edgeInitial){
+//     // need mygraph for max vertex reading
+//       // edgeArray edgeInitial = new edgeArray;
+//       vertex *v = newA(vertex, 0);
+//       unsigned long n = 0;
+//       unsigned long m = 0;
+//       uintV *edges = newA(uintV, m);
+//       uintV *inEdges = newA(uintV, m);
+//       intE *offsets = newA(intE, n);
+//       intE *toffsets = newA(intE, n);
+//       AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
+//       bool *updated_vertices;      
+
+//       updated_vertices = newA(bool, edgeInitial.maxVertex);
+//       graph <vertex> tmp_graph = graph<vertex>(v, n, m, mem);
+//       for (uintV i = 0; i < 1; i++) updated_vertices[i] = 0;      
+//       tmp_graph.addEdges(edgeInitial, updated_vertices);
+//       cout<<tmp_graph.m<<endl;
+//       return tmp_graph;          
+// }
+
 #endif
