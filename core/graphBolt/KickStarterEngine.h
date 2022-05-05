@@ -358,8 +358,9 @@ public:
     cout<<"--------------------------"<<endl;
     cout<<"print schedule status  "<<active_vertices_bitset.anyScheduledTasks()<<endl;
     cout<<"--------------------------"<<endl;
-
+    long iterations = 0;
     while (active_vertices_bitset.anyScheduledTasks()) {
+      iterations++;
       active_vertices_bitset.newIteration();
       parallel_for(uintV u = 0; u < n; u++) {
         if (active_vertices_bitset.isScheduled(u)) {
@@ -381,6 +382,7 @@ public:
         }
       }
     }
+    cout << "iterations: " << iterations << endl;
   }
 
   void deltaCompute(edgeArray &edge_additions, edgeArray &edge_deletions) {
@@ -561,6 +563,7 @@ public:
         active_vertices_bitset.schedule(v);
       }
     }
+    cout << "size: " << active_vertices_bitset.numTasks() << endl;
     traditionalIncrementalComputation();
 
     cout << "Finished batch : " << full_timer.stop() << "\n";

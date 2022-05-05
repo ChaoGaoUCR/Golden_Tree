@@ -24,7 +24,7 @@
 
 #include "../common/bitsetscheduler.h"
 #include "../common/utils.h"
-// #include "../graph/IO.h"
+#include "../graph/IO.h"
 #include "ingestor.h"
 #include "../common/parallel.h"
 #include <vector>
@@ -153,11 +153,16 @@ public:
 
   DependencyData<VertexValueType> *dependency_data;
   DependencyData<VertexValueType> *dependency_data_old;
+  
 
   // TODO : Replace with more efficient vertexSubset using bitmaps
   bool *frontier;
   bool *all_affected_vertices;
   bool *changed;
+
+  // graph<vertex> *multi;
+  graph<vertex>** snapshot;
+  edgeArray** tree_leaf;
 
   BitsetScheduler active_vertices_bitset;
 
@@ -173,6 +178,10 @@ public:
     // &tmpGraph = new graph<vertex>;         
     n = my_graph.n;
     n_old = 0;
+    // multi = multi_graph<vertex>(ingestor.numberOfSnapshots, my_graph.n);
+
+    
+
   }
 
   void init() {
@@ -182,6 +191,11 @@ public:
     initVertexSubsets();
     initTemporaryStructures();
     initDependencyData();
+    initial_all_snapshot();
+    initial_edgearray();
+
+    // edgeArray        
+
   }
 
   ~GoldenTreeEngine() {
@@ -189,6 +203,10 @@ public:
     freeTemporaryStructures();
     freeVertexSubsets();
     global_info.cleanup();
+    free_snapshot();
+    free_edge_array();
+
+
   }
 
   // ======================================================================
@@ -254,7 +272,48 @@ public:
       changed[j] = 0;
     }
   }
-
+  void initial_edgearray(){
+    tree_leaf = new edgeArray*[ingestor.numberOfSnapshots];
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      tree_leaf[i] =  new edgeArray();
+    }
+    
+    cout<<"edgeArray construct done"<<endl;
+  }
+  void initial_all_snapshot(){
+    snapshot = new graph<vertex>*[ingestor.numberOfSnapshots];
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      vertex *v = newA(vertex, my_graph.n);
+      unsigned long n = my_graph.n;
+      unsigned long m = 0;      
+      uintV *edges = newA(uintV, m);
+      uintV *inEdges = newA(uintV, m);
+      intE *offsets = newA(intE, n);
+      intE *toffsets = newA(intE, n);
+      AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
+      // bool *updated_vertices;      
+      // updated_vertices = newA(bool, my_graph.n);
+      snapshot[i] = new graph<vertex>(v, n, m, mem);  
+      // for (uintV i = 0; i < maxVertices; i++) updated_vertices[i] = 0;
+      // cout<<"In number "<<i<<" we have "<<snapshot[i]->n<<" vertices"<<" and "<< snapshot[i]->m<<" edges"<<endl;
+    }
+  }
+  void free_snapshot(){
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      snapshot[i]->del();
+    }
+    cout<<"snapshots deletion complete"<<endl;    
+  }
+  void free_edge_array(){
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      tree_leaf[i]->del();
+    }
+    cout<<"tree delete done"<<endl;
+  }
   void processVertexAddition(long maxVertex) {
     n_old = n;
     n = maxVertex + 1;
@@ -367,9 +426,12 @@ public:
     cout<<"--------------------------"<<endl;
     cout<<"print schedule status  "<<active_vertices_bitset.anyScheduledTasks()<<endl;
     cout<<"--------------------------"<<endl;
+    long iterations = 0;
     while (active_vertices_bitset.anyScheduledTasks()) {
     // cout<<"-----------------------------------------------------------------"<<endl;
-      cout<<"compute start"<<endl;
+      iterations++;
+
+      // cout<<"compute start"<<endl;
       active_vertices_bitset.newIteration();
       parallel_for(uintV u = 0; u < n; u++) {
         if (active_vertices_bitset.isScheduled(u)) {
@@ -389,7 +451,7 @@ public:
               active_vertices_bitset.schedule(v);
             }
           })
-          cout<<"small graph is done"<<endl;
+          // cout<<"small graph is done"<<endl;
           intE outDegree = my_graph.V[u].getOutDegree();
           granular_for(i, 0, outDegree, (outDegree > 1024), {
             uintV v = my_graph.V[u].getOutNeighbor(i);
@@ -404,13 +466,14 @@ public:
               active_vertices_bitset.schedule(v);
             }
           });
-          cout<<"large graph is done"<<endl;
+          // cout<<"large graph is done"<<endl;
 
           
 
         }
       }
     }
+    cout << "iterations: " << iterations << endl;
 
 
   }
@@ -685,38 +748,24 @@ public:
         active_vertices_bitset.schedule(v);
       }
     }
-      graph <vertex> tmp = graph_From_edges(edge_additions, ingestor.my_graph);
+
+    graph <vertex> tmp = graph_From_edges(edge_additions, ingestor.my_graph);
+    
       // cout<<"tmp graph has "<<tmp.m<<endl;
       // cout<<active_vertices_bitset.anyScheduledTasks()<<endl;
 
       edgeListIncrementalComputation(tmp);    
     // cout<<dependency_data[0]<<endl;
+    tmp.del();
     cout << "Finished batch : " << full_timer.stop() << "\n";
     printOutput();    
 
   }
 
 
-  void test(){
-    initialCompute();
-    ingestor.validateAndOpenFifo(); 
-    while (ingestor.current_batch < ingestor.number_of_batches)
-    {
-      ingestor.none_mutation_processNextBatch();
-      edgeArray &edge_additions = ingestor.getEdgeAdditions();
-      none_del_delta_compute(edge_additions);
-      
-    }
-    // initialCompute();
-    // ingestor.validateAndOpenFifo();
-    // while (ingestor.processNextBatch()) {
-    //   edgeArray &edge_additions = ingestor.getEdgeAdditions();
-    //   edgeArray &edge_deletions = ingestor.getEdgeDeletions();
-    //   // deltaCompute(edge_additions, edge_deletions);
-    //   // initialCompute();
-    //   none_del_delta_compute(edge_additions);
-    // }
-  }
+  // void test(){
+
+  // }
 };
 
 #endif

@@ -79,29 +79,63 @@ public:
   bool debug_flag;
   bool stream_closed = false;
 
+
+  long numberOfSnapshots;
+  string  typeOfTree; //0 is binary and 1 is normal tree
+  bool tree_type;
+  float portionOfModification;
+
+  // char *binary = "binary";
+  // char *normal = "normal";
+
   Ingestor(graph<vertex> &_my_graph, commandLine _config)
       : my_graph(_my_graph), config(_config), n(_my_graph.n),
         deletions_data(_my_graph.n), current_batch(0)
   {
+    numberOfSnapshots = config.getOptionLongValue("-Snapshots", 0);
+    typeOfTree = config.getOptionValue("-tree");
+    portionOfModification = config.getOptionFloatValue("-change", 0);
 
     updated_vertices = newA(bool, n);
 
-    is_symmetric = config.getOptionValue("-s");
-    stream_path = config.getOptionValue("-streamPath");
-    simple_flag = config.getOptionValue("-simple");
-    fixed_batch_flag = config.getOptionValue("-fixedBatchSize");
-    enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
-    debug_flag = config.getOptionValue("-debug");
-    max_batch_size = config.getOptionLongValue("-nEdges", 0);
-    if (max_batch_size == 0)
+    if (typeOfTree == "binary")
     {
-      std::cout
-          << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
-          << std::endl;
+      tree_type = true;
     }
+    else if (typeOfTree == "normal")
+    {
+      tree_type = false;
+    }
+    else{
+      cout << "input tree format is wrong"<<endl;
+    }
+    
+    
 
-    number_of_batches = config.getOptionLongValue("-numberOfUpdateBatches", 1);
-    cout << "Number of batches: " << number_of_batches << endl;
+    // cout<<  "Type of Tree is "  <<typeOfTree<<endl;
+    // cout<<  "portion of change is "  <<portionOfModification<<endl;
+    // cout<< "number of snapshot is "<< numberOfSnapshots<<endl;
+
+    // is_symmetric = config.getOptionValue("-s");
+    // stream_path = config.getOptionValue("-streamPath");
+    // simple_flag = config.getOptionValue("-simple");
+    // fixed_batch_flag = config.getOptionValue("-fixedBatchSize");
+    // enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
+    // debug_flag = config.getOptionValue("-debug");
+    // max_batch_size = config.getOptionLongValue("-nEdges", 0);
+    // if (max_batch_size == 0)
+    // {
+    //   std::cout
+    //       << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
+    //       << std::endl;
+    // }
+
+    // number_of_batches = config.getOptionLongValue("-numberOfUpdateBatches", 1);
+    // cout << "Number of batches: " << number_of_batches << endl;
+
+
+
+
   }
 
   ~Ingestor()
@@ -119,6 +153,14 @@ public:
     deletions_data.del();
     if (n > 0)
       free(updated_vertices);
+  }
+
+  void test_print(){
+    cout<<  "Type of Tree is "  << typeOfTree <<endl;
+    
+    cout<<  "portion of change is "  <<portionOfModification<<endl;
+    cout<< "number of snapshot is "<< numberOfSnapshots<<endl;
+
   }
 
   edgeArray &getEdgeAdditions()
@@ -694,6 +736,7 @@ public:
 
   }
 };
+
 template <class vertex> 
 graph<vertex> graph_From_edges(edgeArray &edge_additions, graph <vertex> &mygraph){
     // need mygraph for max vertex reading
@@ -715,26 +758,47 @@ graph<vertex> graph_From_edges(edgeArray &edge_additions, graph <vertex> &mygrap
       // cout<<tmp_graph.m<<endl;
       return tmp_graph;          
 }
-// template <class vertex> 
-// graph<vertex> initialgraph(edgeArray &edgeInitial){
-//     // need mygraph for max vertex reading
-//       // edgeArray edgeInitial = new edgeArray;
-//       vertex *v = newA(vertex, 0);
-//       unsigned long n = 0;
-//       unsigned long m = 0;
-//       uintV *edges = newA(uintV, m);
-//       uintV *inEdges = newA(uintV, m);
-//       intE *offsets = newA(intE, n);
-//       intE *toffsets = newA(intE, n);
-//       AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
-//       bool *updated_vertices;      
 
-//       updated_vertices = newA(bool, edgeInitial.maxVertex);
-//       graph <vertex> tmp_graph = graph<vertex>(v, n, m, mem);
-//       for (uintV i = 0; i < 1; i++) updated_vertices[i] = 0;      
-//       tmp_graph.addEdges(edgeInitial, updated_vertices);
-//       cout<<tmp_graph.m<<endl;
-//       return tmp_graph;          
-// }
+template <class vertex>
+graph <vertex> New_Graph_Initial(uintV maxVertices){
+      vertex *v = newA(vertex, maxVertices);
+      unsigned long n = maxVertices;
+      unsigned long m = 0;
+      uintV *edges = newA(uintV, m);
+      uintV *inEdges = newA(uintV, m);
+      intE *offsets = newA(intE, n);
+      intE *toffsets = newA(intE, n);
+      AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
+      bool *updated_vertices;      
+      updated_vertices = newA(bool, maxVertices);
+      graph <vertex> tmp_graph = graph<vertex>(v, n, m, mem);
+      // tmp_graph.addVertices(maxVertices);
+      for (uintV i = 0; i < maxVertices; i++) updated_vertices[i] = 0;      
+      // tmp_graph.addEdges(edge_additions, updated_vertices);
+      cout<<tmp_graph.m<<endl;
+      return tmp_graph;      
+}
+// template <class vertex> struct multi_graph{
+//   uintV number_of_vertices = 1;
+//   long numberOfSnapshots = 10;
+//   graph <vertex> *snapshots;
 
+//   multi_graph(long _numberOfSnapshots, uintV _number_of_vertices)
+//     : numberOfSnapshots(_numberOfSnapshots), number_of_vertices(_number_of_vertices)
+//   {
+//     for (size_t i = 0; i < numberOfSnapshots; i++)
+//     {
+//       snapshots[i] = New_Graph_Initial(number_of_vertices);
+//     }
+    
+//   }
+//   void del(){
+//     for (size_t i = 0; i < numberOfSnapshots; i++)
+//     {
+//       snapshots[i].del();
+//     }
+    
+//   }
+
+// };
 #endif

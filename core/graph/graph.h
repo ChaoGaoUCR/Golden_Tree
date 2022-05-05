@@ -1265,4 +1265,5 @@ template <class vertex> struct graph {
 
 
 
+
 #endif
