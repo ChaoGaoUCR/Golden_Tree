@@ -51,6 +51,7 @@ int main(int argc, char **argv) {
   input_file.open(edge_operations_file);
 
   int num_lines;
+  int count = 0;
   string line;
   string temp;
   bool bad_input = false;
@@ -81,11 +82,17 @@ int main(int argc, char **argv) {
         break;
       }
       named_pipe << line << endl;
+    
     }
     if (bad_input == false) {
-      cout << "Enter number of lines to send: " << endl;
-      cin >> num_lines;
+      // cout << "Enter number of lines to send: " << endl;
+      // cin >> num_lines;
+      // cout<<"One iteration ends"<<endl;
+      count+=num_lines;
+      cout<<"already "<<count<<" lines written"<<endl;      
     }
+
+
   } while (bad_input == false && num_lines > 0);
 
   named_pipe.close();
