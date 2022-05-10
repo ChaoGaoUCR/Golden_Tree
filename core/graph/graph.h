@@ -1171,6 +1171,7 @@ template <class vertex> struct graph {
   bool transposed;
   bool symmetric;
   uintE *flags;
+  // AdjacencyRep *D
   Deletable *D;
 
   graph(vertex *_V, uintV _n, uintE _m, Deletable *_D)

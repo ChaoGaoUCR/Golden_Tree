@@ -762,6 +762,9 @@ public:
 
   }
 
+  // void sample_edges(uintE edges_for_sample){
+
+  // }
 
   // void test(){
 

@@ -116,22 +116,22 @@ public:
     // cout<<  "portion of change is "  <<portionOfModification<<endl;
     // cout<< "number of snapshot is "<< numberOfSnapshots<<endl;
 
-    // is_symmetric = config.getOptionValue("-s");
-    // stream_path = config.getOptionValue("-streamPath");
-    // simple_flag = config.getOptionValue("-simple");
-    // fixed_batch_flag = config.getOptionValue("-fixedBatchSize");
-    // enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
-    // debug_flag = config.getOptionValue("-debug");
-    // max_batch_size = config.getOptionLongValue("-nEdges", 0);
-    // if (max_batch_size == 0)
-    // {
-    //   std::cout
-    //       << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
-    //       << std::endl;
-    // }
+    is_symmetric = config.getOptionValue("-s");
+    stream_path = config.getOptionValue("-streamPath");
+    simple_flag = config.getOptionValue("-simple");
+    fixed_batch_flag = config.getOptionValue("-fixedBatchSize");
+    enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
+    debug_flag = config.getOptionValue("-debug");
+    max_batch_size = config.getOptionLongValue("-nEdges", 0);
+    if (max_batch_size == 0)
+    {
+      std::cout
+          << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
+          << std::endl;
+    }
 
-    // number_of_batches = config.getOptionLongValue("-numberOfUpdateBatches", 1);
-    // cout << "Number of batches: " << number_of_batches << endl;
+    number_of_batches = config.getOptionLongValue("-numberOfUpdateBatches", 1);
+    cout << "Number of batches: " << number_of_batches << endl;
 
 
 
