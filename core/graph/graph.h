@@ -1287,7 +1287,7 @@ bool single_check_edge_in_graph(edge check){
     auto d = check_source.getOutDegree();
     if (d==0)
     {
-      cout<<"no edges with this source vertex"<<endl;
+      // cout<<"no edges with this source vertex"<<endl;
       // return res;
       return find_flag;
     }
