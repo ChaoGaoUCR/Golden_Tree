@@ -92,23 +92,23 @@ public:
       : my_graph(_my_graph), config(_config), n(_my_graph.n),
         deletions_data(_my_graph.n), current_batch(0)
   {
-    numberOfSnapshots = config.getOptionLongValue("-Snapshots", 0);
-    typeOfTree = config.getOptionValue("-tree");
-    portionOfModification = config.getOptionFloatValue("-change", 0);
+    // numberOfSnapshots = config.getOptionLongValue("-Snapshots", 0);
+    // typeOfTree = config.getOptionValue("-tree");
+    // portionOfModification = config.getOptionFloatValue("-change", 0);
 
     updated_vertices = newA(bool, n);
 
-    if (typeOfTree == "binary")
-    {
-      tree_type = true;
-    }
-    else if (typeOfTree == "normal")
-    {
-      tree_type = false;
-    }
-    else{
-      cout << "input tree format is wrong"<<endl;
-    }
+    // if (typeOfTree == "binary")
+    // {
+    //   tree_type = true;
+    // }
+    // else if (typeOfTree == "normal")
+    // {
+    //   tree_type = false;
+    // }
+    // else{
+    //   cout << "input tree format is wrong"<<endl;
+    // }
     
     
 
@@ -116,22 +116,22 @@ public:
     // cout<<  "portion of change is "  <<portionOfModification<<endl;
     // cout<< "number of snapshot is "<< numberOfSnapshots<<endl;
 
-    is_symmetric = config.getOptionValue("-s");
-    stream_path = config.getOptionValue("-streamPath");
-    simple_flag = config.getOptionValue("-simple");
-    fixed_batch_flag = config.getOptionValue("-fixedBatchSize");
-    enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
-    debug_flag = config.getOptionValue("-debug");
-    max_batch_size = config.getOptionLongValue("-nEdges", 0);
-    if (max_batch_size == 0)
-    {
-      std::cout
-          << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
-          << std::endl;
-    }
+    // is_symmetric = config.getOptionValue("-s");
+    // stream_path = config.getOptionValue("-streamPath");
+    // simple_flag = config.getOptionValue("-simple");
+    // fixed_batch_flag = config.getOptionValue("-fixedBatchSize");
+    // enforce_edge_validity_flag = config.getOptionValue("-enforceEdgeValidity");
+    // debug_flag = config.getOptionValue("-debug");
+    // max_batch_size = config.getOptionLongValue("-nEdges", 0);
+    // if (max_batch_size == 0)
+    // {
+    //   std::cout
+    //       << "WARNING: Max Batch Size = 0, Please assign a value to '-nEdges'"
+    //       << std::endl;
+    // }
 
-    number_of_batches = config.getOptionLongValue("-numberOfUpdateBatches", 1);
-    cout << "Number of batches: " << number_of_batches << endl;
+    // number_of_batches = config.getOptionLongValue("-numberOfUpdateBatches", 1);
+    // cout << "Number of batches: " << number_of_batches << endl;
 
 
 
@@ -669,15 +669,17 @@ public:
       cout << "Ending Execution" << endl;
       return false;
     }
-
     double deletions_map_creation_time = 0;
     timer1.start();
+
     deletions_data.updateWithEdgesArray(edge_deletions_temp);
     deletions_map_creation_time = timer1.next();
     // cout << "deletions_map_creation_time : " << deletions_map_creation_time
     //      << "\n";
+
     edge_deletions =
         my_graph.deleteEdges(deletions_data, updated_vertices, debug_flag);
+
     cout << "Edge deletion time : "
          << deletions_map_creation_time + timer1.next() << "\n";
     edge_deletions_temp.del();

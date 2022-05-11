@@ -304,6 +304,7 @@ public:
       edgeArray &edge_additions = ingestor.getEdgeAdditions();
       edgeArray &edge_deletions = ingestor.getEdgeDeletions();
       deltaCompute(edge_additions, edge_deletions);
+      cout<<"hello"<<endl;
     }
   }
 

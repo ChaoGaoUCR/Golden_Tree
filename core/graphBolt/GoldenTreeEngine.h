@@ -161,8 +161,8 @@ public:
   bool *changed;
 
   // graph<vertex> *multi;
-  graph<vertex>** snapshot;
-  edgeArray** tree_leaf;
+  // graph<vertex>** snapshot;
+  // edgeArray** tree_leaf;
 
   BitsetScheduler active_vertices_bitset;
 
@@ -191,8 +191,8 @@ public:
     initVertexSubsets();
     initTemporaryStructures();
     initDependencyData();
-    initial_all_snapshot();
-    initial_edgearray();
+    // initial_all_snapshot();
+    // initial_edgearray();
 
     // edgeArray        
 
@@ -203,8 +203,8 @@ public:
     freeTemporaryStructures();
     freeVertexSubsets();
     global_info.cleanup();
-    free_snapshot();
-    free_edge_array();
+    // free_snapshot();
+    // free_edge_array();
 
 
   }
@@ -272,48 +272,48 @@ public:
       changed[j] = 0;
     }
   }
-  void initial_edgearray(){
-    tree_leaf = new edgeArray*[ingestor.numberOfSnapshots];
-    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-    {
-      tree_leaf[i] =  new edgeArray();
-    }
+  // void initial_edgearray(){
+  //   tree_leaf = new edgeArray*[ingestor.numberOfSnapshots];
+  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+  //   {
+  //     tree_leaf[i] =  new edgeArray();
+  //   }
     
-    cout<<"edgeArray construct done"<<endl;
-  }
-  void initial_all_snapshot(){
-    snapshot = new graph<vertex>*[ingestor.numberOfSnapshots];
-    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-    {
-      vertex *v = newA(vertex, my_graph.n);
-      unsigned long n = my_graph.n;
-      unsigned long m = 0;      
-      uintV *edges = newA(uintV, m);
-      uintV *inEdges = newA(uintV, m);
-      intE *offsets = newA(intE, n);
-      intE *toffsets = newA(intE, n);
-      AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
-      // bool *updated_vertices;      
-      // updated_vertices = newA(bool, my_graph.n);
-      snapshot[i] = new graph<vertex>(v, n, m, mem);  
-      // for (uintV i = 0; i < maxVertices; i++) updated_vertices[i] = 0;
-      // cout<<"In number "<<i<<" we have "<<snapshot[i]->n<<" vertices"<<" and "<< snapshot[i]->m<<" edges"<<endl;
-    }
-  }
-  void free_snapshot(){
-    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-    {
-      snapshot[i]->del();
-    }
-    cout<<"snapshots deletion complete"<<endl;    
-  }
-  void free_edge_array(){
-    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-    {
-      tree_leaf[i]->del();
-    }
-    cout<<"tree delete done"<<endl;
-  }
+  //   cout<<"edgeArray construct done"<<endl;
+  // }
+  // void initial_all_snapshot(){
+  //   snapshot = new graph<vertex>*[ingestor.numberOfSnapshots];
+  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+  //   {
+  //     vertex *v = newA(vertex, my_graph.n);
+  //     unsigned long n = my_graph.n;
+  //     unsigned long m = 0;      
+  //     uintV *edges = newA(uintV, m);
+  //     uintV *inEdges = newA(uintV, m);
+  //     intE *offsets = newA(intE, n);
+  //     intE *toffsets = newA(intE, n);
+  //     AdjacencyRep<vertex> *mem = new AdjacencyRep<vertex>(v, n, m, edges, inEdges, offsets, toffsets);
+  //     // bool *updated_vertices;      
+  //     // updated_vertices = newA(bool, my_graph.n);
+  //     snapshot[i] = new graph<vertex>(v, n, m, mem);  
+  //     // for (uintV i = 0; i < maxVertices; i++) updated_vertices[i] = 0;
+  //     // cout<<"In number "<<i<<" we have "<<snapshot[i]->n<<" vertices"<<" and "<< snapshot[i]->m<<" edges"<<endl;
+  //   }
+  // }
+  // void free_snapshot(){
+  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+  //   {
+  //     snapshot[i]->del();
+  //   }
+  //   cout<<"snapshots deletion complete"<<endl;    
+  // }
+  // void free_edge_array(){
+  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+  //   {
+  //     tree_leaf[i]->del();
+  //   }
+  //   cout<<"tree delete done"<<endl;
+  // }
   void processVertexAddition(long maxVertex) {
     n_old = n;
     n = maxVertex + 1;
