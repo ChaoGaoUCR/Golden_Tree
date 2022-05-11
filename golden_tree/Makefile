@@ -8,6 +8,44 @@ ifdef LONGVERTEXCOUNT
 INTV = -DLONG
 endif
 
+ifeq (, $(shell which jemalloc-config))
+JEMALLOC =
+else
+JEMALLOCLD = $(shell jemalloc-config --libdir)
+JEMALLOC = -L$(JEMALLOCLD) -ljemalloc
+endif
+
+OPT = -O3 -g
+
+CONCEPTS = -fconcepts -DCONCEPTS
+CFLAGS = -DEDGELONG -mcx16 $(OPT) -ldl -std=c++17 -march=native -Wall -Wno-subobject-linkage -DUSEMALLOC -DNDEBUG
+
+OMPFLAGS = -DOPENMP -fopenmp
+CILKFLAGS = -DCILK -fcilkplus
+HGFLAGS = -DHOMEGROWN -pthread
+
+ifdef CLANG
+CC = clang++
+PFLAGS = $(CILKFLAGS)
+else ifdef CILK
+CC = g++-5
+PFLAGS = $(CILKFLAGS)
+else ifdef OPENMP
+CC = g++
+PFLAGS = $(OMPFLAGS)
+else ifdef HOMEGROWN
+CC = g++
+PFLAGS = $(HGFLAGS)
+else ifdef SERIAL
+CC = g++
+PFLAGS =
+else # default is homegrown
+CC = g++
+PFLAGS = $(HGFLAGS)
+endif
+
+
+
 INTE = -DEDGELONG
 
 #compilers
@@ -25,6 +63,8 @@ GRAPHBOLT=../core/graphBolt/AdaptiveExecutor.h ../core/graphBolt/GraphBoltEngine
 
 OTHERS=../core/main.h
 
+
+# $(info ************  Using Aspen Library ************)
 ALL=BFS SSSP
 
 # make
