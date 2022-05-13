@@ -297,6 +297,25 @@ public:
     current_batch++;
   }
 
+  void test_run() {
+    // initialCompute();
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      uintE original = my_graph.m;
+      
+      parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+      uintV number = my_graph.m*0.01;
+      ingestor.edge_additions = my_graph.random_bacth_insert(number);
+      ingestor.edge_deletions = my_graph.random_bacth_sample(number);
+      ingestor.deletions_data.updateWithEdgesArray(ingestor.edge_deletions);
+      my_graph.add_edgess(ingestor.edge_additions, ingestor.updated_vertices);
+      my_graph.del_edges(ingestor.deletions_data , ingestor.updated_vertices, false);
+      deltaCompute(ingestor.edge_additions, ingestor.edge_deletions);
+      // cout<<"batch number "<<i<<" edges left in the graph are "<<ingestor.edge_additions.size<<endl;
+    }
+    
+  }
+
   void run() {
     initialCompute();
     ingestor.validateAndOpenFifo();
@@ -322,8 +341,8 @@ public:
     }
 
     traditionalIncrementalComputation();
-    cout << "Initial graph processing : " << full_timer.stop() << "\n";
-    printOutput();
+    // cout << "Initial graph processing : " << full_timer.stop() << "\n";
+    // printOutput();
   }
 
   // TODO : Write a lock based reduce function. Add functionality to use the
