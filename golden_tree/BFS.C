@@ -123,36 +123,14 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   
   engine.init();
   cout << "Finished initializing engine\n";
-  // engine.ingestor.test_print();
-  // cout<<"number of vertices "<<engine.my_graph.n<<endl;
-  // cout<<"number of edges "<<engine.my_graph.m<<endl;
-  // engine.run_without_mutation();
-  // engine.run();
-  // engine.test();
+
   cout<<"test for engine begins"<<endl;
-  //Goal 1: print out the edge number and specific edge in the deletable sturct
-  // int count = 0;
-  // cout<<"vertex "<<count<<" has "
-  // <<engine.my_graph.D->V[count]<<" outgoing edges and "
-  // <<engine.my_graph.D[count]->inEdgesArraySize[count] << " ingoing edges."
-  // engine.my_graph.printEdges("test.txt");
-  // edge new_edge(100, 323);
-  // std::pair <bool, uintV> res ;
-  // res= engine.my_graph.check_edge_in_graph(new_edge); 
-  // cout<<"check "<<new_edge.source<<" "<<new_edge.destination<<" in the graph: "<<res.second<<endl;
-  // <<endl;
-    // cout<<"hello there"<<endl; 
-  // edgeArray res = engine.my_graph.random_bacth_insert(100);
-    
-  edgeArray res = engine.my_graph.random_bacth_sample(5);
-  // bool test = true;   
-  for (size_t i = 0; i < res.size; i++)
-  {
-    // test & engine.my_graph.single_check_edge_in_graph(res.E[i]);
-    // cout<<engine.my_graph.single_check_edge_in_graph(res.E[i])<<endl;
-    cout<<"src "<<res.E[i].source<<" dst "<<res.E[i].destination<<endl;
-  }
-  // res.del();
-  cout<<"test"<<endl;
+  cout<<"total edges in original graph "<<engine.my_graph.m<<endl;
+
+  engine.count_for_test();
+  engine.all_level_construct();
+  engine.all_level_deconstruct();
+
   
+
 }
