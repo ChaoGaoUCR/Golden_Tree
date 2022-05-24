@@ -38,8 +38,10 @@
 #include <stdlib.h>
 #include <unordered_set>
 #include <vector>
+#include <set>
 
 using namespace std;
+typedef pair<uintV, uintV> pairs;
 
 struct edge {
   uintV source;
@@ -78,6 +80,15 @@ struct edgeArray {
   edgeArray(edge *EE, long _size, long _maxVertex)
       : E(EE), size(_size), maxVertex(_maxVertex) {}
 #endif
+
+// void add_edge(edge ins_tmp){
+// #ifdef EDGEDATA
+//   //now we don't allocate this
+// #else
+  
+// #endif
+// }
+
 };
 
 struct edgesToDelete {
@@ -914,7 +925,7 @@ public:
 
   edgeArray deleteEdges(edgeDeletionData &deletionsData, bool *updatedVertices,
                         bool debugFlag) {
-    cout<<"hello del"<<endl;
+    // cout<<"hello del"<<endl;
 
     uintV maxValue = numeric_limits<uintV>::max();
     intE numberOfSuccessfulDeletions = 0;
@@ -1201,12 +1212,24 @@ template <class vertex> struct graph {
   bool isSymmetric() { return symmetric; }
 
   void addVertices(uintV maxVertex) {
-    if (n <= maxVertex) {
+    if (n <= maxVertex+1) {
       cout << "max vertex: " << maxVertex << endl;
       V = (vertex *)D->updateVertices(maxVertex);
       n = maxVertex + 1;
     }
   }
+
+  void add_edgess(edgeArray edgesToAdd, bool *updatedVertices){
+    edgeArray ea = D->addEdges(edgesToAdd, updatedVertices);
+    ea.del();
+    m = D->getNumberOfEdges();
+  }
+
+  void del_edges(edgeDeletionData edgesToDelete, bool *updatedVertices, bool debugFlag){
+    edgeArray ed = D->deleteEdges(edgesToDelete, updatedVertices, debugFlag);
+    m = D->getNumberOfEdges();  
+    ed.del();                        
+    }
 
   edgeArray addEdges(edgeArray edgesToAdd, bool *updatedVertices) {
     edgeArray ea = D->addEdges(edgesToAdd, updatedVertices);
@@ -1268,18 +1291,11 @@ std::pair<bool, uintV> check_edge_in_graph(edge check){
 bool single_check_edge_in_graph(edge check){
   bool find_flag;
   find_flag = false;
-  // uintV score = 0;
-  // std::pair <bool, uintV> res;
-  //   // res = std::make_pair<find_flag, score>;
-  // res.first = find_flag;
-  // res.second = score;  
   
   // uintV find = 0;
   if (check.source>n || check.destination>n || check.source <0 || check.destination<0)
   {
     cout<<"wrong input"<<endl;
-    // break;
-    // return res;
     return false;
   }
   else{
@@ -1287,8 +1303,6 @@ bool single_check_edge_in_graph(edge check){
     auto d = check_source.getOutDegree();
     if (d==0)
     {
-      // cout<<"no edges with this source vertex"<<endl;
-      // return res;
       return find_flag;
     }
     else{
@@ -1296,16 +1310,11 @@ bool single_check_edge_in_graph(edge check){
         if (check_source.getOutNeighbor(j) == check.destination)
         {
           find_flag = true;
-          // score = check_source.getOutNeighbor(j);
-          // score = j;
         }
         
       }
     }
     return find_flag;
-  // res.first = find_flag;
-  // res.second = score;  
-    // return res;
   }
 }
 
@@ -1313,7 +1322,7 @@ edgeArray random_bacth_insert(uintV insert_number){
   // cout<<"initial a new edgearray"<<endl;
     // edgeArray res;
     // long max = n;
-    srand(12361236);
+    srand(time(NULL));
     edge *random_insert_edges = newA(edge, insert_number);
     parallel_for(uintE i =0; i<insert_number; i++){
       random_insert_edges[i].source = 0+ (rand() % n);
@@ -1336,20 +1345,41 @@ edgeArray random_bacth_sample(uintV sample_number){
   // cout<<"initial a new edgearray"<<endl;
     // edgeArray res;
     // long max = n;
-    srand(12361236);
+    // std::unordered_set<edge> s1;
+    // cout<<"sample number is "<<sample_number<<endl;
+    srand(time(NULL));
     edge *random_sample_edges = newA(edge, sample_number);
-    parallel_for(uintE i =0; i<sample_number; i++){
+    set<pairs> check;
+    for(uintE i =0; i<sample_number; i++){
+
       random_sample_edges[i].source = 0+ (rand() % n);
       while (V[random_sample_edges[i].source].getOutDegree() == 0)
       {
         random_sample_edges[i].source = 0+ (rand() % n);
       }
-      
+      // uintV dest = i%V[random_sample_edges[i].source].getOutDegree();
       random_sample_edges[i].destination = V[random_sample_edges[i].source].getOutNeighbor(0+ (rand() % V[random_sample_edges[i].source].getOutDegree()));
+    // check.insert(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination));
+    // if (check.find(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination))==check.end())
+    // {
+    //   cout<<"edge "<<random_sample_edges[i].source<<"\t"<<random_sample_edges[i].destination<<" repeated"<<endl;
+    // }
+    // if(check.find(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination))!=check.end()) cout<<"repeat happens"<<endl;
 
+    while(check.find(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination))!=check.end()){
+      random_sample_edges[i].source = 0+ (rand() % n);
+      while (V[random_sample_edges[i].source].getOutDegree() == 0)
+      {
+        random_sample_edges[i].source = 0+ (rand() % n);
+      }
+      // uintV dest = i%V[random_sample_edges[i].source].getOutDegree();
+      random_sample_edges[i].destination = V[random_sample_edges[i].source].getOutNeighbor(0+ (rand() % V[random_sample_edges[i].source].getOutDegree()));
     }
-
-    edgeArray res = edgeArray(random_sample_edges, sample_number, n);
+      check.insert(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination));
+    }
+    cout<<"we put "<<check.size()<<" to the sample set"<<endl;
+    edgeArray res = edgeArray(random_sample_edges, check.size(), n);
+    check.clear();
 
   
   return res;
@@ -1357,7 +1387,7 @@ edgeArray random_bacth_sample(uintV sample_number){
 
 
 
-void printEdges(string outputFilePath) {
+void printEdges() {
 #ifdef EDGEDATA
     // TODO: Add support for printing weighted edges
     return;
@@ -1374,9 +1404,9 @@ void printEdges(string outputFilePath) {
       abort();
     }
 
-    ofstream outputFile;
-    outputFile.open(outputFilePath, ios::out);
-    outputFile << setprecision(2);
+    // ofstream outputFile;
+    // outputFile.open(outputFilePath, ios::out);
+    // outputFile << setprecision(2);
     // cout<<"hello there"<<endl;    
 
     for (uintV i = 0; i < n; ++i) {
@@ -1386,30 +1416,33 @@ void printEdges(string outputFilePath) {
         insertionSort(currentVertex.getOutNeighbors(), d, ascendingF<uintV>());
       }
       for (intE j = 0; j < currentVertex.getOutDegree(); j++)
-        outputFile << i << " " << currentVertex.getOutNeighbor(j) << "\n";
+        // outputFile << i << " " << currentVertex.getOutNeighbor(j) << "\n";
+        cout << i << " " << currentVertex.getOutNeighbor(j) << endl;
+    
     }
-    outputFile.close();
-    outputFile.open(outputFilePath + "_inEdges", ios::out);
-    outputFile << setprecision(2);
+    // outputFile.close();
+    // outputFile.open(outputFilePath + "_inEdges", ios::out);
+    // outputFile << setprecision(2);
 
 
-    for (uintV i = 0; i < n; ++i) {
-      vertex &currentVertex = V[i];
-      auto d = currentVertex.getInDegree();
-      if (d != 0) {
-        insertionSort(currentVertex.getInNeighbors(), d, ascendingF<uintV>());
-      }
-      for (intE j = 0; j < currentVertex.getInDegree(); j++) {
-        outputFile << i << " " << currentVertex.getInNeighbor(j) << "\n";
-      }
-      // outputFile << currentVertex.getInNeighbor(j) << " " << i << "\n";
-    }
+    // for (uintV i = 0; i < n; ++i) {
+    //   vertex &currentVertex = V[i];
+    //   auto d = currentVertex.getInDegree();
+    //   if (d != 0) {
+    //     insertionSort(currentVertex.getInNeighbors(), d, ascendingF<uintV>());
+    //   }
+    //   for (intE j = 0; j < currentVertex.getInDegree(); j++) {
+    //     outputFile << i << " " << currentVertex.getInNeighbor(j) << "\n";
+    //   }
+    //   // outputFile << currentVertex.getInNeighbor(j) << " " << i << "\n";
+    // }
 
-    outputFile.close();
+    // outputFile.close();
     // cout<<"hello there"<<endl;    
 
   }
 };
+
 
 
 

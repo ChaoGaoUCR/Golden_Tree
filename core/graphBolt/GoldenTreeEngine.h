@@ -28,6 +28,9 @@
 #include "ingestor.h"
 #include "../common/parallel.h"
 #include <vector>
+// #include <cilk-lib.h>
+// #include <mutex>
+// #include <tbb/mutex.h>
 
 #define MAX_LEVEL 65535
 #define MAX_PARENT 4294967295
@@ -36,10 +39,74 @@
 #else
 struct EmptyEdgeData{};
 typedef EmptyEdgeData EdgeData;
+// typedef pair <edgeArray, edgeArray>;
 
 EdgeData emptyEdgeData;
 #endif
+template <class vertex>
+void none_order_overlapping(graph<vertex> &big_graph, graph<vertex> &small_graph){
+  // RWLock edgelock;
+  // edgelock.init();
+  uintE count = 0;
+  // edge *res = newA(edge, small_graph.m);
+  parallel_for(uintV i=0; i< small_graph.n; i++){
+    parallel_for(uintE j =0; j<small_graph.V[i].getOutDegree(); j++){
+      // edge tmp = edge(i, small_graph.V[i].getOutNeighbor(j));
+      if (big_graph.single_check_edge_in_graph(edge(i, small_graph.V[i].getOutNeighbor(j)))){
+        // count++;
+        pbbs::fetch_and_add(&count, 1);
+      }
+    }
+  }
+  cout<<"number of overalapping is "<< count<<endl;
 
+
+  edge *res = newA(edge, count);
+  uintE count_new=0;
+  for(uintV i=0; i< small_graph.n; i++){
+    for(uintE j =0; j<small_graph.V[i].getOutDegree(); j++){
+      // edge tmp = edge(i, small_graph.V[i].getOutNeighbor(j));
+      if (big_graph.single_check_edge_in_graph(edge(i, small_graph.V[i].getOutNeighbor(j)))){
+        // cout<<i<<" "<<small_graph.V[i].getOutNeighbor(j)<<endl;
+        // pbbs::fetch_and_add(&count_new,1);
+        count_new++;
+        res[count_new-1] = edge(i, small_graph.V[i].getOutNeighbor(j));
+        // pbbs::fetch_and_add(&count_new,1);
+      }
+    }
+  }
+  uintE wrong_number = 0;
+  parallel_for(uintE i=0; i<count; i++){
+    if (!small_graph.single_check_edge_in_graph(res[i]) || !big_graph.single_check_edge_in_graph(res[i]))
+    {
+      // cout<<"number " <<i<<" not in small graph or big graph, smaple wrong"<<endl;
+      pbbs::fetch_and_add(&wrong_number,1);
+    }
+  }
+  cout<<"wrong_number is "<<wrong_number<<endl;
+  bool *update = newA(bool, small_graph.n);
+  bool *update1 = newA(bool, big_graph.n);
+  parallel_for(uintV i =0; i< small_graph.n; i++){
+    update[i] =0;
+  }  
+  parallel_for(uintV i =0; i< big_graph.n; i++){
+    update1[i] =0;
+  }
+  edgeArray res1 = edgeArray(res, count, big_graph.n);
+  edgeArray res2 = edgeArray(res, count, big_graph.n);
+  edgeDeletionData del_tmp = edgeDeletionData(big_graph.n);
+  edgeDeletionData del_tmp1 = edgeDeletionData(big_graph.n);
+  del_tmp.updateWithEdgesArray(res1);
+  del_tmp1.updateWithEdgesArray(res2);
+  cout<<"we need to delet "<< del_tmp.numberOfDeletions<<" edges from small graph"<<endl;
+  cout<<"we need to delet "<< del_tmp1.numberOfDeletions<<" edges from big graph"<<endl;
+  cout<<"before delete small graph has "<<small_graph.m<< " edges"<<endl;  
+  cout<<"before delete big graph has "<<big_graph.m<< " edges"<<endl; 
+  small_graph.del_edges(del_tmp, update, false);
+  big_graph.del_edges(del_tmp1, update1, false);
+  cout<<"after delete small graph has "<<small_graph.m<< " edges"<<endl;  
+  cout<<"after delete big graph has "<<big_graph.m<< " edges"<<endl;
+}
 // ======================================================================
 // VertexValue INITIALIZATION
 // ======================================================================
@@ -154,6 +221,77 @@ public:
   DependencyData<VertexValueType> *dependency_data;
   DependencyData<VertexValueType> *dependency_data_old;
   
+  // DependencyData<VertexValueType> **all_level_dependency;
+  struct GraphDependencyData{
+  DependencyData<VertexValueType> *_dependency_data;
+  uintV size;
+  GraphDependencyData(): size(0){_dependency_data = nullptr;}
+  GraphDependencyData(uintV _size):
+    size(_size){
+    _dependency_data = newA(DependencyData<VertexValueType>, _size);
+  }
+  void init(uintV _size){
+    size = _size;
+    _dependency_data = newA(DependencyData<VertexValueType>, _size);
+  }
+  void del(){
+    // cout<<"single dependency delete"<<endl;
+    deleteA(_dependency_data);
+  }
+
+  };
+
+  GraphDependencyData graph_single;
+
+
+  struct TreeDependency{
+    int SnapshotNumber;
+    GraphDependencyData **TreeDependencyData;
+    TreeDependency():SnapshotNumber(0){TreeDependencyData=nullptr;}
+
+    void init(uintV verticesNumber, int snapshots){
+      SnapshotNumber = snapshots;
+      TreeDependencyData = newA(GraphDependencyData*, SnapshotNumber);
+      for (int i = 0; i < SnapshotNumber; i++)
+      {
+        TreeDependencyData[i] = newA(GraphDependencyData, i+1);
+      }
+
+      for(size_t k = 0; k < SnapshotNumber; k++){
+        for(size_t j = 0; j < k+1; j++){
+          TreeDependencyData[k][j].init(verticesNumber);
+        }
+      }
+    }
+    
+    void del(){
+      // TreeDependencyData = newA(GraphDependencyData*, SnapshotNumber);
+
+      for(size_t i = 0; i < SnapshotNumber; i++){
+        for(size_t j = 0; j < i+1; j++){
+          // TreeDependencyData[i][j].init(verticesNumber);
+          cout<<"in level "<<i<<" and index "<<j<<" we have deleted"<<endl;          
+          TreeDependencyData[i][j].del();
+
+        }
+      }
+    }      
+    
+    void tree_test(){
+      for(size_t i = 0; i < SnapshotNumber; i++){
+        for(size_t j = 0; j < i+1; j++){
+          // TreeDependencyData[i][j].init(verticesNumber);
+          // TreeDependencyData[i][j].del();
+          cout<<"in level "<<i<<" and index "<<j<<" we have dependency with "<<
+          TreeDependencyData[i][j].size<<" locations"<<endl;
+        }
+      }
+    }
+    };
+  
+  TreeDependency TreeVertexDependency;
+
+
 
   // TODO : Replace with more efficient vertexSubset using bitmaps
   bool *frontier;
@@ -162,8 +300,11 @@ public:
 
   // graph<vertex> *multi;
   // graph<vertex>** snapshot;
-  // edgeArray** tree_leaf;
-
+  edgeArray* insertion_list;
+  edgeArray* deletion_list;
+  int level;
+  edgeArray** insert_tree;
+  edgeArray** delet_tree;
   BitsetScheduler active_vertices_bitset;
 
   // Stream Ingestor
@@ -179,34 +320,38 @@ public:
     n = my_graph.n;
     n_old = 0;
     // multi = multi_graph<vertex>(ingestor.numberOfSnapshots, my_graph.n);
-
+    level = ingestor.numberOfSnapshots-2;
     
 
   }
 
   void init() {
-    createDependencyData();
-    createTemporaryStructures();
-    createVertexSubsets();
-    initVertexSubsets();
-    initTemporaryStructures();
-    initDependencyData();
+    // createDependencyData();
+    // createTemporaryStructures();
+    // createVertexSubsets();
+    // initVertexSubsets();
+    // initTemporaryStructures();
+    // initDependencyData();
     // initial_all_snapshot();
-    // initial_edgearray();
-
+    // graph_single.init(my_graph.n);
+    // vertices_dependency_construction();
+    TreeVertexDependency.init(my_graph.n ,ingestor.numberOfSnapshots);
+    initial_edgearray();
+    // Tree.tree_test();
     // edgeArray        
 
   }
 
   ~GoldenTreeEngine() {
-    freeDependencyData();
-    freeTemporaryStructures();
-    freeVertexSubsets();
+    // freeDependencyData();
+    // freeTemporaryStructures();
+    // freeVertexSubsets();
+    // graph_single.del();
+    // de_vertices_dependency_construction();
     global_info.cleanup();
     // free_snapshot();
-    // free_edge_array();
-
-
+    free_edge_array();
+    TreTreeVertexDependencye.del();
   }
 
   // ======================================================================
@@ -272,15 +417,96 @@ public:
       changed[j] = 0;
     }
   }
-  // void initial_edgearray(){
-  //   tree_leaf = new edgeArray*[ingestor.numberOfSnapshots];
-  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-  //   {
-  //     tree_leaf[i] =  new edgeArray();
-  //   }
+  
+
+
+  void all_level_construct(){
+    insert_tree = newA(edgeArray*, level+1);
+    delet_tree = newA(edgeArray*, level+1);
+    for (size_t i = 0; i < level+1; i++)
+    {
+      delet_tree[i] = newA(edgeArray, i+1);
+      insert_tree[i] = newA(edgeArray, i+1);
+    }
+    parallel_for (size_t i = 0; i < level+1; i++)
+    {
+      insert_tree[level][i] = insertion_list[i];
+      delet_tree[level][i] = deletion_list[i];
+
+    }
+    int count = level-1;
+    while (count>=0)
+    {
+      parallel_for (size_t i = 0; i < count+1; i++)
+      {
+        insert_tree[count][i] = insert_tree[count+1][i];
+        delet_tree[count][i] = delet_tree[count+1][i+1];
+        
+      }
+      count--;
+    }
+
     
-  //   cout<<"edgeArray construct done"<<endl;
+    
+    
+  } 
+
+  void all_level_deconstruct(){
+    for (size_t i = 0; i < level; i++)
+    {
+      for (size_t j = 0; j < i+1; j++)
+      {
+        insert_tree[i][j].del();
+        delet_tree[i][j].del();
+      }
+      
+    }
+    
+  }
+
+  // void newLevelConstruction(edgeArray** insertion, edgeArray** deletion, int level,
+  // edgeArray** new_level){
+  //   for (int i = 0; i < 2*(level-1); i=i+2)
+  //   {
+  //     new_level[i] = insertion[(i/2)];
+  //     new_level[i+1] = deletion[(i/2)+1];
+  //   }
   // }
+
+  void count_for_test(){
+    for (size_t i = 0; i < ingestor.numberOfSnapshots-1; i++)
+    {
+      cout<<"from snapshot "<<i<<" to "<<"snapshot "<<i+1<<" we delete "<<deletion_list[i].size<<" edges"<<endl;
+      cout<<"from snapshot "<<i<<" to "<<"snapshot "<<i+1<<" we insert "<<insertion_list[i].size<<" edges"<<endl;
+
+    }
+    
+  }
+
+  void initial_edgearray(){
+    // insertion_list = new edgeArray*[ingestor.numberOfSnapshots-1];
+    // deletion_list = new edgeArray*[ingestor.numberOfSnapshots-1];
+    insertion_list = newA(edgeArray, ingestor.numberOfSnapshots-1);
+    deletion_list = newA(edgeArray, ingestor.numberOfSnapshots-1);
+    parallel_for (size_t i = 0; i < ingestor.numberOfSnapshots-1; i++)
+    {
+      // insertion_list[i] =  new edgeArray();
+      insertion_list[i] = my_graph.random_bacth_insert(5*(i+1));
+      // deletion_list[i] = new edgeArray();
+      // deletion_list[i] = new edgeArray();
+      deletion_list[i] =  my_graph.random_bacth_sample(i+1);
+    }
+    
+    cout<<"edgeArray construct done"<<endl;
+    // for (size_t i = 0; i < ingestor.numberOfSnapshots-1; i++)
+    // {
+      
+    // }
+    
+    // my_graph.random_bacth_sample
+
+  }
+  // void random_sample
   // void initial_all_snapshot(){
   //   snapshot = new graph<vertex>*[ingestor.numberOfSnapshots];
   //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
@@ -307,13 +533,14 @@ public:
   //   }
   //   cout<<"snapshots deletion complete"<<endl;    
   // }
-  // void free_edge_array(){
-  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-  //   {
-  //     tree_leaf[i]->del();
-  //   }
-  //   cout<<"tree delete done"<<endl;
-  // }
+  void free_edge_array(){
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      insertion_list[i].del();
+      deletion_list[i].del();
+    }
+    cout<<"tree delete done"<<endl;
+  }
   void processVertexAddition(long maxVertex) {
     n_old = n;
     n = maxVertex + 1;
@@ -473,7 +700,7 @@ public:
         }
       }
     }
-    cout << "iterations: " << iterations << endl;
+    // cout << "iterations: " << iterations << endl;
 
 
   }
@@ -699,7 +926,7 @@ public:
     full_timer.start();
 
     // Handle newly added vertices
-    n_old = n;
+    // n_old = n;
     if (edge_additions.maxVertex >= n) {
       processVertexAddition(edge_additions.maxVertex);
     }
@@ -712,7 +939,7 @@ public:
       all_affected_vertices[v] = 0;
       changed[v] = 0;
       // Make a copy of the old dependency data
-      dependency_data_old[v] = dependency_data[v];
+      // dependency_data_old[v] = dependency_data[v];
     }
     // ======================================================================
     // PHASE 1 - Update global_info
@@ -758,17 +985,26 @@ public:
     // cout<<dependency_data[0]<<endl;
     tmp.del();
     cout << "Finished batch : " << full_timer.stop() << "\n";
-    printOutput();    
+    // printOutput();    
 
   }
 
-  // void sample_edges(uintE edges_for_sample){
+  void path_delta_computation(
+    int current_level,
+    int current_index,
+    int compute_hop,
+    std::vector<bool> path
+  ){
+    // step0: reset vertices bitset, frontier, all_affected_vertices
+    // copy global information
 
-  // }
+    // step1: based on current level and index, generating edgelists as part of the graph
+    
+    // step2: parallel generating the affected information for destination
 
-  // void test(){
+    // step3: doing traditional processing
+  }
 
-  // }
 };
 
 #endif

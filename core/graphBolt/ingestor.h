@@ -92,7 +92,7 @@ public:
       : my_graph(_my_graph), config(_config), n(_my_graph.n),
         deletions_data(_my_graph.n), current_batch(0)
   {
-    // numberOfSnapshots = config.getOptionLongValue("-Snapshots", 0);
+    numberOfSnapshots = config.getOptionLongValue("-Snapshots", 0);
     // typeOfTree = config.getOptionValue("-tree");
     // portionOfModification = config.getOptionFloatValue("-change", 0);
 
@@ -114,8 +114,12 @@ public:
 
     // cout<<  "Type of Tree is "  <<typeOfTree<<endl;
     // cout<<  "portion of change is "  <<portionOfModification<<endl;
-    // cout<< "number of snapshot is "<< numberOfSnapshots<<endl;
-
+    cout<< "number of snapshot is "<< numberOfSnapshots<<endl;
+    if (numberOfSnapshots <= 0)
+    {
+      cout<<"number of snapshots is not valid"<<endl;
+    }
+    
     // is_symmetric = config.getOptionValue("-s");
     // stream_path = config.getOptionValue("-streamPath");
     // simple_flag = config.getOptionValue("-simple");
@@ -777,30 +781,33 @@ graph <vertex> New_Graph_Initial(uintV maxVertices){
       // tmp_graph.addVertices(maxVertices);
       for (uintV i = 0; i < maxVertices; i++) updated_vertices[i] = 0;      
       // tmp_graph.addEdges(edge_additions, updated_vertices);
-      cout<<tmp_graph.m<<endl;
+      // cout<<tmp_graph.m<<endl;
       return tmp_graph;      
 }
-// template <class vertex> struct multi_graph{
-//   uintV number_of_vertices = 1;
-//   long numberOfSnapshots = 10;
-//   graph <vertex> *snapshots;
 
-//   multi_graph(long _numberOfSnapshots, uintV _number_of_vertices)
-//     : numberOfSnapshots(_numberOfSnapshots), number_of_vertices(_number_of_vertices)
+template<class vertex>
+graph <vertex> random_insert_graph(uintE number, graph<vertex> &graph_example){
+  edgeArray res = graph_example.random_bacth_insert(number);
+  graph <vertex> tmp_graph= graph_From_edges(res, graph_example);
+  res.del();
+  return tmp_graph;
+}
+template<class vertex>
+graph <vertex> random_sample_graph(uintE number, graph<vertex> &graph_example){
+  edgeArray res = graph_example.random_bacth_sample(number);
+  graph <vertex> tmp_graph= graph_From_edges(res, graph_example);
+  res.del();
+  return tmp_graph;
+}
+
+// template <class vertex>
+// graph <vertex> overlapping(graph<vertex> &graph1, graph<vertex> &graph2){
+//   graph <vertex> tmp_graph = New_Graph_Initial(graph1.n);
+//   if (graph1.m > graph2.m)
 //   {
-//     for (size_t i = 0; i < numberOfSnapshots; i++)
-//     {
-//       snapshots[i] = New_Graph_Initial(number_of_vertices);
-//     }
-    
+//     tmp_graph = none_order_overlapping(graph1, graph2);
 //   }
-//   void del(){
-//     for (size_t i = 0; i < numberOfSnapshots; i++)
-//     {
-//       snapshots[i].del();
-//     }
-    
-//   }
-
-// };
+//   else {tmp_graph = none_order_overlapping(graph2, graph1);}
+//   return tmp_graph;
+// }
 #endif

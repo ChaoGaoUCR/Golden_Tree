@@ -119,5 +119,6 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   KickStarterEngine<vertex, uint16_t, BfsInfo> engine(G, global_info, config);
   engine.init();
   cout << "Finished initializing engine\n";
-  engine.run();
+  // engine.run();
+  engine.test_run();
 }
