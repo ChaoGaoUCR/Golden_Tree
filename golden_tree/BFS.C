@@ -124,13 +124,32 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   engine.init();
   cout << "Finished initializing engine\n";
 
-  cout<<"test for engine begins"<<endl;
-  cout<<"total edges in original graph "<<engine.my_graph.m<<endl;
+  // cout<<"test for engine begins"<<endl;
+  // cout<<"total edges in original graph "<<engine.my_graph.m<<endl;
+  // cout<<"now there are "<<engine.my_graph.whole_level<<" edgearrays in the system"<<endl;
+  // engine.my_graph.first_edge_array_generate(10);
+  // engine.my_graph.push_one_edge_array(20);
+  // cout<<"now there are "<<engine.my_graph.whole_level<<" edgearrays in the system"<<endl;
+  // for (size_t i = 0; i < engine.my_graph.whole_level; i++)
+  // {
+  //   cout<<engine.my_graph.insertion_array[i].size<<endl;
+  // }
+  // int path = 10;
+  // for (size_t i = 0; i < path; i++)
+  // {
+  //   engine.mutation_free_one_edge_list_incremental_computation(i*10);
+  // }
+  
 
-  engine.count_for_test();
-  engine.all_level_construct();
-  engine.all_level_deconstruct();
 
+  // engine.count_for_test();
+  // engine.all_level_construct();
+  // engine.all_level_deconstruct();
+  engine.initialCompute();
+  cout<<"finish initial compute"<<endl;
+  uintE insert_number = 70000;
+  engine.mutation_free_one_edge_list_generation(insert_number);
+  engine.mutation_free_one_edge_list_computation();
   
 
 }

@@ -1188,12 +1188,56 @@ template <class vertex> struct graph {
   uintE *flags;
   // AdjacencyRep *D
   Deletable *D;
+  int whole_level;
+  int current_level;
+  edgeArray *insertion_array;
 
+  graph(){
+    V = nullptr;
+    n = 0;
+    m = 0;
+    transposed = false;
+    symmetric = false;
+    flags = nullptr;
+    D = nullptr;
+    whole_level = 0;
+    current_level = 0;
+    insertion_array=0;
+  }
   graph(vertex *_V, uintV _n, uintE _m, Deletable *_D)
-      : V(_V), n(_n), m(_m), D(_D), flags(NULL), transposed(0), symmetric(0) {}
+      : V(_V), n(_n), m(_m), D(_D), flags(NULL), transposed(0), symmetric(0), whole_level(0), current_level(0) 
+      {
+        insertion_array = newA(edgeArray, whole_level);
+      }
 
   graph(vertex *_V, uintV _n, uintE _m, Deletable *_D, uintE *_flags)
-      : V(_V), n(_n), m(_m), D(_D), flags(_flags), transposed(0), symmetric(0) {
+      : V(_V), n(_n), m(_m), D(_D), flags(_flags), transposed(0), symmetric(0), whole_level(0), current_level(0) {
+        // insertion_array = nullptr;
+        insertion_array = newA(edgeArray, whole_level);
+  }
+
+  void first_edge_array_generate (uintE number_of_random_generation){
+    whole_level = 1;
+    insertion_array = renewA(edgeArray, insertion_array,whole_level);
+    for (size_t i = 0; i < whole_level; i++)
+    {
+      insertion_array[i] = random_bacth_insert(number_of_random_generation);
+    }
+    
+  }
+  void push_one_edge_array(uintE number_of_random_generation){
+    whole_level++;
+    insertion_array = renewA(edgeArray, insertion_array,whole_level);
+    insertion_array[whole_level-1] = random_bacth_insert(number_of_random_generation);
+    
+  }
+  void clear_edgeArray(){
+    // insertion_array = nullptr;
+    for (size_t i = 0; i < whole_level; i++)
+    {
+      insertion_array[i].del();
+    }
+    
   }
 
   void del() {
@@ -1213,7 +1257,7 @@ template <class vertex> struct graph {
 
   void addVertices(uintV maxVertex) {
     if (n <= maxVertex+1) {
-      cout << "max vertex: " << maxVertex << endl;
+      // cout << "max vertex: " << maxVertex << endl;
       V = (vertex *)D->updateVertices(maxVertex);
       n = maxVertex + 1;
     }
@@ -1322,7 +1366,8 @@ edgeArray random_bacth_insert(uintV insert_number){
   // cout<<"initial a new edgearray"<<endl;
     // edgeArray res;
     // long max = n;
-    srand(time(NULL));
+    // srand(time(NULL));
+    srand(876876876);
     edge *random_insert_edges = newA(edge, insert_number);
     parallel_for(uintE i =0; i<insert_number; i++){
       random_insert_edges[i].source = 0+ (rand() % n);
@@ -1347,7 +1392,7 @@ edgeArray random_bacth_sample(uintV sample_number){
     // long max = n;
     // std::unordered_set<edge> s1;
     // cout<<"sample number is "<<sample_number<<endl;
-    srand(time(NULL));
+    srand(123456789);
     edge *random_sample_edges = newA(edge, sample_number);
     set<pairs> check;
     for(uintE i =0; i<sample_number; i++){
@@ -1377,7 +1422,7 @@ edgeArray random_bacth_sample(uintV sample_number){
     }
       check.insert(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination));
     }
-    cout<<"we put "<<check.size()<<" to the sample set"<<endl;
+    // cout<<"we put "<<check.size()<<" to the sample set"<<endl;
     edgeArray res = edgeArray(random_sample_edges, check.size(), n);
     check.clear();
 

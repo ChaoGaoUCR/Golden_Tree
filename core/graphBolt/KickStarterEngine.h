@@ -296,51 +296,115 @@ public:
     cout << "\n";
     current_batch++;
   }
-
-  void test_run() {
-    initialCompute();
+  void run_two_batch(){
     timer full_time;
-    // for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-    // {
-    //   // uintE original = my_graph.m;
-      
-    //   parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
-    //   // uintV number = my_graph.m*0.05;
-    //   uintV number = 5000000;
-    //   ingestor.edge_additions = my_graph.random_bacth_insert(number);
-    //   ingestor.edge_deletions = my_graph.random_bacth_sample(0);
-    //   ingestor.deletions_data.updateWithEdgesArray(ingestor.edge_deletions);
-    //   full_time.start();
-    //   my_graph.add_edgess(ingestor.edge_additions, ingestor.updated_vertices);
-    //   cout << "Finished edges addition : " << full_time.stop() << "\n";
-    //   full_time.start();
-    //   my_graph.del_edges(ingestor.deletions_data , ingestor.updated_vertices, false);
-    //   cout << "Finished edges deletion : " << full_time.stop() << "\n";
-    //   cout<<"number of edges we insert are "<<ingestor.edge_additions.size<<endl;
-    //   deltaCompute(ingestor.edge_additions, ingestor.edge_deletions);
-    //   // cout<<"batch number "<<i<<" edges left in the graph are "<<ingestor.edge_additions.size<<endl;
-    // }
+
     parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
 
-    uintV number = 1000000;
-    edgeArray h = my_graph.random_bacth_sample(number);
-    edgeArray g = my_graph.random_bacth_sample(number);
-    edgeArray a = my_graph.random_bacth_sample(number);
+    uintV number = 700000;
+
+  }
+
+  void parallel_test(){
+    initialCompute();
+    timer full_time;
+
+    parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+
+    uintV number = 50000;
+    edgeArray h = my_graph.random_bacth_insert(number);
+    edgeArray g = my_graph.random_bacth_insert(number);
+    edgeArray a = my_graph.random_bacth_insert(number);
     full_time.start();
     my_graph.add_edgess(h, ingestor.updated_vertices);
     cout << "Finished edges addition : " << full_time.stop() << "\n";
     cout<<"---------compute h batch now--------------"<<endl;
+    full_time.start();
     deltaCompute(h, ingestor.edge_deletions);
+    cout<<"h computation is done with "<<full_time.stop()<<" time"<<endl;
     parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
     full_time.start();
     my_graph.add_edgess(g, ingestor.updated_vertices);
     cout << "Finished edges addition : " << full_time.stop() << "\n";
     cout<<"---------compute g batch now--------------"<<endl;
-    deltaCompute(g, ingestor.edge_deletions);
+    full_time.start();
+    // ingestor.edge_additions = g;
+    deltaCompute(ingestor.edge_additions, ingestor.edge_deletions);
+    cout<<"g computation is done with "<<full_time.stop()<<" time"<<endl;
+
     parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
     // edgeDeletionData _g;
-    ingestor.deletions_data.updateWithEdgesArray(g);
+    cout<<"g size "<<g.size<<endl;
+    ingestor.edge_deletions_temp = g;
+
+    ingestor.deletions_data.updateWithEdgesArray(ingestor.edge_deletions_temp);
+
+    cout<<"delete data prepared"<<endl;
     my_graph.del_edges(ingestor.deletions_data, ingestor.updated_vertices, false);
+    cout<<"deletion finished"<<endl;
+    ingestor.edge_additions = my_graph.random_bacth_insert(0);
+    deltaCompute(ingestor.edge_additions, ingestor.edge_deletions);
+    parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+    full_time.start();
+    my_graph.add_edgess(a, ingestor.updated_vertices);
+    cout<<"---------compute a batch now--------------"<<endl;
+    edgeArray blank = my_graph.random_bacth_sample(0);
+    full_time.start();
+    deltaCompute(a, blank);
+    cout<<"a computation is done with "<<full_time.stop()<<" time"<<endl;
+
+
+  }
+
+  void test_run() {
+    initialCompute();
+    timer full_time;
+    for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+    {
+      // uintE original = my_graph.m;
+      
+      parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+      uintV number = 175000+i;
+      // uintV number = my_graph.m*0.1;
+      // uintV number = my_graph.m*0.0025;
+      // number = number*10;
+      // number = 7000000;
+      cout<<"the number here is "<<number<<endl;
+      ingestor.edge_additions = my_graph.random_bacth_insert(number);
+      ingestor.edge_deletions = my_graph.random_bacth_sample(0);
+      ingestor.deletions_data.updateWithEdgesArray(ingestor.edge_deletions);
+      // full_time.start();
+      // my_graph.add_edgess(ingestor.edge_additions, ingestor.updated_vertices);
+      // cout << "Finished edges addition : " << full_time.stop() << "\n";
+      // full_time.start();
+      // my_graph.del_edges(ingestor.deletions_data , ingestor.updated_vertices, false);
+      // cout << "Finished edges deletion : " << full_time.stop() << "\n";
+      cout<<"number of edges we insert are "<<ingestor.edge_additions.size<<endl;
+      deltaCompute(ingestor.edge_additions, ingestor.edge_deletions);
+      // cout<<"batch number "<<i<<" edges left in the graph are "<<ingestor.edge_additions.size<<endl;
+    }
+
+    // parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+
+    // uintV number = 1000000;
+    // edgeArray h = my_graph.random_bacth_sample(number);
+    // edgeArray g = my_graph.random_bacth_sample(number);
+    // edgeArray a = my_graph.random_bacth_sample(number);
+    // full_time.start();
+    // my_graph.add_edgess(h, ingestor.updated_vertices);
+    // cout << "Finished edges addition : " << full_time.stop() << "\n";
+    // cout<<"---------compute h batch now--------------"<<endl;
+    // deltaCompute(h, ingestor.edge_deletions);
+    // parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+    // full_time.start();
+    // my_graph.add_edgess(g, ingestor.updated_vertices);
+    // cout << "Finished edges addition : " << full_time.stop() << "\n";
+    // cout<<"---------compute g batch now--------------"<<endl;
+    // deltaCompute(g, ingestor.edge_deletions);
+    // parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
+    // // edgeDeletionData _g;
+    // ingestor.deletions_data.updateWithEdgesArray(g);
+    // my_graph.del_edges(ingestor.deletions_data, ingestor.updated_vertices, false);
     // deltaCompute(ingestor.edge_additions, g);
     // parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
     // full_time.start();
@@ -412,9 +476,16 @@ public:
     // cout<<"--------------------------"<<endl;
     // cout<<"print schedule status  "<<active_vertices_bitset.anyScheduledTasks()<<endl;
     // cout<<"--------------------------"<<endl;
+    timer incre_timer;
     long iterations = 0;
+    // cout<<"in iteration "<<iterations<<" we have "<<active_vertices_bitset.numTasks()<<" tasks"<<endl;   
+    incre_timer.start();
+
     while (active_vertices_bitset.anyScheduledTasks()) {
       iterations++;
+      // uintV tmp = active_vertices_bitset.numTasks();
+      // cout<<"in iteration "<<iterations<<" we have "<<active_vertices_bitset.numTasks()<<" tasks"<<endl;     
+      // incre_timer.start(); 
       active_vertices_bitset.newIteration();
       parallel_for(uintV u = 0; u < n; u++) {
         if (active_vertices_bitset.isScheduled(u)) {
@@ -435,13 +506,19 @@ public:
           });
         }
       }
+    // cout << "iterations: " << iterations <<" takes " << incre_timer.stop() <<" to finish"<<endl;
+    // cout<<"Average execution time for tasks are "<<
+
     }
-    // cout << "iterations: " << iterations << endl;
+    cout<<"incremental time is "<<incre_timer.stop()<<endl;
+    cout<<"*****************"<<endl;
+
   }
 
   void deltaCompute(edgeArray &edge_additions, edgeArray &edge_deletions) {
     timer iteration_timer, phase_timer, full_timer;
     double misc_time, copy_time, phase_time, iteration_time;
+    timer whole_timer;
     full_timer.start();
 
     // Handle newly added vertices
@@ -589,10 +666,13 @@ public:
       }
     }
     cout << "Finished deletion batch computation: " << full_timer.stop() << "\n";
+
+
     // ======================================================================
     // PHASE 4 - Process additions
     // ======================================================================
     full_timer.start();
+    whole_timer.start();
     parallel_for(long i = 0; i < edge_additions.size; i++) {
       uintV source = edge_additions.E[i].source;
       uintV destination = edge_additions.E[i].destination;
@@ -607,22 +687,36 @@ public:
         all_affected_vertices[destination] = true;
       }
     }
+  cout<<"****************************************************"<<endl;  
+  cout<<"vertices activated time is "<<full_timer.stop()<<endl;
+  
+    uintV test = 0;
+    parallel_for(uintV v = 0; v < n; v++) {
+      if (all_affected_vertices[v] == 1) {
+        pbbs::fetch_and_add(&test, 1);
+      }
+    } 
+  cout<<"number of affected nodes are "<<test<<endl;
 
     // ======================================================================
     // PHASE 5 - Traditional processing
     // ======================================================================
     // For all affected vertices, start traditional processing
     active_vertices_bitset.reset();
+    full_timer.start();
     parallel_for(uintV v = 0; v < n; v++) {
       if (all_affected_vertices[v] == 1) {
         active_vertices_bitset.schedule(v);
       }
     }
+    // cout<<"****************************************************"<<endl;  
+    cout<<"bitset set time "<<full_timer.stop()<<endl;
     // cout << "size: " << active_vertices_bitset.numTasks() << endl;
+    // cout<<"+++++++++++++++++++++++++++++++++++++++++++"<<endl;
     traditionalIncrementalComputation();
 
-    cout << "Finished addition computation: " << full_timer.stop() << "\n";
-    printOutput();
+    // cout << "Finished addition computation: " << whole_timer.stop() << "\n";
+    // printOutput();
   }
 };
 

@@ -218,6 +218,8 @@ public:
     return os;
   }
 
+  // edgeArray *path;
+
   DependencyData<VertexValueType> *dependency_data;
   DependencyData<VertexValueType> *dependency_data_old;
   
@@ -311,6 +313,8 @@ public:
   Ingestor<vertex> ingestor;
   int current_batch;
 
+  graph <vertex> *path;
+
   GoldenTreeEngine(graph<vertex> &_my_graph, GlobalInfoType &_global_info,
                     commandLine _config)
       : my_graph(_my_graph), global_info(_global_info), global_info_old(),
@@ -326,32 +330,34 @@ public:
   }
 
   void init() {
-    // createDependencyData();
-    // createTemporaryStructures();
-    // createVertexSubsets();
-    // initVertexSubsets();
-    // initTemporaryStructures();
-    // initDependencyData();
+    createDependencyData();
+    createTemporaryStructures();
+    createVertexSubsets();
+    initVertexSubsets();
+    initTemporaryStructures();
+    initDependencyData();
     // initial_all_snapshot();
     // graph_single.init(my_graph.n);
     // vertices_dependency_construction();
-    TreeVertexDependency.init(my_graph.n ,ingestor.numberOfSnapshots);
-    initial_edgearray();
+    // TreeVertexDependency.init(my_graph.n ,ingestor.numberOfSnapshots);
+    // initial_edgearray();
     // Tree.tree_test();
+    create_path_list();
     // edgeArray        
 
   }
 
   ~GoldenTreeEngine() {
-    // freeDependencyData();
-    // freeTemporaryStructures();
-    // freeVertexSubsets();
+    freeDependencyData();
+    freeTemporaryStructures();
+    freeVertexSubsets();
     // graph_single.del();
     // de_vertices_dependency_construction();
     global_info.cleanup();
     // free_snapshot();
-    free_edge_array();
-    TreTreeVertexDependencye.del();
+    // free_edge_array();
+    // TreTreeVertexDependencye.del();
+    del_path();
   }
 
   // ======================================================================
@@ -374,7 +380,21 @@ public:
           v, dependency_data[v].value, global_info);
     }
   }
-
+  void create_path_list(){
+    path = newA(graph<vertex>, my_graph.whole_level);
+    cout<<"path init"<<endl;
+  }
+  void push_one_path(edgeArray &tmp ){
+    path = renewA(graph<vertex>, path, my_graph.whole_level);
+    path[my_graph.whole_level-1] = graph_From_edges(tmp, my_graph);
+  }
+  void del_path(){
+    for (size_t i = 0; i < my_graph.whole_level; i++)
+    {
+      path[i].del();
+    }
+    
+  }
   // ======================================================================
   // TEMPORARY STRUCTURES USED BY THE ENGINE
   // ======================================================================
@@ -498,12 +518,7 @@ public:
     }
     
     cout<<"edgeArray construct done"<<endl;
-    // for (size_t i = 0; i < ingestor.numberOfSnapshots-1; i++)
-    // {
-      
-    // }
-    
-    // my_graph.random_bacth_sample
+
 
   }
   // void random_sample
@@ -533,6 +548,12 @@ public:
   //   }
   //   cout<<"snapshots deletion complete"<<endl;    
   // }
+
+  // void get_out_degree(){
+
+  // }
+
+
   void free_edge_array(){
     for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
     {
@@ -988,22 +1009,126 @@ public:
     // printOutput();    
 
   }
-
-  void path_delta_computation(
-    int current_level,
-    int current_index,
-    int compute_hop,
-    std::vector<bool> path
-  ){
-    // step0: reset vertices bitset, frontier, all_affected_vertices
-    // copy global information
-
-    // step1: based on current level and index, generating edgelists as part of the graph
-    
-    // step2: parallel generating the affected information for destination
-
-    // step3: doing traditional processing
+  void mutation_free_one_edge_list_generation(uintE number_of_insertion){
+    my_graph.push_one_edge_array(number_of_insertion);
+    edgeArray tmp_insert = my_graph.insertion_array[my_graph.whole_level-1];
+    push_one_path(tmp_insert);
+    cout<<"we push "<<path[my_graph.whole_level-1].m<<" to engine"<<endl;
+    tmp_insert.del();
   }
+  void mutation_free_one_edge_list_push(edgeArray &tmp_array){
+    // my_graph.push_one_edge_array(number_of_insertion);
+    // edgeArray tmp_insert = my_graph.insertion_array[my_graph.whole_level-1];
+    push_one_path(tmp_array);
+    cout<<"we push "<<path[my_graph.whole_level-1].m<<" to engine"<<endl;
+    tmp_insert.del();
+  }  
+  void getAlloutput(uintV vertex){
+    for (size_t i = 0; i < my_graph.whole_level; i++)
+    {
+      cout<<path[i].V[vertex].getOutDegree()<<endl;
+    }
+    
+  }
+  void untraditionalIncrementalComputation(){
+    timer incre_timer;
+    // long iterations = 0;
+    // cout<<"in iteration "<<iterations<<" we have "<<active_vertices_bitset.numTasks()<<" tasks"<<endl;   
+    // incre_timer.start();
+    // cout<<"*****************"<<endl;
+    // incre_timer.start();
+    while (active_vertices_bitset.anyScheduledTasks()) {
+      // uintV tmp = active_vertices_bitset.numTasks();
+      // cout<<"in iteration "<<iterations<<" we have "<<active_vertices_bitset.numTasks()<<" tasks"<<endl;     
+      active_vertices_bitset.newIteration();
+      // incre_timer.start(); 
+      parallel_for(uintV u = 0; u < n; u++) {
+        if (active_vertices_bitset.isScheduled(u)) {
+
+          // process all its outNghs
+          intE outDegree = my_graph.V[u].getOutDegree();
+          granular_for(i, 0, outDegree, (outDegree > 1024), {
+            uintV v = my_graph.V[u].getOutNeighbor(i);
+#ifdef EDGEDATA
+            EdgeData *edge_data = my_graph.V[u].getOutEdgeData(i);
+#else
+            EdgeData *edge_data = &emptyEdgeData;
+#endif
+            bool ret = reduce(u, v, *edge_data, dependency_data[u], dependency_data[v],
+                              global_info);
+            if (ret) {
+              active_vertices_bitset.schedule(v);
+            }
+          });
+
+
+
+        }
+      }
+    }
+  }
+  
+  void mutation_free_one_edge_list_computation(edgeArray &edge_add){
+    timer full_time;
+    // Handle newly added vertices
+    n_old = n;
+    if (edge_add.maxVertex >= n) {
+      processVertexAddition(edge_add.maxVertex);
+    }    
+  
+    // Reset values before incremental computation
+    // active_vertices_bitset.reset();
+    parallel_for(uintV v = 0; v < n; v++) {
+      frontier[v] = 0;
+      all_affected_vertices[v] = 0;
+    }
+    // ======================================================================
+    // PHASE 1 - Process additions
+    // ======================================================================
+    cout<<"the batch we are processing contains "<<edge_add.size<<" number of edges"<<endl;
+    full_time.start();
+    parallel_for(long i = 0; i < edge_add.size ; i++) {
+      uintV source = edge_add.E[i].source;
+      uintV destination = edge_add.E[i].destination;
+#ifdef EDGEDATA
+      EdgeData *edge_data = edge_add.E[i].edgeData;
+#else 
+      EdgeData *edge_data = &emptyEdgeData;
+#endif
+      bool ret = reduce(source, destination, *edge_data, dependency_data[source],
+                        dependency_data[destination], global_info);
+      // cout<<ret<<endl;
+      if (ret) {
+        all_affected_vertices[destination] = true;
+      }
+    }
+    cout<<"vertex activate time "<<full_time.stop()<<endl;
+
+    uintV test = 0;
+    parallel_for(uintV v = 0; v < n; v++) {
+      if (all_affected_vertices[v] == 1) {
+        pbbs::fetch_and_add(&test, 1);
+      }
+    }    
+  cout<<"number of affected nodes are "<<test<<endl;
+
+    // ======================================================================
+    // PHASE 2 - Traditional processing
+    // ======================================================================
+    // For all affected vertices, start traditional processing
+    full_time.start();
+    active_vertices_bitset.reset();
+    parallel_for(uintV v = 0; v < n; v++) {
+      if (all_affected_vertices[v] == 1) {
+        active_vertices_bitset.schedule(v);
+      }
+    }
+    cout<<"bitscheduler set time "<<full_time.stop()<<endl;
+    full_time.start();
+    untraditionalIncrementalComputation();
+    cout<<"incremental computation time "<<full_time.stop()<<endl;
+  }
+
 
 };
 

@@ -134,6 +134,14 @@ void printAdditionalData(ofstream &output_file, const uintV &v,
 // COMPUTE FUNCTION
 // ======================================================================
 template <class vertex> void compute(graph<vertex> &G, commandLine config) {
+  // srand(10);
+  // for (size_t i = 0; i < 10; i++)
+  // {
+  //   cout<< 0+rand()%100<<endl;
+  // }
+  
+
+
   long n = G.n;
   int source_vertex = config.getOptionLongValue("-source", 0);
   int weight_cap = config.getOptionLongValue("-weight_cap", 5);
@@ -144,5 +152,15 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   engine.init();
   cout << "Finished initializing engine\n";
   // engine.run();
-  engine.test();
+  // engine.test();
+  engine.initialCompute();
+  uintE insert_number = 175000;
+  cout<<"finish initial compute"<<endl;
+  for (size_t i = 0; i < 4; i++)
+  {
+  engine.mutation_free_one_edge_list_generation(insert_number+i);
+  engine.mutation_free_one_edge_list_computation(engine.my_graph.insertion_array[engine.my_graph.whole_level-1]);  
+  }
+  
+
 }
