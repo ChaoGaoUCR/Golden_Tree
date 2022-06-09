@@ -1429,8 +1429,55 @@ edgeArray random_bacth_sample(uintV sample_number){
   
   return res;
 }
+edgeArray random_bacth_insert_10(uintV insert_number){
+  // cout<<"initial a new edgearray"<<endl;
+    // edgeArray res;
+    // long max = n;
+    srand(time(NULL));
+    // srand(876876876);
+    edge *random_insert_edges = newA(edge, insert_number);
+    parallel_for(uintE i =0; i<insert_number; i++){
+      random_insert_edges[i].source = 0+ (rand() % 10);
+      random_insert_edges[i].destination = 0+ (rand() % n);
+    }
+    // bool *find_array = newA(bool, insert_number);
+    parallel_for(uintE i =0; i<insert_number; i++){
+      while (single_check_edge_in_graph(random_insert_edges[i]))
+      {
+      random_insert_edges[i].source = 0+ (rand() % 10);
+      random_insert_edges[i].destination = 0+ (rand() % n);        
+      }
+    }
+    edgeArray res = edgeArray(random_insert_edges, insert_number, n);
 
+  
+  return res;
+}
 
+edgeArray random_bacth_insert_seed(uintV insert_number, uintV seed){
+  // cout<<"initial a new edgearray"<<endl;
+    // edgeArray res;
+    // long max = n;
+    // srand(time(NULL));
+    srand(345345345 * seed);
+    edge *random_insert_edges = newA(edge, insert_number);
+    parallel_for(uintE i =0; i<insert_number; i++){
+      random_insert_edges[i].source = 0+ (rand() % n);
+      random_insert_edges[i].destination = 0+ (rand() % n);
+    }
+    // bool *find_array = newA(bool, insert_number);
+    parallel_for(uintE i =0; i<insert_number; i++){
+      while (single_check_edge_in_graph(random_insert_edges[i]))
+      {
+      random_insert_edges[i].source = 0+ (rand() % n);
+      random_insert_edges[i].destination = 0+ (rand() % n);        
+      }
+    }
+    edgeArray res = edgeArray(random_insert_edges, insert_number, n);
+
+  
+  return res;
+}
 
 void printEdges() {
 #ifdef EDGEDATA

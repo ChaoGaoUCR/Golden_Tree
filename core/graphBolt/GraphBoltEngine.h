@@ -536,22 +536,28 @@ public:
     }
     cout << "\n";
   }
-    void test_run() {
-
+    void test_run(uintE number) {
+    timer full;
     initialCompute();
     for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
     {
-      uintE original = my_graph.m;
       
       parallel_for(uintV i = 0; i < n; i++) ingestor.updated_vertices[i] = 0;
-      uintV number = my_graph.m*0.01;
+      // uintV number = my_graph.m*0.01;
       ingestor.edge_additions = my_graph.random_bacth_insert(number);
-      ingestor.edge_deletions = my_graph.random_bacth_sample(number);
+      ingestor.edge_deletions = my_graph.random_bacth_sample(0);
       ingestor.deletions_data.updateWithEdgesArray(ingestor.edge_deletions);
+      full.start();
       my_graph.add_edgess(ingestor.edge_additions, ingestor.updated_vertices);
+      cout<<"edge addition time is "<<full.stop()<<endl;
+      full.start();
       my_graph.del_edges(ingestor.deletions_data , ingestor.updated_vertices, false);
+      cout<<"edge deletion time is "<<full.stop()<<endl;
+      full.start();
       deltaCompute(ingestor.edge_additions, ingestor.edge_deletions);
-      // cout<<"batch number "<<i<<" edges left in the graph are "<<ingestor.edge_additions.size<<endl;
+      cout<<"delta compute time is "<<full.stop()<<endl;
+      cout<<endl;
+    freeTemporaryStructures();
     }
     // ======================================================================
     // Incremental Compute - Get the next update batch from ingestor
@@ -576,17 +582,29 @@ public:
     // ======================================================================
     // Incremental Compute - Get the next update batch from ingestor
     // ======================================================================
-    ingestor.validateAndOpenFifo();
-    while (ingestor.processNextBatch()) {
-      current_batch++;
-      edgeArray &edge_additions = ingestor.getEdgeAdditions();
-      edgeArray &edge_deletions = ingestor.getEdgeDeletions();
-      // ingestor.edge_additions and ingestor.edge_deletions have been added
-      // to the graph datastructure. Now, refine using it.
-      deltaCompute(edge_additions, edge_deletions);
-    }
+    // ingestor.validateAndOpenFifo();
+    // while (ingestor.processNextBatch()) {
+    //   current_batch++;
+    //   edgeArray &edge_additions = ingestor.getEdgeAdditions();
+    //   edgeArray &edge_deletions = ingestor.getEdgeDeletions();
+    //   // ingestor.edge_additions and ingestor.edge_deletions have been added
+    //   // to the graph datastructure. Now, refine using it.
+    //   deltaCompute(edge_additions, edge_deletions);
+    // }
     freeTemporaryStructures();
   }
+
+  // void free_test(uintE number){
+  //   initialCompute();
+  //   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+  //   {
+  //     edgeArray tmp = my_graph.random_bacth_insert(number);
+  //     parallel_for(uintV i=0; i<my_graph.n, i++){ingestor.updated_vertices[i] =0;}
+  //     my_graph.add_edgess(tmp, ingestor.updated_vertices);
+  //     deltaCompute(ingestor.edge_additions, ingestor.deletions_data);
+  //   }
+  //   freeTemporaryStructures();
+  // }
 
   void initialCompute() {
     timer full_timer, t1;
@@ -607,7 +625,7 @@ public:
 
     cout << "Initial graph processing : " << full_timer.stop() << "\n";
     cout << "Number of iterations : " << iters << "\n";
-    printOutput();
+    // printOutput();
     // testPrint();
   }
 

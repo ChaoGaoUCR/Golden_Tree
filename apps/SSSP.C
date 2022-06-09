@@ -132,6 +132,11 @@ void printAdditionalData(ofstream &output_file, const uintV &v,
 // COMPUTE FUNCTION
 // ======================================================================
 template <class vertex> void compute(graph<vertex> &G, commandLine config) {
+  //   srand(10);
+  // for (size_t i = 0; i < 10; i++)
+  // {
+  //   cout<< 0+rand()%100<<endl;
+  // }
   long n = G.n;
   int source_vertex = config.getOptionLongValue("-source", 0);
   int weight_cap = config.getOptionLongValue("-weight_cap", 5);
@@ -141,6 +146,9 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   KickStarterEngine<vertex, uint16_t, SsspInfo> engine(G, global_info, config);
   engine.init();
   cout << "Finished initializing engine\n";
-  // engine.run();
-  engine.test_run();
+  //  engine.run();
+  uintE number;
+  cin>>number;  
+ engine.test_run(number);
+  // engine.parallel_test();
 }

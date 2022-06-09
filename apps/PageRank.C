@@ -299,6 +299,6 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
       G, max_iters, global_info, false, config);
   engine.init();
   cout << "Finished initializing engine\n";
-
+  // engine.test_run(175000);
   engine.run();
 }
