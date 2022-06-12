@@ -1,0 +1,350 @@
+************  Using CILK ************
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSSP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSSP
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.396626
+
+the number here is 125000
+graph add mutation time is 2.520636 for 125000 edges
+graph del mutation time is 2.391313 for 125000 edges
+deletion time is 0.101127
+incremental computation time 0.220307
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.349588
+
+the number here is 125000
+graph add mutation time is 1.854971 for 125000 edges
+graph del mutation time is 2.375419 for 125000 edges
+deletion time is 0.101409
+incremental computation time 0.186589
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352539
+
+the number here is 125000
+graph add mutation time is 1.798733 for 125000 edges
+graph del mutation time is 2.158206 for 125000 edges
+deletion time is 0.101537
+incremental computation time 0.215206
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351647
+
+the number here is 250000
+graph add mutation time is 1.679701 for 250000 edges
+graph del mutation time is 2.519842 for 250000 edges
+deletion time is 0.102193
+incremental computation time 0.186923
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352222
+
+the number here is 250000
+graph add mutation time is 1.862819 for 250000 edges
+graph del mutation time is 2.311399 for 250000 edges
+deletion time is 0.101479
+incremental computation time 0.184106
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352154
+
+the number here is 250000
+graph add mutation time is 1.833329 for 250000 edges
+graph del mutation time is 2.514113 for 250000 edges
+deletion time is 0.103959
+incremental computation time 0.187129
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.353756
+
+the number here is 375000
+graph add mutation time is 1.837425 for 375000 edges
+graph del mutation time is 2.586677 for 375000 edges
+deletion time is 0.104283
+incremental computation time 0.185220
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351053
+
+the number here is 375000
+graph add mutation time is 1.864395 for 375000 edges
+graph del mutation time is 2.641143 for 375000 edges
+deletion time is 0.101729
+incremental computation time 0.185179
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.349742
+
+the number here is 375000
+graph add mutation time is 1.855433 for 375000 edges
+graph del mutation time is 2.686086 for 375000 edges
+deletion time is 0.101365
+incremental computation time 0.185692
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352773
+
+the number here is 500000
+graph add mutation time is 1.860602 for 500000 edges
+graph del mutation time is 2.771630 for 500000 edges
+deletion time is 0.101918
+incremental computation time 0.184355
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351047
+
+the number here is 500000
+graph add mutation time is 1.858754 for 500000 edges
+graph del mutation time is 2.779151 for 500000 edges
+deletion time is 0.102015
+incremental computation time 0.187125
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352343
+
+the number here is 500000
+graph add mutation time is 1.857653 for 500000 edges
+graph del mutation time is 2.853398 for 500000 edges
+deletion time is 0.102437
+incremental computation time 0.186404
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352027
+
+the number here is 625000
+graph add mutation time is 1.863618 for 625000 edges
+graph del mutation time is 2.881346 for 625000 edges
+deletion time is 0.102240
+incremental computation time 0.186074
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.402308
+
+the number here is 625000
+graph add mutation time is 0.994212 for 625000 edges
+graph del mutation time is 2.801301 for 625000 edges
+deletion time is 0.101849
+incremental computation time 0.211268
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.400201
+
+the number here is 625000
+graph add mutation time is 0.946637 for 625000 edges
+graph del mutation time is 2.838324 for 625000 edges
+deletion time is 0.101802
+incremental computation time 0.219099
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.350813
+
+the number here is 750000
+graph add mutation time is 1.736801 for 750000 edges
+graph del mutation time is 2.485548 for 750000 edges
+deletion time is 0.102368
+incremental computation time 0.184761
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352693
+
+the number here is 750000
+graph add mutation time is 1.857306 for 750000 edges
+graph del mutation time is 2.908553 for 750000 edges
+deletion time is 0.102548
+incremental computation time 0.185519
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351802
+
+the number here is 750000
+graph add mutation time is 1.856850 for 750000 edges
+graph del mutation time is 3.214619 for 750000 edges
+deletion time is 0.102934
+incremental computation time 0.204182
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352467
+
+the number here is 875000
+graph add mutation time is 1.706347 for 875000 edges
+graph del mutation time is 2.718012 for 875000 edges
+deletion time is 0.103167
+incremental computation time 0.186763
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352712
+
+the number here is 875000
+graph add mutation time is 1.857393 for 875000 edges
+graph del mutation time is 2.589275 for 875000 edges
+deletion time is 0.104626
+incremental computation time 0.186993
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352739
+
+the number here is 875000
+graph add mutation time is 1.856980 for 875000 edges
+graph del mutation time is 3.082617 for 875000 edges
+deletion time is 0.103350
+incremental computation time 0.187099
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.355057
+
+the number here is 1000000
+graph add mutation time is 1.862822 for 1000000 edges
+graph del mutation time is 3.301883 for 1000000 edges
+deletion time is 0.103938
+incremental computation time 0.183972
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.353758
+
+the number here is 1000000
+graph add mutation time is 1.873460 for 1000000 edges
+graph del mutation time is 3.125850 for 1000000 edges
+deletion time is 0.104143
+incremental computation time 0.188008
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.349325
+
+the number here is 1000000
+graph add mutation time is 1.862760 for 1000000 edges
+graph del mutation time is 3.312807 for 1000000 edges
+deletion time is 0.104032
+incremental computation time 0.185771
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351964
+
+the number here is 1125000
+graph add mutation time is 1.864893 for 1125000 edges
+graph del mutation time is 3.254080 for 1125000 edges
+deletion time is 0.104410
+incremental computation time 0.187102
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352011
+
+the number here is 1125000
+graph add mutation time is 1.881833 for 1125000 edges
+graph del mutation time is 3.211859 for 1125000 edges
+deletion time is 0.104732
+incremental computation time 0.186138
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351414
+
+the number here is 1125000
+graph add mutation time is 1.872085 for 1125000 edges
+graph del mutation time is 2.641408 for 1125000 edges
+deletion time is 0.104044
+incremental computation time 0.189391
+next batch
++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.389761
+
+the number here is 1250000
+graph add mutation time is 1.871545 for 1250000 edges
+graph del mutation time is 2.903836 for 1250000 edges
+deletion time is 0.104494
+incremental computation time 0.215636
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.351159
+
+the number here is 1250000
+graph add mutation time is 1.714125 for 1250000 edges
+graph del mutation time is 3.315954 for 1250000 edges
+deletion time is 0.105273
+incremental computation time 0.187826
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 0.352072
+
+the number here is 1250000
+graph add mutation time is 1.882334 for 1250000 edges
+graph del mutation time is 3.237267 for 1250000 edges
+deletion time is 0.104837
+incremental computation time 0.187457

@@ -1,0 +1,3052 @@
+************  Using CILK ************
+make: 'BFS' is up to date.
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.201533
+enter the number for basic hop: 70000
+time = 0.018279
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.323474
+enter the number for basic hop: 70000
+time = 0.015755
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.815997
+enter the number for basic hop: 70000
+time = 0.019368
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.685513
+enter the number for basic hop: 70000
+time = 0.019551
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.176554
+enter the number for basic hop: 70000
+time = 0.014266
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.605987
+enter the number for basic hop: 140000
+time = 0.022122
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.987426
+enter the number for basic hop: 140000
+time = 0.019655
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.470943
+enter the number for basic hop: 140000
+time = 0.022449
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.434032
+enter the number for basic hop: 140000
+time = 0.020017
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.520858
+enter the number for basic hop: 140000
+time = 0.019732
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.596442
+enter the number for basic hop: 210000
+time = 0.023061
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.105205
+enter the number for basic hop: 210000
+time = 0.023081
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.447354
+enter the number for basic hop: 210000
+time = 0.021216
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.347936
+enter the number for basic hop: 210000
+time = 0.028737
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.779103
+enter the number for basic hop: 210000
+time = 0.021934
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.585279
+enter the number for basic hop: 280000
+time = 0.019169
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.313487
+enter the number for basic hop: 280000
+time = 0.024227
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.301378
+enter the number for basic hop: 280000
+time = 0.028976
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.753915
+enter the number for basic hop: 280000
+time = 0.024179
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.579912
+enter the number for basic hop: 280000
+time = 0.024238
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.231803
+enter the number for basic hop: 350000
+time = 0.027338
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.882943
+enter the number for basic hop: 350000
+time = 0.031943
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.922680
+enter the number for basic hop: 350000
+time = 0.028215
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.538110
+enter the number for basic hop: 350000
+time = 0.030978
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.590794
+enter the number for basic hop: 350000
+time = 0.020330
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.135098
+enter the number for basic hop: 420000
+time = 0.025982
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.318211
+enter the number for basic hop: 420000
+time = 0.024585
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.530030
+enter the number for basic hop: 420000
+time = 0.026260
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.710127
+enter the number for basic hop: 420000
+time = 0.024959
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.289793
+enter the number for basic hop: 420000
+time = 0.027450
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.752059
+enter the number for basic hop: 490000
+time = 0.032015
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.828565
+enter the number for basic hop: 490000
+time = 0.024195
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.677370
+enter the number for basic hop: 490000
+time = 0.027019
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.988012
+enter the number for basic hop: 490000
+time = 0.030616
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.336038
+enter the number for basic hop: 490000
+time = 0.028664
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.171135
+enter the number for basic hop: 560000
+time = 0.030546
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.287095
+enter the number for basic hop: 560000
+time = 0.030932
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.258045
+enter the number for basic hop: 560000
+time = 0.030737
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.504985
+enter the number for basic hop: 560000
+time = 0.031938
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.355550
+enter the number for basic hop: 560000
+time = 0.030514
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.411035
+enter the number for basic hop: 630000
+time = 0.030372
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.264716
+enter the number for basic hop: 630000
+time = 0.034126
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.093039
+enter the number for basic hop: 630000
+time = 0.030581
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.728887
+enter the number for basic hop: 630000
+time = 0.030563
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.875165
+enter the number for basic hop: 630000
+time = 0.026979
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.936901
+enter the number for basic hop: 700000
+time = 0.031485
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.220215
+enter the number for basic hop: 700000
+time = 0.030711
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.839049
+enter the number for basic hop: 700000
+time = 0.034377
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.356237
+enter the number for basic hop: 700000
+time = 0.028562
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.685283
+enter the number for basic hop: 700000
+time = 0.031252
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.515434
+enter the number for basic hop: 770000
+time = 0.031755
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.525924
+enter the number for basic hop: 770000
+time = 0.025865
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.605543
+enter the number for basic hop: 770000
+time = 0.034910
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 6.427864
+enter the number for basic hop: 770000
+time = 0.037965
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.190189
+enter the number for basic hop: 770000
+time = 0.035768
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.938915
+enter the number for basic hop: 840000
+time = 0.030923
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.069500
+enter the number for basic hop: 840000
+time = 0.029537
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.995965
+enter the number for basic hop: 840000
+time = 0.033039
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.391351
+enter the number for basic hop: 840000
+time = 0.033082
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.343040
+enter the number for basic hop: 840000
+time = 0.035865
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.991899
+enter the number for basic hop: 910000
+time = 0.037375
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.600778
+enter the number for basic hop: 910000
+time = 0.035746
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.353053
+enter the number for basic hop: 910000
+time = 0.034398
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.212570
+enter the number for basic hop: 910000
+time = 0.033682
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.942288
+enter the number for basic hop: 910000
+time = 0.033728
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.697001
+enter the number for basic hop: 980000
+time = 0.033651
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.514893
+enter the number for basic hop: 980000
+time = 0.043605
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.362765
+enter the number for basic hop: 980000
+time = 0.038720
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.797419
+enter the number for basic hop: 980000
+time = 0.038741
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.244510
+enter the number for basic hop: 980000
+time = 0.043353
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.944676
+enter the number for basic hop: 1050000
+time = 0.037210
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.779953
+enter the number for basic hop: 1050000
+time = 0.030924
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.413470
+enter the number for basic hop: 1050000
+time = 0.032603
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.768492
+enter the number for basic hop: 1050000
+time = 0.038178
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.659214
+enter the number for basic hop: 1050000
+time = 0.042202
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.181029
+enter the number for basic hop: 1120000
+time = 0.030597
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.106462
+enter the number for basic hop: 1120000
+time = 0.040750
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.960550
+enter the number for basic hop: 1120000
+time = 0.033613
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.987916
+enter the number for basic hop: 1120000
+time = 0.037289
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.326086
+enter the number for basic hop: 1120000
+time = 0.038595
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.202383
+enter the number for basic hop: 1190000
+time = 0.041280
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.360371
+enter the number for basic hop: 1190000
+time = 0.041370
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.340753
+enter the number for basic hop: 1190000
+time = 0.039175
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.844763
+enter the number for basic hop: 1190000
+time = 0.043194
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.205447
+enter the number for basic hop: 1190000
+time = 0.042007
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.995908
+enter the number for basic hop: 1260000
+time = 0.042545
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.800765
+enter the number for basic hop: 1260000
+time = 0.036320
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.345557
+enter the number for basic hop: 1260000
+time = 0.039801
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.898581
+enter the number for basic hop: 1260000
+time = 0.035715
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.418612
+enter the number for basic hop: 1260000
+time = 0.041533
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.783444
+enter the number for basic hop: 1330000
+time = 0.041297
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.545140
+enter the number for basic hop: 1330000
+time = 0.044318
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.723177
+enter the number for basic hop: 1330000
+time = 0.040804
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.416695
+enter the number for basic hop: 1330000
+time = 0.036090
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.364349
+enter the number for basic hop: 1330000
+time = 0.043591
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.459827
+enter the number for basic hop: 1400000
+time = 0.032513
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.067053
+enter the number for basic hop: 1400000
+time = 0.043169
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.765643
+enter the number for basic hop: 1400000
+time = 0.036741
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.530643
+enter the number for basic hop: 1400000
+time = 0.042170
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.388143
+enter the number for basic hop: 1400000
+time = 0.045724
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.623438
+enter the number for basic hop: 1470000
+time = 0.035937
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.383311
+enter the number for basic hop: 1470000
+time = 0.038384
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.870625
+enter the number for basic hop: 1470000
+time = 0.043972
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.380655
+enter the number for basic hop: 1470000
+time = 0.040079
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.048062
+enter the number for basic hop: 1470000
+time = 0.049325
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.710232
+enter the number for basic hop: 1540000
+time = 0.054749
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.186563
+enter the number for basic hop: 1540000
+time = 0.069683
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.328809
+enter the number for basic hop: 1540000
+time = 0.048885
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.419330
+enter the number for basic hop: 1540000
+time = 0.050879
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.435424
+enter the number for basic hop: 1540000
+time = 0.043870
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.760376
+enter the number for basic hop: 1610000
+time = 0.038163
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.689232
+enter the number for basic hop: 1610000
+time = 0.051298
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.795776
+enter the number for basic hop: 1610000
+time = 0.042030
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.746134
+enter the number for basic hop: 1610000
+time = 0.041886
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.481496
+enter the number for basic hop: 1610000
+time = 0.049344
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.910274
+enter the number for basic hop: 1680000
+time = 0.052929
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.001210
+enter the number for basic hop: 1680000
+time = 0.041113
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.096511
+enter the number for basic hop: 1680000
+time = 0.047550
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.107154
+enter the number for basic hop: 1680000
+time = 0.042529
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.126378
+enter the number for basic hop: 1680000
+time = 0.050141
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.342378
+enter the number for basic hop: 1750000
+time = 0.051760
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.400467
+enter the number for basic hop: 1750000
+time = 0.044464
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.166241
+enter the number for basic hop: 1750000
+time = 0.046166
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.301794
+enter the number for basic hop: 1750000
+time = 0.048541
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.111036
+enter the number for basic hop: 1750000
+time = 0.048471
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.366362
+enter the number for basic hop: 1820000
+time = 0.039632
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.625882
+enter the number for basic hop: 1820000
+time = 0.054185
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.608293
+enter the number for basic hop: 1820000
+time = 0.041585
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.096652
+enter the number for basic hop: 1820000
+time = 0.047233
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.072394
+enter the number for basic hop: 1820000
+time = 0.044345
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.399171
+enter the number for basic hop: 1890000
+time = 0.049632
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.454743
+enter the number for basic hop: 1890000
+time = 0.048958
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.647269
+enter the number for basic hop: 1890000
+time = 0.054339
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.714244
+enter the number for basic hop: 1890000
+time = 0.046283
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.986870
+enter the number for basic hop: 1890000
+time = 0.053412
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.629519
+enter the number for basic hop: 1960000
+time = 0.048607
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.964303
+enter the number for basic hop: 1960000
+time = 0.054236
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.166129
+enter the number for basic hop: 1960000
+time = 0.052367
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.862497
+enter the number for basic hop: 1960000
+time = 0.044096
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.568614
+enter the number for basic hop: 1960000
+time = 0.055372
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.325693
+enter the number for basic hop: 2030000
+time = 0.058614
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.804300
+enter the number for basic hop: 2030000
+time = 0.047695
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.806530
+enter the number for basic hop: 2030000
+time = 0.054257
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.368526
+enter the number for basic hop: 2030000
+time = 0.048832
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.255745
+enter the number for basic hop: 2030000
+time = 0.050070
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.664028
+enter the number for basic hop: 2100000
+time = 0.055293
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.636813
+enter the number for basic hop: 2100000
+time = 0.047800
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.264553
+enter the number for basic hop: 2100000
+time = 0.048866
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.713421
+enter the number for basic hop: 2100000
+time = 0.058608
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.999878
+enter the number for basic hop: 2100000
+time = 0.052293
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.517845
+enter the number for basic hop: 2170000
+time = 0.055526
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 6.950551
+enter the number for basic hop: 2170000
+time = 0.065755
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.972471
+enter the number for basic hop: 2170000
+time = 0.044201
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 6.096975
+enter the number for basic hop: 2170000
+time = 0.053910
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.405204
+enter the number for basic hop: 2170000
+time = 0.048226
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.134542
+enter the number for basic hop: 2240000
+time = 0.060445
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.134441
+enter the number for basic hop: 2240000
+time = 0.052983
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.539115
+enter the number for basic hop: 2240000
+time = 0.059520
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.018244
+enter the number for basic hop: 2240000
+time = 0.057095
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.653484
+enter the number for basic hop: 2240000
+time = 0.047502
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.903394
+enter the number for basic hop: 2310000
+time = 0.062472
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.036244
+enter the number for basic hop: 2310000
+time = 0.060732
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.973546
+enter the number for basic hop: 2310000
+time = 0.057544
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.026013
+enter the number for basic hop: 2310000
+time = 0.075054
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.751115
+enter the number for basic hop: 2310000
+time = 0.046555
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.273209
+enter the number for basic hop: 2380000
+time = 0.046052
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.371188
+enter the number for basic hop: 2380000
+time = 0.055528
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.057471
+enter the number for basic hop: 2380000
+time = 0.053719
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.769955
+enter the number for basic hop: 2380000
+time = 0.064441
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.539788
+enter the number for basic hop: 2380000
+time = 0.061821
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.371039
+enter the number for basic hop: 2450000
+time = 0.062829
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.776529
+enter the number for basic hop: 2450000
+time = 0.061921
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.780162
+enter the number for basic hop: 2450000
+time = 0.061636
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.167348
+enter the number for basic hop: 2450000
+time = 0.060706
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.234087
+enter the number for basic hop: 2450000
+time = 0.058047
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.876000
+enter the number for basic hop: 2520000
+time = 0.053430
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.666074
+enter the number for basic hop: 2520000
+time = 0.057968
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.038465
+enter the number for basic hop: 2520000
+time = 0.056371
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.255331
+enter the number for basic hop: 2520000
+time = 0.059822
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.300056
+enter the number for basic hop: 2520000
+time = 0.061554
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.451862
+enter the number for basic hop: 2590000
+time = 0.061479
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.610091
+enter the number for basic hop: 2590000
+time = 0.049393
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.363610
+enter the number for basic hop: 2590000
+time = 0.066432
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.457759
+enter the number for basic hop: 2590000
+time = 0.066215
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.871318
+enter the number for basic hop: 2590000
+time = 0.058584
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.550730
+enter the number for basic hop: 2660000
+time = 0.052399
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.786729
+enter the number for basic hop: 2660000
+time = 0.067650
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.022605
+enter the number for basic hop: 2660000
+time = 0.061946
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.364091
+enter the number for basic hop: 2660000
+time = 0.058928
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.234484
+enter the number for basic hop: 2660000
+time = 0.056987
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.309961
+enter the number for basic hop: 2730000
+time = 0.065903
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.483564
+enter the number for basic hop: 2730000
+time = 0.069286
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.419765
+enter the number for basic hop: 2730000
+time = 0.058895
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.278235
+enter the number for basic hop: 2730000
+time = 0.062099
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.153510
+enter the number for basic hop: 2730000
+time = 0.066275
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.476828
+enter the number for basic hop: 2800000
+time = 0.058837
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.723242
+enter the number for basic hop: 2800000
+time = 0.067126
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.082815
+enter the number for basic hop: 2800000
+time = 0.070897
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.034330
+enter the number for basic hop: 2800000
+time = 0.069641
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 6.124944
+enter the number for basic hop: 2800000
+time = 0.076841
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.347932
+enter the number for basic hop: 2870000
+time = 0.066283
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.765226
+enter the number for basic hop: 2870000
+time = 0.070116
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 6.800172
+enter the number for basic hop: 2870000
+time = 0.070223
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.772046
+enter the number for basic hop: 2870000
+time = 0.069121
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.981402
+enter the number for basic hop: 2870000
+time = 0.072906
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.164170
+enter the number for basic hop: 2940000
+time = 0.064415
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.759927
+enter the number for basic hop: 2940000
+time = 0.061670
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.301465
+enter the number for basic hop: 2940000
+time = 0.061763
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.224799
+enter the number for basic hop: 2940000
+time = 0.065810
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.317609
+enter the number for basic hop: 2940000
+time = 0.069270
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.094571
+enter the number for basic hop: 3010000
+time = 0.058390
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.639990
+enter the number for basic hop: 3010000
+time = 0.062512
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.419843
+enter the number for basic hop: 3010000
+time = 0.073665
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.835759
+enter the number for basic hop: 3010000
+time = 0.062938
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.294362
+enter the number for basic hop: 3010000
+time = 0.063368
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.270001
+enter the number for basic hop: 3080000
+time = 0.072939
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.651925
+enter the number for basic hop: 3080000
+time = 0.070683
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.542933
+enter the number for basic hop: 3080000
+time = 0.062179
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.332903
+enter the number for basic hop: 3080000
+time = 0.068019
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.629225
+enter the number for basic hop: 3080000
+time = 0.063034
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.160603
+enter the number for basic hop: 3150000
+time = 0.064085
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.799823
+enter the number for basic hop: 3150000
+time = 0.089057
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.696573
+enter the number for basic hop: 3150000
+time = 0.074500
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.423770
+enter the number for basic hop: 3150000
+time = 0.064162
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.851432
+enter the number for basic hop: 3150000
+time = 0.073180
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.318314
+enter the number for basic hop: 3220000
+time = 0.062758
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.391419
+enter the number for basic hop: 3220000
+time = 0.065429
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.700616
+enter the number for basic hop: 3220000
+time = 0.068434
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.462225
+enter the number for basic hop: 3220000
+time = 0.062867
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.831784
+enter the number for basic hop: 3220000
+time = 0.061344
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.712240
+enter the number for basic hop: 3290000
+time = 0.066268
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 3.913321
+enter the number for basic hop: 3290000
+time = 0.065502
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.551032
+enter the number for basic hop: 3290000
+time = 0.070120
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.085590
+enter the number for basic hop: 3290000
+time = 0.054700
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.991166
+enter the number for basic hop: 3290000
+time = 0.075665
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.274962
+enter the number for basic hop: 3360000
+time = 0.076937
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.202240
+enter the number for basic hop: 3360000
+time = 0.076532
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.465786
+enter the number for basic hop: 3360000
+time = 0.073426
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.056805
+enter the number for basic hop: 3360000
+time = 0.070301
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.508402
+enter the number for basic hop: 3360000
+time = 0.071471
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.559450
+enter the number for basic hop: 3430000
+time = 0.071011
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.684785
+enter the number for basic hop: 3430000
+time = 0.073505
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.379178
+enter the number for basic hop: 3430000
+time = 0.076596
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.705692
+enter the number for basic hop: 3430000
+time = 0.073965
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.822590
+enter the number for basic hop: 3430000
+time = 0.077415
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.310777
+enter the number for basic hop: 3500000
+time = 0.076746
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.964098
+enter the number for basic hop: 3500000
+time = 0.078172
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.277294
+enter the number for basic hop: 3500000
+time = 0.071541
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 5.055675
+enter the number for basic hop: 3500000
+time = 0.080693
+
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+--------------------------
+print schedule status  1
+--------------------------
+Initial graph processing : 4.492660
+enter the number for basic hop: 3500000
+time = 0.069629
+
+----------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++
