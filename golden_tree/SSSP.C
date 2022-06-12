@@ -151,16 +151,16 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   GoldenTreeEngine<vertex, uint16_t, SsspInfo> engine(G, global_info, config);
   engine.init();
   cout << "Finished initializing engine\n";
-  // engine.run();
-  // engine.test();
+
   engine.initialCompute();
-  uintE insert_number = 175000;
-  cout<<"finish initial compute"<<endl;
-  for (size_t i = 0; i < 4; i++)
-  {
-  engine.mutation_free_one_edge_list_generation(insert_number+i);
-  engine.mutation_free_one_edge_list_computation(engine.my_graph.insertion_array[engine.my_graph.whole_level-1]);  
-  }
+  // engine.printOutput("static_graph.txt");
+  uintE number = engine.ingestor.change_edge_number;
+  // cin>>number;
+  cout<<"enter the number for basic hop: "<< number<<endl;
+
+  engine.golden_test(number);
+  // engine.unit_test(number);
+
   
 
 }

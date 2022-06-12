@@ -146,10 +146,15 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   // engine.all_level_construct();
   // engine.all_level_deconstruct();
   engine.initialCompute();
-  cout<<"finish initial compute"<<endl;
-  uintE insert_number = 70000;
-  engine.mutation_free_one_edge_list_generation(insert_number);
-  engine.mutation_free_one_edge_list_computation();
+  // cout<<"finish initial compute"<<endl;
+  // uintE insert_number = 70000;
+  // engine.mutation_free_one_edge_list_generation(insert_number);
+  // engine.mutation_free_one_edge_list_computation();
+  uintE number = engine.ingestor.change_edge_number;
+  // cin>>number;
+  cout<<"enter the number for basic hop: "<< number<<endl;
+
+  engine.golden_test(number);  
   
 
 }

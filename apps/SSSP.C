@@ -147,8 +147,10 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   engine.init();
   cout << "Finished initializing engine\n";
   //  engine.run();
-  uintE number;
-  cin>>number;  
+  uintE number = engine.ingestor.change_edge_number;
+  // uintE number;
+  // cout<<"enter the number for basic hop: ";
+  // cin>>number;  
  engine.test_run(number);
   // engine.parallel_test();
 }

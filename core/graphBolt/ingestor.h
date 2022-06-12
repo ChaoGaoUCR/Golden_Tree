@@ -78,7 +78,7 @@ public:
   bool enforce_edge_validity_flag;
   bool debug_flag;
   bool stream_closed = false;
-
+  long change_edge_number;
 
   long numberOfSnapshots;
   string  typeOfTree; //0 is binary and 1 is normal tree
@@ -95,7 +95,7 @@ public:
     numberOfSnapshots = config.getOptionLongValue("-Snapshots", 0);
     // typeOfTree = config.getOptionValue("-tree");
     // portionOfModification = config.getOptionFloatValue("-change", 0);
-
+    change_edge_number = config.getOptionLongValue("-E_number", 0);
     updated_vertices = newA(bool, n);
 
     // if (typeOfTree == "binary")

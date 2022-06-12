@@ -1429,6 +1429,51 @@ edgeArray random_bacth_sample(uintV sample_number){
   
   return res;
 }
+
+edgeArray random_bacth_sample_with_seed(uintV sample_number, long seed){
+  // cout<<"initial a new edgearray"<<endl;
+    // edgeArray res;
+    // long max = n;
+    // std::unordered_set<edge> s1;
+    // cout<<"sample number is "<<sample_number<<endl;
+    srand(seed);
+    edge *random_sample_edges = newA(edge, sample_number);
+    set<pairs> check;
+    for(uintE i =0; i<sample_number; i++){
+
+      random_sample_edges[i].source = 0+ (rand() % n);
+      while (V[random_sample_edges[i].source].getOutDegree() == 0)
+      {
+        random_sample_edges[i].source = 0+ (rand() % n);
+      }
+      // uintV dest = i%V[random_sample_edges[i].source].getOutDegree();
+      random_sample_edges[i].destination = V[random_sample_edges[i].source].getOutNeighbor(0+ (rand() % V[random_sample_edges[i].source].getOutDegree()));
+    // check.insert(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination));
+    // if (check.find(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination))==check.end())
+    // {
+    //   cout<<"edge "<<random_sample_edges[i].source<<"\t"<<random_sample_edges[i].destination<<" repeated"<<endl;
+    // }
+    // if(check.find(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination))!=check.end()) cout<<"repeat happens"<<endl;
+
+    while(check.find(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination))!=check.end()){
+      random_sample_edges[i].source = 0+ (rand() % n);
+      while (V[random_sample_edges[i].source].getOutDegree() == 0)
+      {
+        random_sample_edges[i].source = 0+ (rand() % n);
+      }
+      // uintV dest = i%V[random_sample_edges[i].source].getOutDegree();
+      random_sample_edges[i].destination = V[random_sample_edges[i].source].getOutNeighbor(0+ (rand() % V[random_sample_edges[i].source].getOutDegree()));
+    }
+      check.insert(make_pair(random_sample_edges[i].source, random_sample_edges[i].destination));
+    }
+    // cout<<"we put "<<check.size()<<" to the sample set"<<endl;
+    edgeArray res = edgeArray(random_sample_edges, check.size(), n);
+    check.clear();
+    // cout<<res.size<<endl;
+  
+  return res;
+}
+
 edgeArray random_bacth_insert_10(uintV insert_number){
   // cout<<"initial a new edgearray"<<endl;
     // edgeArray res;
@@ -1459,7 +1504,7 @@ edgeArray random_bacth_insert_seed(uintV insert_number, uintV seed){
     // edgeArray res;
     // long max = n;
     // srand(time(NULL));
-    srand(345345345 * seed);
+    srand(seed);
     edge *random_insert_edges = newA(edge, insert_number);
     parallel_for(uintE i =0; i<insert_number; i++){
       random_insert_edges[i].source = 0+ (rand() % n);
@@ -1474,6 +1519,7 @@ edgeArray random_bacth_insert_seed(uintV insert_number, uintV seed){
       }
     }
     edgeArray res = edgeArray(random_insert_edges, insert_number, n);
+    // cout<<res.size<<endl;
 
   
   return res;

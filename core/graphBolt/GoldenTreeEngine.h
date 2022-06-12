@@ -153,6 +153,9 @@ template <class GlobalInfoType>
 void printAdditionalData(ofstream &output_file, const uintV &v,
                          GlobalInfoType &info);
 
+
+
+
 // ======================================================================
 // GoldenTree ENGINE
 // ======================================================================
@@ -223,7 +226,7 @@ public:
   DependencyData<VertexValueType> *dependency_data;
   DependencyData<VertexValueType> *dependency_data_old;
   
-  // DependencyData<VertexValueType> **all_level_dependency;
+  DependencyData<VertexValueType> **all_level_dependency;
   struct GraphDependencyData{
   DependencyData<VertexValueType> *_dependency_data;
   uintV size;
@@ -304,6 +307,7 @@ public:
   // graph<vertex>** snapshot;
   edgeArray* insertion_list;
   edgeArray* deletion_list;
+
   int level;
   edgeArray** insert_tree;
   edgeArray** delet_tree;
@@ -342,7 +346,7 @@ public:
     // TreeVertexDependency.init(my_graph.n ,ingestor.numberOfSnapshots);
     // initial_edgearray();
     // Tree.tree_test();
-    create_path_list();
+    // create_path_list();
     // edgeArray        
 
   }
@@ -357,7 +361,7 @@ public:
     // free_snapshot();
     // free_edge_array();
     // TreTreeVertexDependencye.del();
-    del_path();
+    // del_path();
   }
 
   // ======================================================================
@@ -553,8 +557,8 @@ public:
     }
   }
 
-  void printOutput() {
-    string output_file_path = config.getOptionValue("-outputFile", "/tmp/");
+  void printOutput(string output_file_path) {
+    // string output_file_path = config.getOptionValue("-outputFile", "/tmp/");
     bool should_print = true;
     if (output_file_path.compare("/tmp/") == 0) {
       should_print = false;
@@ -606,7 +610,7 @@ public:
 
     traditionalIncrementalComputation();
     cout << "Initial graph processing : " << full_timer.stop() << "\n";
-    printOutput();
+    // printOutput();
   }
 
   // TODO : Write a lock based reduce function. Add functionality to use the
@@ -1124,6 +1128,12 @@ public:
     // cout<<"incremental computation time "<<full_time.stop()<<endl;
     // cout<<endl;
   }
+  void runtime_test(){
+    edgeArray* insertion_array;
+    edgeArray* deletion_array;
+
+
+  }
   void test_run() {
     initialCompute();
     timer full_time;
@@ -1143,7 +1153,7 @@ public:
     
   }
   void deendency_copy_new_to_old(){
-  for (size_t i = 0; i < n; i++)
+  parallel_for (size_t i = 0; i < n; i++)
   {
     dependency_data_old[i].parent = dependency_data[i].parent;
     dependency_data_old[i].value = dependency_data[i].value;
@@ -1151,7 +1161,7 @@ public:
   }    
   }
   void dependency_copy_old_to_new(){
-  for (size_t i = 0; i < n; i++)
+  parallel_for (size_t i = 0; i < n; i++)
   {
     dependency_data[i].parent = dependency_data_old[i].parent;
     dependency_data[i].value = dependency_data_old[i].value;
@@ -1159,57 +1169,25 @@ public:
   }     
   }
   void golden_test(uintV insert_number){
-  for (size_t i = 0; i < n; i++)
-  {
-    dependency_data_old[i].parent = dependency_data[i].parent;
-    dependency_data_old[i].value = dependency_data[i].value;
-    dependency_data_old[i].level = dependency_data[i].level;
-  }
+  // parallel_for (size_t i = 0; i < n; i++)
+  // {
+  //   dependency_data_old[i].parent = dependency_data[i].parent;
+  //   dependency_data_old[i].value = dependency_data[i].value;
+  //   dependency_data_old[i].level = dependency_data[i].level;
+  // }
   
-
+  // cout<<ingestor.numberOfSnapshots<<endl;
   insert_number *= 1;
-  cout<<"finish initial compute"<<endl;
+  // cout<<"finish initial compute"<<endl;
   timer full_time;
   double time_count;
   deendency_copy_new_to_old();//always hold this copy  
-  for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
-  {
-    create_path_list();
-    dependency_copy_old_to_new();
-    edgeArray tmp_insert = my_graph.random_bacth_insert_seed(insert_number, i+1);
-    mutation_free_one_edge_list_push(tmp_insert);
-    full_time.start();
-    mutation_free_one_edge_list_computation(tmp_insert);
-    time_count += full_time.stop();
-    // cout<<"time = "<<time_count<<endl<<endl;    
-    del_path();
-    my_graph.insertion_array = nullptr;
-    my_graph.whole_level = 0;
-  }
-    // cout<<"time = "<<time_count<<endl<<endl;    
-    for (size_t i = 1; i < ingestor.numberOfSnapshots; i++)
-  {
-    create_path_list();
-    dependency_copy_old_to_new();
-    edgeArray tmp_insert = my_graph.random_bacth_insert_seed(insert_number*i, i+1);
-    mutation_free_one_edge_list_push(tmp_insert);
-    full_time.start();
-    mutation_free_one_edge_list_computation(tmp_insert);
-    time_count += full_time.stop();
-    // cout<<"time = "<<time_count<<endl<<endl;    
-    del_path();
-    my_graph.insertion_array = nullptr;
-    my_graph.whole_level = 0;
-  }
-    cout<<"whole time = "<<time_count<<endl<<endl;    
 
-    time_count = 0;
-    cout<<"direct compute start"<<endl;
   for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
   {
-    dependency_copy_old_to_new();
     create_path_list();
-    edgeArray tmp_insert = my_graph.random_bacth_insert_seed(insert_number*ingestor.numberOfSnapshots, i+1);
+    dependency_copy_old_to_new();
+    edgeArray tmp_insert = my_graph.random_bacth_insert_seed(insert_number, time(NULL));
     mutation_free_one_edge_list_push(tmp_insert);
     full_time.start();
     mutation_free_one_edge_list_computation(tmp_insert);
@@ -1219,21 +1197,55 @@ public:
     my_graph.insertion_array = nullptr;
     my_graph.whole_level = 0;
   }
-    cout<<"direct time = "<<time_count<<endl<<endl;    
-    cout<<"average time for "<<insert_number*ingestor.numberOfSnapshots<< " direct insertion is "<<time_count/ingestor.numberOfSnapshots<<endl;
+   
+    cout<<"time = "<<time_count<<endl<<endl;    
+  //   for (size_t i = 1; i < ingestor.numberOfSnapshots; i++)
+  // {
+  //   create_path_list();
+  //   dependency_copy_old_to_new();
+  //   edgeArray tmp_insert = my_graph.random_bacth_insert_seed(insert_number*i, i+1);
+  //   mutation_free_one_edge_list_push(tmp_insert);
+  //   full_time.start();
+  //   mutation_free_one_edge_list_computation(tmp_insert);
+  //   time_count += full_time.stop();
+  //   // cout<<"time = "<<time_count<<endl<<endl;    
+  //   del_path();
+  //   my_graph.insertion_array = nullptr;
+  //   my_graph.whole_level = 0;
+  // }
+  //   cout<<"whole time = "<<time_count<<endl<<endl;    
+
+  //   time_count = 0;
+  //   cout<<"direct compute start"<<endl;
+  // for (size_t i = 0; i < ingestor.numberOfSnapshots; i++)
+  // {
+  //   dependency_copy_old_to_new();
+  //   create_path_list();
+  //   edgeArray tmp_insert = my_graph.random_bacth_insert_seed(insert_number*ingestor.numberOfSnapshots, i+1);
+  //   mutation_free_one_edge_list_push(tmp_insert);
+  //   full_time.start();
+  //   mutation_free_one_edge_list_computation(tmp_insert);
+  //   time_count += full_time.stop();
+  //   // cout<<"time = "<<time_count<<endl<<endl;    
+  //   del_path();
+  //   my_graph.insertion_array = nullptr;
+  //   my_graph.whole_level = 0;
+  // }
+  //   cout<<"direct time = "<<time_count<<endl<<endl;    
+  //   cout<<"average time for "<<insert_number*ingestor.numberOfSnapshots<< " direct insertion is "<<time_count/ingestor.numberOfSnapshots<<endl;
     
 
   }
-  void unit_test(uintE insert_number){
-    timer full_time;
-    double time_count;
-    edgeArray tmp_insert = my_graph.random_bacth_insert(insert_number);
-    mutation_free_one_edge_list_push(tmp_insert);
-    full_time.start();
-    mutation_free_one_edge_list_computation(tmp_insert);
-    time_count += full_time.stop(); 
-    cout<<insert_number<<" takes "<<time_count<<endl;   
-  }
+  // void unit_test(uintE insert_number){
+  //   timer full_time;
+  //   double time_count;
+  //   edgeArray tmp_insert = my_graph.random_bacth_insert(insert_number);
+  //   mutation_free_one_edge_list_push(tmp_insert);
+  //   full_time.start();
+  //   mutation_free_one_edge_list_computation(tmp_insert);
+  //   time_count += full_time.stop(); 
+  //   cout<<insert_number<<" takes "<<time_count<<endl;   
+  // }
 };
 
 #endif
