@@ -1,0 +1,53 @@
+************  Using CILK ************
+make: 'SSSP' is up to date.
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 9.399009
+
+the number here is 70000
+graph add mutation time is 0.064183 for 70000 edges
+graph del mutation time is 0.245598 for 70000 edges
+deletion time is 0.047726
+incremental computation time 0.021404
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 10.363466
+
+the number here is 70000
+graph add mutation time is 0.066270 for 70000 edges
+graph del mutation time is 0.241609 for 70000 edges
+deletion time is 0.036341
+incremental computation time 0.021515
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 10.091769
+
+the number here is 70000
+graph add mutation time is 0.047585 for 70000 edges
+graph del mutation time is 0.233930 for 70000 edges
+deletion time is 0.047014
+incremental computation time 0.025956
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1
+Finished initializing engine
+Initial graph processing : 10.282432
+
+the number here is 70000
+graph add mutation time is 0.062430 for 70000 edges
+graph del mutation time is 0.269138 for 70000 edges
+deletion time is 0.054690
+incremental computation time 0.029995
+----------------------------------------------
+Graph created
+Initializing engine ....
+number of snapshot is 1

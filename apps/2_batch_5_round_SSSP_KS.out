@@ -1,0 +1,158 @@
+************  Using CILK ************
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSSP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSSP
+Live-J start
+Initial graph processing : 1.380446
+batch number is 35000
+average total time 0.085030
+round  0
+****************************************
+Initial graph processing : 0.555652
+batch number is 35000
+average total time 0.074121
+round  1
+****************************************
+Initial graph processing : 2.381171
+batch number is 35000
+average total time 0.062365
+round  2
+****************************************
+Initial graph processing : 0.515433
+batch number is 35000
+average total time 0.072046
+round  3
+****************************************
+Initial graph processing : 1.341067
+batch number is 35000
+average total time 0.068207
+round  4
+****************************************
+Initial graph processing : 0.842283
+batch number is 70000
+average total time 0.092057
+round  0
+****************************************
+Initial graph processing : 1.545983
+batch number is 70000
+average total time 0.095347
+round  1
+****************************************
+Initial graph processing : 1.721520
+batch number is 70000
+average total time 0.091426
+round  2
+****************************************
+Initial graph processing : 1.559587
+batch number is 70000
+average total time 0.082260
+round  3
+****************************************
+Initial graph processing : 0.590799
+batch number is 70000
+average total time 0.082706
+round  4
+****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Twitter start
+Initial graph processing : 9.519817
+batch number is 75000
+average total time 0.243576
+round  0
+****************************************
+Initial graph processing : 11.377779
+batch number is 75000
+average total time 0.230409
+round  1
+****************************************
+Initial graph processing : 7.985231
+batch number is 75000
+average total time 0.236612
+round  2
+****************************************
+Initial graph processing : 8.693038
+batch number is 75000
+average total time 0.222819
+round  3
+****************************************
+Initial graph processing : 11.168674
+batch number is 75000
+average total time 0.234527
+round  4
+****************************************
+Initial graph processing : 7.951485
+batch number is 150000
+average total time 0.258114
+round  0
+****************************************
+Initial graph processing : 8.515541
+batch number is 150000
+average total time 0.290224
+round  1
+****************************************
+Initial graph processing : 7.732414
+batch number is 150000
+average total time 0.280644
+round  2
+****************************************
+Initial graph processing : 9.259735
+batch number is 150000
+average total time 0.291975
+round  3
+****************************************
+Initial graph processing : 8.204420
+batch number is 150000
+average total time 0.301164
+round  4
+****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wiki start
+Initial graph processing : 6.891275
+batch number is 40000
+average total time 0.091651
+round  0
+****************************************
+Initial graph processing : 5.998874
+batch number is 40000
+average total time 0.085310
+round  1
+****************************************
+Initial graph processing : 5.083255
+batch number is 40000
+average total time 0.079716
+round  2
+****************************************
+Initial graph processing : 1.906663
+batch number is 40000
+average total time 0.116655
+round  3
+****************************************
+Initial graph processing : 2.950836
+batch number is 40000
+average total time 0.093422
+round  4
+****************************************
+Initial graph processing : 3.261032
+batch number is 80000
+average total time 0.131655
+round  0
+****************************************
+Initial graph processing : 3.345895
+batch number is 80000
+average total time 0.140926
+round  1
+****************************************
+Initial graph processing : 4.849901
+batch number is 80000
+average total time 0.123169
+round  2
+****************************************
+Initial graph processing : 4.375314
+batch number is 80000
+average total time 0.112652
+round  3
+****************************************
+Initial graph processing : 4.056426
+batch number is 80000
+average total time 0.127958
+round  4
+****************************************

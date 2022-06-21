@@ -117,12 +117,12 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   int source_vertex = config.getOptionLongValue("-source", 0);
   BfsInfo global_info(source_vertex);
 
-  cout << "Initializing engine ....\n";
+  // cout << "Initializing engine ....\n";
   // KickStarterEngine<vertex, uint16_t, BfsInfo> engine(G, global_info, config);
   GoldenTreeEngine<vertex, uint16_t, BfsInfo> engine(G, global_info, config);
   
   engine.init();
-  cout << "Finished initializing engine\n";
+  // cout << "Finished initializing engine\n";
 
   // cout<<"test for engine begins"<<endl;
   // cout<<"total edges in original graph "<<engine.my_graph.m<<endl;
@@ -145,7 +145,7 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   // engine.count_for_test();
   // engine.all_level_construct();
   // engine.all_level_deconstruct();
-  engine.initialCompute();
+  // engine.initialCompute();
   // cout<<"finish initial compute"<<endl;
   // uintE insert_number = 70000;
   // engine.mutation_free_one_edge_list_generation(insert_number);

@@ -152,7 +152,7 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   engine.init();
   cout << "Finished initializing engine\n";
 
-  engine.initialCompute();
+  // engine.initialCompute();
   // engine.printOutput("static_graph.txt");
   uintE number = engine.ingestor.change_edge_number;
   // cin>>number;

@@ -70,7 +70,7 @@ template <class VertexValueType, class GlobalInfoType>
 inline void initializeVertexValue(const uintV &v,
                                   VertexValueType &v_vertex_value,
                                   const GlobalInfoType &global_info) {
-  if (v != global_info.source_vertex) {
+  if (v != global_info.source_vertex) { //v is not root
     v_vertex_value = MAX_DISTANCE;
   } else {
     v_vertex_value = 0;
@@ -137,20 +137,26 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   // {
   //   cout<< 0+rand()%100<<endl;
   // }
+  // for (size_t i = 0; i < 5; i++)
+  // {
   long n = G.n;
   int source_vertex = config.getOptionLongValue("-source", 0);
   int weight_cap = config.getOptionLongValue("-weight_cap", 5);
   SsspInfo global_info(source_vertex, weight_cap);
 
-  cout << "Initializing engine ....\n";
+  // cout << "Initializing engine ....\n";
   KickStarterEngine<vertex, uint16_t, SsspInfo> engine(G, global_info, config);
   engine.init();
-  cout << "Finished initializing engine\n";
+  // cout << "Finished initializing engine\n";
   //  engine.run();
   uintE number = engine.ingestor.change_edge_number;
   // uintE number;
   // cout<<"enter the number for basic hop: ";
   // cin>>number;  
- engine.test_run(number);
+  engine.test_run(number);
   // engine.parallel_test();
+  // engine.del_KickStarterEngine();
+  // }
+  
+
 }

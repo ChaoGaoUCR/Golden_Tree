@@ -1,0 +1,2740 @@
+************  Using CILK ************
+make: 'SSSP' is up to date.
+make: 'BFS' is up to date.
+make: 'SSWP' is up to date.
+SSSP now starts
+/***********************************************/
+Live-J start
+Initial graph processing : 1.694320
+batch number is 35000
+average delta time 0.025318
+average total time 0.064381
+round  0
+****************************************
+Initial graph processing : 1.062292
+batch number is 35000
+average delta time 0.030779
+average total time 0.076696
+round  1
+****************************************
+Initial graph processing : 1.602298
+batch number is 35000
+average delta time 0.023316
+average total time 0.069694
+round  2
+****************************************
+Initial graph processing : 1.620521
+batch number is 70000
+average delta time 0.037761
+average total time 0.118692
+round  0
+****************************************
+Initial graph processing : 1.721787
+batch number is 70000
+average delta time 0.027596
+average total time 0.116695
+round  1
+****************************************
+Initial graph processing : 1.902964
+batch number is 70000
+average delta time 0.043012
+average total time 0.121798
+round  2
+****************************************
+Initial graph processing : 1.643543
+batch number is 105000
+average delta time 0.035730
+average total time 0.135014
+round  0
+****************************************
+Initial graph processing : 1.105535
+batch number is 105000
+average delta time 0.031226
+average total time 0.133814
+round  1
+****************************************
+Initial graph processing : 1.631205
+batch number is 105000
+average delta time 0.036090
+average total time 0.138173
+round  2
+****************************************
+Initial graph processing : 1.663143
+batch number is 140000
+average delta time 0.037119
+average total time 0.152126
+round  0
+****************************************
+Initial graph processing : 0.861951
+batch number is 140000
+average delta time 0.032288
+average total time 0.141110
+round  1
+****************************************
+Initial graph processing : 1.821808
+batch number is 140000
+average delta time 0.039609
+average total time 0.145493
+round  2
+****************************************
+Initial graph processing : 1.567876
+batch number is 175000
+average delta time 0.040409
+average total time 0.167394
+round  0
+****************************************
+Initial graph processing : 1.644138
+batch number is 175000
+average delta time 0.054442
+average total time 0.193045
+round  1
+****************************************
+Initial graph processing : 1.925837
+batch number is 175000
+average delta time 0.048382
+average total time 0.163738
+round  2
+****************************************
+Initial graph processing : 1.763450
+batch number is 210000
+average delta time 0.061866
+average total time 0.187588
+round  0
+****************************************
+Initial graph processing : 1.811734
+batch number is 210000
+average delta time 0.039930
+average total time 0.184203
+round  1
+****************************************
+Initial graph processing : 1.808000
+batch number is 210000
+average delta time 0.046853
+average total time 0.171649
+round  2
+****************************************
+Initial graph processing : 1.665100
+batch number is 245000
+average delta time 0.055115
+average total time 0.197131
+round  0
+****************************************
+Initial graph processing : 1.554504
+batch number is 245000
+average delta time 0.050646
+average total time 0.220354
+round  1
+****************************************
+Initial graph processing : 1.600370
+batch number is 245000
+average delta time 0.048273
+average total time 0.197601
+round  2
+****************************************
+Initial graph processing : 1.639175
+batch number is 280000
+average delta time 0.056033
+average total time 0.220099
+round  0
+****************************************
+Initial graph processing : 1.600487
+batch number is 280000
+average delta time 0.078847
+average total time 0.247286
+round  1
+****************************************
+Initial graph processing : 2.017162
+batch number is 280000
+average delta time 0.059900
+average total time 0.226304
+round  2
+****************************************
+Initial graph processing : 1.542262
+batch number is 315000
+average delta time 0.057701
+average total time 0.242893
+round  0
+****************************************
+Initial graph processing : 1.597130
+batch number is 315000
+average delta time 0.053301
+average total time 0.229137
+round  1
+****************************************
+Initial graph processing : 1.771083
+batch number is 315000
+average delta time 0.084184
+average total time 0.258640
+round  2
+****************************************
+Initial graph processing : 1.848897
+batch number is 350000
+average delta time 0.055237
+average total time 0.245471
+round  0
+****************************************
+Initial graph processing : 0.975378
+batch number is 350000
+average delta time 0.047780
+average total time 0.233488
+round  1
+****************************************
+Initial graph processing : 1.728924
+batch number is 350000
+average delta time 0.088863
+average total time 0.272636
+round  2
+****************************************
+Initial graph processing : 1.689228
+batch number is 385000
+average delta time 0.061987
+average total time 0.271828
+round  0
+****************************************
+Initial graph processing : 1.743888
+batch number is 385000
+average delta time 0.057380
+average total time 0.261328
+round  1
+****************************************
+Initial graph processing : 2.033160
+batch number is 385000
+average delta time 0.057656
+average total time 0.249739
+round  2
+****************************************
+Initial graph processing : 1.670929
+batch number is 420000
+average delta time 0.064592
+average total time 0.277074
+round  0
+****************************************
+Initial graph processing : 1.553075
+batch number is 420000
+average delta time 0.060951
+average total time 0.276895
+round  1
+****************************************
+Initial graph processing : 1.576510
+batch number is 420000
+average delta time 0.076615
+average total time 0.287990
+round  2
+****************************************
+Initial graph processing : 1.666381
+batch number is 455000
+average delta time 0.063025
+average total time 0.320766
+round  0
+****************************************
+Initial graph processing : 1.971409
+batch number is 455000
+average delta time 0.062171
+average total time 0.297894
+round  1
+****************************************
+Initial graph processing : 0.883921
+batch number is 455000
+average delta time 0.132496
+average total time 0.359255
+round  2
+****************************************
+Initial graph processing : 0.759833
+batch number is 490000
+average delta time 0.071439
+average total time 0.315994
+round  0
+****************************************
+Initial graph processing : 1.600266
+batch number is 490000
+average delta time 0.060942
+average total time 0.309182
+round  1
+****************************************
+Initial graph processing : 1.623588
+batch number is 490000
+average delta time 0.062466
+average total time 0.306013
+round  2
+****************************************
+Initial graph processing : 1.737833
+batch number is 525000
+average delta time 0.092925
+average total time 0.315569
+round  0
+****************************************
+Initial graph processing : 1.820481
+batch number is 525000
+average delta time 0.313223
+average total time 0.546151
+round  1
+****************************************
+Initial graph processing : 1.959219
+batch number is 525000
+average delta time 0.074501
+average total time 0.300017
+round  2
+****************************************
+Initial graph processing : 1.752127
+batch number is 560000
+average delta time 0.583909
+average total time 0.874023
+round  0
+****************************************
+Initial graph processing : 1.799430
+batch number is 560000
+average delta time 0.083155
+average total time 0.371684
+round  1
+****************************************
+Initial graph processing : 1.857500
+batch number is 560000
+average delta time 0.076455
+average total time 0.335550
+round  2
+****************************************
+Initial graph processing : 0.939756
+batch number is 595000
+average delta time 0.061587
+average total time 0.328027
+round  0
+****************************************
+Initial graph processing : 0.791032
+batch number is 595000
+average delta time 0.063916
+average total time 0.324843
+round  1
+****************************************
+Initial graph processing : 1.108478
+batch number is 595000
+average delta time 0.113346
+average total time 0.379620
+round  2
+****************************************
+Initial graph processing : 0.773250
+batch number is 630000
+average delta time 0.077324
+average total time 0.354685
+round  0
+****************************************
+Initial graph processing : 1.952513
+batch number is 630000
+average delta time 0.083125
+average total time 0.355648
+round  1
+****************************************
+Initial graph processing : 1.928984
+batch number is 630000
+average delta time 0.076152
+average total time 0.351076
+round  2
+****************************************
+Initial graph processing : 0.737719
+batch number is 665000
+average delta time 0.073211
+average total time 0.376321
+round  0
+****************************************
+Initial graph processing : 1.609282
+batch number is 665000
+average delta time 0.144156
+average total time 0.442136
+round  1
+****************************************
+Initial graph processing : 1.645683
+batch number is 665000
+average delta time 0.082566
+average total time 0.369906
+round  2
+****************************************
+Initial graph processing : 2.005199
+batch number is 700000
+average delta time 0.085372
+average total time 0.371311
+round  0
+****************************************
+Initial graph processing : 1.490463
+batch number is 700000
+average delta time 0.078106
+average total time 0.380489
+round  1
+****************************************
+Initial graph processing : 0.766215
+batch number is 700000
+average delta time 0.071404
+average total time 0.392726
+round  2
+****************************************
+Initial graph processing : 1.477002
+batch number is 735000
+average delta time 0.232751
+average total time 0.524705
+round  0
+****************************************
+Initial graph processing : 0.789462
+batch number is 735000
+average delta time 0.077964
+average total time 0.406180
+round  1
+****************************************
+Initial graph processing : 2.063281
+batch number is 735000
+average delta time 0.084811
+average total time 0.388849
+round  2
+****************************************
+Initial graph processing : 1.840667
+batch number is 770000
+average delta time 0.087137
+average total time 0.399235
+round  0
+****************************************
+Initial graph processing : 2.022089
+batch number is 770000
+average delta time 0.088619
+average total time 0.400925
+round  1
+****************************************
+Initial graph processing : 1.591489
+batch number is 770000
+average delta time 0.070381
+average total time 0.391529
+round  2
+****************************************
+Initial graph processing : 1.821320
+batch number is 805000
+average delta time 0.116816
+average total time 0.412877
+round  0
+****************************************
+Initial graph processing : 0.753077
+batch number is 805000
+average delta time 0.198765
+average total time 0.541095
+round  1
+****************************************
+Initial graph processing : 1.831392
+batch number is 805000
+average delta time 0.160181
+average total time 0.484491
+round  2
+****************************************
+Initial graph processing : 1.704166
+batch number is 840000
+average delta time 0.093684
+average total time 0.442715
+round  0
+****************************************
+Initial graph processing : 1.533418
+batch number is 840000
+average delta time 0.178247
+average total time 0.526392
+round  1
+****************************************
+Initial graph processing : 1.656977
+batch number is 840000
+average delta time 0.083340
+average total time 0.429352
+round  2
+****************************************
+Initial graph processing : 1.626405
+batch number is 875000
+average delta time 0.104265
+average total time 0.470729
+round  0
+****************************************
+Initial graph processing : 1.648584
+batch number is 875000
+average delta time 0.291031
+average total time 0.630236
+round  1
+****************************************
+Initial graph processing : 1.304591
+batch number is 875000
+average delta time 0.109536
+average total time 0.456845
+round  2
+****************************************
+Initial graph processing : 1.087641
+batch number is 910000
+average delta time 0.083063
+average total time 0.451605
+round  0
+****************************************
+Initial graph processing : 1.566570
+batch number is 910000
+average delta time 0.095083
+average total time 0.465222
+round  1
+****************************************
+Initial graph processing : 1.795405
+batch number is 910000
+average delta time 0.105030
+average total time 0.478406
+round  2
+****************************************
+Initial graph processing : 1.615361
+batch number is 945000
+average delta time 0.094593
+average total time 0.475261
+round  0
+****************************************
+Initial graph processing : 2.142670
+batch number is 945000
+average delta time 0.124408
+average total time 0.500663
+round  1
+****************************************
+Initial graph processing : 1.672646
+batch number is 945000
+average delta time 0.122891
+average total time 0.478380
+round  2
+****************************************
+Initial graph processing : 1.126732
+batch number is 980000
+average delta time 0.098772
+average total time 0.489384
+round  0
+****************************************
+Initial graph processing : 1.482444
+batch number is 980000
+average delta time 0.088413
+average total time 0.468162
+round  1
+****************************************
+Initial graph processing : 0.851637
+batch number is 980000
+average delta time 0.368217
+average total time 0.762227
+round  2
+****************************************
+Initial graph processing : 1.644985
+batch number is 1015000
+average delta time 0.132144
+average total time 0.514008
+round  0
+****************************************
+Initial graph processing : 1.578037
+batch number is 1015000
+average delta time 0.092216
+average total time 0.512647
+round  1
+****************************************
+Initial graph processing : 1.852088
+batch number is 1015000
+average delta time 0.100295
+average total time 0.482550
+round  2
+****************************************
+Initial graph processing : 0.793946
+batch number is 1050000
+average delta time 0.074357
+average total time 0.488218
+round  0
+****************************************
+Initial graph processing : 0.765605
+batch number is 1050000
+average delta time 0.090871
+average total time 0.511505
+round  1
+****************************************
+Initial graph processing : 1.498764
+batch number is 1050000
+average delta time 0.254275
+average total time 0.652934
+round  2
+****************************************
+Initial graph processing : 1.809871
+batch number is 1085000
+average delta time 0.116599
+average total time 0.514935
+round  0
+****************************************
+Initial graph processing : 0.773549
+batch number is 1085000
+average delta time 0.087932
+average total time 0.523759
+round  1
+****************************************
+Initial graph processing : 1.638228
+batch number is 1085000
+average delta time 0.401166
+average total time 0.785212
+round  2
+****************************************
+Initial graph processing : 1.724124
+batch number is 1120000
+average delta time 0.135956
+average total time 0.538419
+round  0
+****************************************
+Initial graph processing : 0.763055
+batch number is 1120000
+average delta time 0.081212
+average total time 0.507812
+round  1
+****************************************
+Initial graph processing : 1.691298
+batch number is 1120000
+average delta time 0.105162
+average total time 0.489979
+round  2
+****************************************
+Initial graph processing : 1.962486
+batch number is 1155000
+average delta time 0.103736
+average total time 0.517158
+round  0
+****************************************
+Initial graph processing : 0.825233
+batch number is 1155000
+average delta time 0.080108
+average total time 0.501821
+round  1
+****************************************
+Initial graph processing : 1.857288
+batch number is 1155000
+average delta time 0.139208
+average total time 0.531877
+round  2
+****************************************
+Initial graph processing : 1.606114
+batch number is 1190000
+average delta time 0.101122
+average total time 0.536263
+round  0
+****************************************
+Initial graph processing : 2.033157
+batch number is 1190000
+average delta time 0.173243
+average total time 0.594443
+round  1
+****************************************
+Initial graph processing : 1.704583
+batch number is 1190000
+average delta time 0.101744
+average total time 0.535199
+round  2
+****************************************
+Initial graph processing : 0.688097
+batch number is 1225000
+average delta time 0.090461
+average total time 0.538981
+round  0
+****************************************
+Initial graph processing : 1.596307
+batch number is 1225000
+average delta time 0.144518
+average total time 0.578829
+round  1
+****************************************
+Initial graph processing : 1.629778
+batch number is 1225000
+average delta time 0.110378
+average total time 0.576635
+round  2
+****************************************
+Initial graph processing : 1.847377
+batch number is 1260000
+average delta time 0.136831
+average total time 0.585184
+round  0
+****************************************
+Initial graph processing : 1.567495
+batch number is 1260000
+average delta time 0.241327
+average total time 0.701034
+round  1
+****************************************
+Initial graph processing : 1.802904
+batch number is 1260000
+average delta time 0.114952
+average total time 0.565260
+round  2
+****************************************
+Initial graph processing : 0.915364
+batch number is 1295000
+average delta time 0.104802
+average total time 0.577618
+round  0
+****************************************
+Initial graph processing : 1.606574
+batch number is 1295000
+average delta time 0.199294
+average total time 0.647784
+round  1
+****************************************
+Initial graph processing : 1.870230
+batch number is 1295000
+average delta time 0.110794
+average total time 0.542433
+round  2
+****************************************
+Initial graph processing : 1.600990
+batch number is 1330000
+average delta time 0.118079
+average total time 0.584772
+round  0
+****************************************
+Initial graph processing : 1.589368
+batch number is 1330000
+average delta time 0.141613
+average total time 0.599112
+round  1
+****************************************
+Initial graph processing : 1.510006
+batch number is 1330000
+average delta time 0.141142
+average total time 0.614018
+round  2
+****************************************
+Initial graph processing : 1.534327
+batch number is 1365000
+average delta time 0.178853
+average total time 0.630442
+round  0
+****************************************
+Initial graph processing : 1.501901
+batch number is 1365000
+average delta time 0.117986
+average total time 0.589114
+round  1
+****************************************
+Initial graph processing : 1.611300
+batch number is 1365000
+average delta time 0.176544
+average total time 0.645209
+round  2
+****************************************
+Initial graph processing : 1.880109
+batch number is 1400000
+average delta time 0.162981
+average total time 0.598137
+round  0
+****************************************
+Initial graph processing : 1.644470
+batch number is 1400000
+average delta time 0.107943
+average total time 0.597112
+round  1
+****************************************
+Initial graph processing : 1.522646
+batch number is 1400000
+average delta time 0.122680
+average total time 0.603572
+round  2
+****************************************
+Initial graph processing : 1.735374
+batch number is 1435000
+average delta time 0.322391
+average total time 0.804612
+round  0
+****************************************
+Initial graph processing : 1.557315
+batch number is 1435000
+average delta time 0.167330
+average total time 0.673635
+round  1
+****************************************
+Initial graph processing : 1.781005
+batch number is 1435000
+average delta time 0.127774
+average total time 0.621261
+round  2
+****************************************
+Initial graph processing : 1.535084
+batch number is 1470000
+average delta time 0.121188
+average total time 0.624061
+round  0
+****************************************
+Initial graph processing : 1.071834
+batch number is 1470000
+average delta time 0.133675
+average total time 0.624722
+round  1
+****************************************
+Initial graph processing : 0.747882
+batch number is 1470000
+average delta time 0.138772
+average total time 0.639947
+round  2
+****************************************
+Initial graph processing : 1.644858
+batch number is 1505000
+average delta time 0.144833
+average total time 0.626851
+round  0
+****************************************
+Initial graph processing : 0.760086
+batch number is 1505000
+average delta time 0.100019
+average total time 0.619008
+round  1
+****************************************
+Initial graph processing : 1.836369
+batch number is 1505000
+average delta time 0.143438
+average total time 0.589849
+round  2
+****************************************
+Initial graph processing : 1.626452
+batch number is 1540000
+average delta time 0.131358
+average total time 0.643245
+round  0
+****************************************
+Initial graph processing : 0.875679
+batch number is 1540000
+average delta time 0.138524
+average total time 0.653267
+round  1
+****************************************
+Initial graph processing : 1.751784
+batch number is 1540000
+average delta time 0.184524
+average total time 0.697314
+round  2
+****************************************
+Initial graph processing : 1.502473
+batch number is 1575000
+average delta time 0.189860
+average total time 0.689569
+round  0
+****************************************
+Initial graph processing : 1.955203
+batch number is 1575000
+average delta time 0.148145
+average total time 0.629878
+round  1
+****************************************
+Initial graph processing : 1.611080
+batch number is 1575000
+average delta time 0.138379
+average total time 0.671381
+round  2
+****************************************
+Initial graph processing : 1.657154
+batch number is 1610000
+average delta time 0.135790
+average total time 0.654393
+round  0
+****************************************
+Initial graph processing : 1.683610
+batch number is 1610000
+average delta time 0.121940
+average total time 0.626845
+round  1
+****************************************
+Initial graph processing : 1.550922
+batch number is 1610000
+average delta time 0.223758
+average total time 0.719336
+round  2
+****************************************
+Initial graph processing : 0.767666
+batch number is 1645000
+average delta time 0.165090
+average total time 0.700875
+round  0
+****************************************
+Initial graph processing : 1.893624
+batch number is 1645000
+average delta time 0.378573
+average total time 0.892093
+round  1
+****************************************
+Initial graph processing : 1.586240
+batch number is 1645000
+average delta time 0.124348
+average total time 0.648785
+round  2
+****************************************
+Initial graph processing : 1.892795
+batch number is 1680000
+average delta time 0.180125
+average total time 0.712794
+round  0
+****************************************
+Initial graph processing : 0.741303
+batch number is 1680000
+average delta time 0.107367
+average total time 0.652246
+round  1
+****************************************
+Initial graph processing : 1.670791
+batch number is 1680000
+average delta time 0.224750
+average total time 0.763965
+round  2
+****************************************
+Initial graph processing : 0.798395
+batch number is 1715000
+average delta time 0.102321
+average total time 0.642537
+round  0
+****************************************
+Initial graph processing : 0.772520
+batch number is 1715000
+average delta time 0.152209
+average total time 0.719528
+round  1
+****************************************
+Initial graph processing : 1.568167
+batch number is 1715000
+average delta time 0.135645
+average total time 0.688146
+round  2
+****************************************
+Initial graph processing : 2.083347
+batch number is 1750000
+average delta time 0.138931
+average total time 0.663552
+round  0
+****************************************
+Initial graph processing : 1.696976
+batch number is 1750000
+average delta time 0.199018
+average total time 0.706621
+round  1
+****************************************
+Initial graph processing : 1.681582
+batch number is 1750000
+average delta time 0.169436
+average total time 0.729299
+round  2
+****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wiki start
+Initial graph processing : 4.774416
+batch number is 40000
+average delta time 0.060971
+average total time 0.168959
+round  0
+****************************************
+Initial graph processing : 2.812002
+batch number is 40000
+average delta time 0.035864
+average total time 0.156336
+round  1
+****************************************
+Initial graph processing : 3.900570
+batch number is 40000
+average delta time 0.038827
+average total time 0.152780
+round  2
+****************************************
+Initial graph processing : 5.421995
+batch number is 80000
+average delta time 0.049601
+average total time 0.213256
+round  0
+****************************************
+Initial graph processing : 6.156265
+batch number is 80000
+average delta time 0.052618
+average total time 0.197929
+round  1
+****************************************
+Initial graph processing : 4.886393
+batch number is 80000
+average delta time 0.037399
+average total time 0.209056
+round  2
+****************************************
+Initial graph processing : 5.303903
+batch number is 120000
+average delta time 0.060594
+average total time 0.232511
+round  0
+****************************************
+Initial graph processing : 4.338120
+batch number is 120000
+average delta time 0.062720
+average total time 0.246732
+round  1
+****************************************
+Initial graph processing : 4.935783
+batch number is 120000
+average delta time 0.070291
+average total time 0.256070
+round  2
+****************************************
+Initial graph processing : 6.500743
+batch number is 160000
+average delta time 0.045216
+average total time 0.238707
+round  0
+****************************************
+Initial graph processing : 5.922289
+batch number is 160000
+average delta time 0.051476
+average total time 0.259467
+round  1
+****************************************
+Initial graph processing : 5.267196
+batch number is 160000
+average delta time 0.062821
+average total time 0.286430
+round  2
+****************************************
+Initial graph processing : 5.492304
+batch number is 200000
+average delta time 0.055251
+average total time 0.262820
+round  0
+****************************************
+Initial graph processing : 2.765698
+batch number is 200000
+average delta time 0.044668
+average total time 0.302648
+round  1
+****************************************
+Initial graph processing : 4.653310
+batch number is 200000
+average delta time 0.050979
+average total time 0.277741
+round  2
+****************************************
+Initial graph processing : 4.507377
+batch number is 240000
+average delta time 0.051335
+average total time 0.319390
+round  0
+****************************************
+Initial graph processing : 7.806652
+batch number is 240000
+average delta time 0.070720
+average total time 0.325962
+round  1
+****************************************
+Initial graph processing : 5.967966
+batch number is 240000
+average delta time 0.056605
+average total time 0.294918
+round  2
+****************************************
+Initial graph processing : 4.353954
+batch number is 280000
+average delta time 0.055788
+average total time 0.298998
+round  0
+****************************************
+Initial graph processing : 4.896356
+batch number is 280000
+average delta time 0.077030
+average total time 0.335476
+round  1
+****************************************
+Initial graph processing : 6.137094
+batch number is 280000
+average delta time 12.131550
+average total time 12.409997
+round  2
+****************************************
+Initial graph processing : 4.423707
+batch number is 320000
+average delta time 0.069266
+average total time 0.360559
+round  0
+****************************************
+Initial graph processing : 5.144865
+batch number is 320000
+average delta time 0.063201
+average total time 0.362806
+round  1
+****************************************
+Initial graph processing : 7.061237
+batch number is 320000
+average delta time 0.078856
+average total time 0.375177
+round  2
+****************************************
+Initial graph processing : 5.359034
+batch number is 360000
+average delta time 0.057957
+average total time 0.339137
+round  0
+****************************************
+Initial graph processing : 5.492569
+batch number is 360000
+average delta time 0.065569
+average total time 0.380430
+round  1
+****************************************
+Initial graph processing : 4.285276
+batch number is 360000
+average delta time 0.079129
+average total time 0.398176
+round  2
+****************************************
+Initial graph processing : 5.535382
+batch number is 400000
+average delta time 0.117791
+average total time 0.420012
+round  0
+****************************************
+Initial graph processing : 2.849374
+batch number is 400000
+average delta time 0.063933
+average total time 0.416894
+round  1
+****************************************
+Initial graph processing : 4.466741
+batch number is 400000
+average delta time 0.056047
+average total time 0.382584
+round  2
+****************************************
+Initial graph processing : 4.434975
+batch number is 440000
+average delta time 0.079128
+average total time 0.440835
+round  0
+****************************************
+Initial graph processing : 4.884028
+batch number is 440000
+average delta time 0.062728
+average total time 0.386303
+round  1
+****************************************
+Initial graph processing : 2.949586
+batch number is 440000
+average delta time 0.076216
+average total time 0.488492
+round  2
+****************************************
+Initial graph processing : 5.398119
+batch number is 480000
+average delta time 0.071265
+average total time 0.437737
+round  0
+****************************************
+Initial graph processing : 5.041194
+batch number is 480000
+average delta time 0.063524
+average total time 0.438352
+round  1
+****************************************
+Initial graph processing : 2.716271
+batch number is 480000
+average delta time 0.065867
+average total time 0.450297
+round  2
+****************************************
+Initial graph processing : 4.411420
+batch number is 520000
+average delta time 0.082226
+average total time 0.441084
+round  0
+****************************************
+Initial graph processing : 4.566819
+batch number is 520000
+average delta time 0.075091
+average total time 0.447512
+round  1
+****************************************
+Initial graph processing : 5.504973
+batch number is 520000
+average delta time 0.093211
+average total time 0.493315
+round  2
+****************************************
+Initial graph processing : 4.871733
+batch number is 560000
+average delta time 0.073865
+average total time 0.449879
+round  0
+****************************************
+Initial graph processing : 4.721304
+batch number is 560000
+average delta time 0.084938
+average total time 0.528818
+round  1
+****************************************
+Initial graph processing : 4.263580
+batch number is 560000
+average delta time 0.078436
+average total time 0.419023
+round  2
+****************************************
+Initial graph processing : 5.512655
+batch number is 600000
+average delta time 0.074216
+average total time 0.486726
+round  0
+****************************************
+Initial graph processing : 4.619687
+batch number is 600000
+average delta time 10.629102
+average total time 11.030049
+round  1
+****************************************
+Initial graph processing : 5.797144
+batch number is 600000
+average delta time 0.079263
+average total time 0.415091
+round  2
+****************************************
+Initial graph processing : 4.782514
+batch number is 640000
+average delta time 0.076599
+average total time 0.507278
+round  0
+****************************************
+Initial graph processing : 5.989990
+batch number is 640000
+average delta time 0.073178
+average total time 0.531201
+round  1
+****************************************
+Initial graph processing : 2.348410
+batch number is 640000
+average delta time 0.057822
+average total time 0.538612
+round  2
+****************************************
+Initial graph processing : 4.413571
+batch number is 680000
+average delta time 0.098981
+average total time 0.566565
+round  0
+****************************************
+Initial graph processing : 3.021255
+batch number is 680000
+average delta time 0.058363
+average total time 0.581781
+round  1
+****************************************
+Initial graph processing : 5.244618
+batch number is 680000
+average delta time 0.076126
+average total time 0.527390
+round  2
+****************************************
+Initial graph processing : 7.465535
+batch number is 720000
+average delta time 0.223048
+average total time 0.667829
+round  0
+****************************************
+Initial graph processing : 5.361867
+batch number is 720000
+average delta time 0.080167
+average total time 0.507525
+round  1
+****************************************
+Initial graph processing : 5.909656
+batch number is 720000
+average delta time 0.078710
+average total time 0.538039
+round  2
+****************************************
+Initial graph processing : 3.514287
+batch number is 760000
+average delta time 0.060853
+average total time 0.611732
+round  0
+****************************************
+Initial graph processing : 5.026624
+batch number is 760000
+average delta time 0.088463
+average total time 0.565888
+round  1
+****************************************
+Initial graph processing : 2.699370
+batch number is 760000
+average delta time 8.725562
+average total time 9.190654
+round  2
+****************************************
+Initial graph processing : 5.091905
+batch number is 800000
+average delta time 0.062729
+average total time 0.527636
+round  0
+****************************************
+Initial graph processing : 5.106224
+batch number is 800000
+average delta time 0.084488
+average total time 0.557816
+round  1
+****************************************
+Initial graph processing : 2.563542
+batch number is 800000
+average delta time 0.083285
+average total time 0.709450
+round  2
+****************************************
+Initial graph processing : 5.870363
+batch number is 840000
+average delta time 0.095516
+average total time 0.578298
+round  0
+****************************************
+Initial graph processing : 2.869496
+batch number is 840000
+average delta time 0.073643
+average total time 0.728020
+round  1
+****************************************
+Initial graph processing : 5.642488
+batch number is 840000
+average delta time 0.082890
+average total time 0.560950
+round  2
+****************************************
+Initial graph processing : 5.293140
+batch number is 880000
+average delta time 0.204911
+average total time 0.685184
+round  0
+****************************************
+Initial graph processing : 5.129868
+batch number is 880000
+average delta time 0.087215
+average total time 0.588722
+round  1
+****************************************
+Initial graph processing : 4.359822
+batch number is 880000
+average delta time 0.111773
+average total time 0.586107
+round  2
+****************************************
+Initial graph processing : 4.752181
+batch number is 920000
+average delta time 0.084328
+average total time 0.578511
+round  0
+****************************************
+Initial graph processing : 4.575080
+batch number is 920000
+average delta time 0.072247
+average total time 0.568816
+round  1
+****************************************
+Initial graph processing : 5.509871
+batch number is 920000
+average delta time 0.102490
+average total time 0.649207
+round  2
+****************************************
+Initial graph processing : 5.456074
+batch number is 960000
+average delta time 0.079025
+average total time 0.618772
+round  0
+****************************************
+Initial graph processing : 5.592147
+batch number is 960000
+average delta time 0.086793
+average total time 0.569500
+round  1
+****************************************
+Initial graph processing : 5.982980
+batch number is 960000
+average delta time 0.083063
+average total time 0.675018
+round  2
+****************************************
+Initial graph processing : 2.343054
+batch number is 1000000
+average delta time 8.337551
+average total time 8.903716
+round  0
+****************************************
+Initial graph processing : 4.492688
+batch number is 1000000
+average delta time 0.084007
+average total time 0.697628
+round  1
+****************************************
+Initial graph processing : 5.744920
+batch number is 1000000
+average delta time 12.189036
+average total time 12.730283
+round  2
+****************************************
+Initial graph processing : 5.211217
+batch number is 1040000
+average delta time 0.092806
+average total time 0.662512
+round  0
+****************************************
+Initial graph processing : 4.207775
+batch number is 1040000
+average delta time 0.097281
+average total time 0.673885
+round  1
+****************************************
+Initial graph processing : 4.099364
+batch number is 1040000
+average delta time 0.090420
+average total time 0.733576
+round  2
+****************************************
+Initial graph processing : 2.699218
+batch number is 1080000
+average delta time 0.088828
+average total time 0.790647
+round  0
+****************************************
+Initial graph processing : 2.711891
+batch number is 1080000
+average delta time 0.098004
+average total time 0.838102
+round  1
+****************************************
+Initial graph processing : 5.605829
+batch number is 1080000
+average delta time 0.095720
+average total time 0.678864
+round  2
+****************************************
+Initial graph processing : 4.680583
+batch number is 1120000
+average delta time 0.523719
+average total time 1.099011
+round  0
+****************************************
+Initial graph processing : 3.063151
+batch number is 1120000
+average delta time 0.098717
+average total time 0.774052
+round  1
+****************************************
+Initial graph processing : 2.360108
+batch number is 1120000
+average delta time 0.093871
+average total time 0.678466
+round  2
+****************************************
+Initial graph processing : 5.316054
+batch number is 1160000
+average delta time 0.262710
+average total time 0.882394
+round  0
+****************************************
+Initial graph processing : 5.879561
+batch number is 1160000
+average delta time 0.081553
+average total time 0.692028
+round  1
+****************************************
+Initial graph processing : 5.051735
+batch number is 1160000
+average delta time 0.082266
+average total time 0.732578
+round  2
+****************************************
+Initial graph processing : 4.907824
+batch number is 1200000
+average delta time 0.112069
+average total time 0.741328
+round  0
+****************************************
+Initial graph processing : 4.644615
+batch number is 1200000
+average delta time 1.675821
+average total time 2.364448
+round  1
+****************************************
+Initial graph processing : 4.249216
+batch number is 1200000
+average delta time 0.102951
+average total time 0.658889
+round  2
+****************************************
+Initial graph processing : 4.700604
+batch number is 1240000
+average delta time 0.087530
+average total time 0.755986
+round  0
+****************************************
+Initial graph processing : 4.574559
+batch number is 1240000
+average delta time 0.101542
+average total time 0.799239
+round  1
+****************************************
+Initial graph processing : 4.730839
+batch number is 1240000
+average delta time 0.113601
+average total time 0.751782
+round  2
+****************************************
+Initial graph processing : 4.906308
+batch number is 1280000
+average delta time 0.074011
+average total time 0.762404
+round  0
+****************************************
+Initial graph processing : 4.441273
+batch number is 1280000
+average delta time 0.104867
+average total time 0.829729
+round  1
+****************************************
+Initial graph processing : 6.857116
+batch number is 1280000
+average delta time 0.114216
+average total time 0.800022
+round  2
+****************************************
+Initial graph processing : 5.560558
+batch number is 1320000
+average delta time 0.112056
+average total time 0.678319
+round  0
+****************************************
+Initial graph processing : 4.593763
+batch number is 1320000
+average delta time 0.101856
+average total time 0.757467
+round  1
+****************************************
+Initial graph processing : 4.367711
+batch number is 1320000
+average delta time 0.091620
+average total time 0.791349
+round  2
+****************************************
+Initial graph processing : 6.850814
+batch number is 1360000
+average delta time 0.101716
+average total time 0.681779
+round  0
+****************************************
+Initial graph processing : 6.158273
+batch number is 1360000
+average delta time 0.112999
+average total time 0.748613
+round  1
+****************************************
+Initial graph processing : 5.079135
+batch number is 1360000
+average delta time 0.097274
+average total time 0.767270
+round  2
+****************************************
+Initial graph processing : 5.790554
+batch number is 1400000
+average delta time 0.138177
+average total time 0.845692
+round  0
+****************************************
+Initial graph processing : 7.577111
+batch number is 1400000
+average delta time 0.105887
+average total time 0.824324
+round  1
+****************************************
+Initial graph processing : 5.067731
+batch number is 1400000
+average delta time 0.099148
+average total time 0.735007
+round  2
+****************************************
+Initial graph processing : 4.584482
+batch number is 1440000
+average delta time 0.114773
+average total time 0.837390
+round  0
+****************************************
+Initial graph processing : 4.816102
+batch number is 1440000
+average delta time 0.108244
+average total time 0.828612
+round  1
+****************************************
+Initial graph processing : 5.709626
+batch number is 1440000
+average delta time 0.101028
+average total time 0.774219
+round  2
+****************************************
+Initial graph processing : 6.438355
+batch number is 1480000
+average delta time 0.092610
+average total time 0.758007
+round  0
+****************************************
+Initial graph processing : 4.271694
+batch number is 1480000
+average delta time 0.100948
+average total time 0.867626
+round  1
+****************************************
+Initial graph processing : 5.657473
+batch number is 1480000
+average delta time 0.094303
+average total time 0.780046
+round  2
+****************************************
+Initial graph processing : 5.012755
+batch number is 1520000
+average delta time 0.103180
+average total time 1.030832
+round  0
+****************************************
+Initial graph processing : 5.712345
+batch number is 1520000
+average delta time 0.121861
+average total time 0.887636
+round  1
+****************************************
+Initial graph processing : 4.719596
+batch number is 1520000
+average delta time 0.112006
+average total time 0.822946
+round  2
+****************************************
+Initial graph processing : 4.886708
+batch number is 1560000
+average delta time 0.103387
+average total time 0.892473
+round  0
+****************************************
+Initial graph processing : 4.779169
+batch number is 1560000
+average delta time 0.088886
+average total time 0.856097
+round  1
+****************************************
+Initial graph processing : 7.211013
+batch number is 1560000
+average delta time 0.107201
+average total time 0.790929
+round  2
+****************************************
+Initial graph processing : 4.602396
+batch number is 1600000
+average delta time 0.138531
+average total time 0.904902
+round  0
+****************************************
+Initial graph processing : 4.908628
+batch number is 1600000
+average delta time 0.107868
+average total time 0.890898
+round  1
+****************************************
+Initial graph processing : 4.758383
+batch number is 1600000
+average delta time 0.093310
+average total time 0.916714
+round  2
+****************************************
+Initial graph processing : 4.059638
+batch number is 1640000
+average delta time 0.100032
+average total time 0.939202
+round  0
+****************************************
+Initial graph processing : 4.882245
+batch number is 1640000
+average delta time 0.107578
+average total time 0.851927
+round  1
+****************************************
+Initial graph processing : 4.539794
+batch number is 1640000
+average delta time 0.106540
+average total time 0.869815
+round  2
+****************************************
+Initial graph processing : 5.042488
+batch number is 1680000
+average delta time 2.102349
+average total time 2.920356
+round  0
+****************************************
+Initial graph processing : 4.954051
+batch number is 1680000
+average delta time 0.108608
+average total time 0.869737
+round  1
+****************************************
+Initial graph processing : 5.836634
+batch number is 1680000
+average delta time 0.097099
+average total time 0.933604
+round  2
+****************************************
+Initial graph processing : 2.748674
+batch number is 1720000
+average delta time 0.119588
+average total time 0.974258
+round  0
+****************************************
+Initial graph processing : 7.163324
+batch number is 1720000
+average delta time 0.094252
+average total time 0.858077
+round  1
+****************************************
+Initial graph processing : 5.220441
+batch number is 1720000
+average delta time 0.183445
+average total time 1.041495
+round  2
+****************************************
+Initial graph processing : 5.457650
+batch number is 1760000
+average delta time 0.086167
+average total time 0.869805
+round  0
+****************************************
+Initial graph processing : 6.356292
+batch number is 1760000
+average delta time 0.110003
+average total time 0.801076
+round  1
+****************************************
+Initial graph processing : 4.642656
+batch number is 1760000
+average delta time 0.144784
+average total time 0.985311
+round  2
+****************************************
+Initial graph processing : 2.553754
+batch number is 1800000
+average delta time 8.355525
+average total time 9.271965
+round  0
+****************************************
+Initial graph processing : 5.562201
+batch number is 1800000
+average delta time 0.088001
+average total time 0.978437
+round  1
+****************************************
+Initial graph processing : 4.788459
+batch number is 1800000
+average delta time 0.110460
+average total time 0.933736
+round  2
+****************************************
+Initial graph processing : 7.081983
+batch number is 1840000
+average delta time 0.115046
+average total time 0.910484
+round  0
+****************************************
+Initial graph processing : 4.938843
+batch number is 1840000
+average delta time 0.113543
+average total time 0.884137
+round  1
+****************************************
+Initial graph processing : 6.510542
+batch number is 1840000
+average delta time 0.114578
+average total time 0.960454
+round  2
+****************************************
+Initial graph processing : 6.533681
+batch number is 1880000
+average delta time 0.102366
+average total time 0.930000
+round  0
+****************************************
+Initial graph processing : 6.916410
+batch number is 1880000
+average delta time 0.152211
+average total time 1.007360
+round  1
+****************************************
+Initial graph processing : 6.322114
+batch number is 1880000
+average delta time 0.111302
+average total time 0.910097
+round  2
+****************************************
+Initial graph processing : 4.832273
+batch number is 1920000
+average delta time 0.139432
+average total time 1.011802
+round  0
+****************************************
+Initial graph processing : 4.970579
+batch number is 1920000
+average delta time 0.121807
+average total time 0.959124
+round  1
+****************************************
+Initial graph processing : 4.413504
+batch number is 1920000
+average delta time 0.111518
+average total time 0.911432
+round  2
+****************************************
+Initial graph processing : 2.828948
+batch number is 1960000
+average delta time 0.114317
+average total time 1.029514
+round  0
+****************************************
+Initial graph processing : 4.989716
+batch number is 1960000
+average delta time 12.447147
+average total time 13.284972
+round  1
+****************************************
+Initial graph processing : 4.524629
+batch number is 1960000
+average delta time 1.733121
+average total time 2.618840
+round  2
+****************************************
+Initial graph processing : 6.466850
+batch number is 2000000
+average delta time 2.317282
+average total time 3.133349
+round  0
+****************************************
+Initial graph processing : 5.385321
+batch number is 2000000
+average delta time 0.116964
+average total time 0.938710
+round  1
+****************************************
+Initial graph processing : 5.189811
+batch number is 2000000
+average delta time 0.101113
+average total time 0.919497
+round  2
+****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Twitter start
+Initial graph processing : 10.189654
+batch number is 75000
+average delta time 0.107251
+average total time 0.464585
+round  0
+****************************************
+Initial graph processing : 7.444785
+batch number is 75000
+average delta time 0.098241
+average total time 0.433765
+round  1
+****************************************
+Initial graph processing : 9.917055
+batch number is 75000
+average delta time 0.098853
+average total time 0.365902
+round  2
+****************************************
+Initial graph processing : 7.208629
+batch number is 150000
+average delta time 0.125251
+average total time 0.505885
+round  0
+****************************************
+Initial graph processing : 9.493845
+batch number is 150000
+average delta time 0.125676
+average total time 0.544381
+round  1
+****************************************
+Initial graph processing : 12.912251
+batch number is 150000
+average delta time 0.106872
+average total time 0.505189
+round  2
+****************************************
+Initial graph processing : 8.948522
+batch number is 225000
+average delta time 0.108774
+average total time 0.486034
+round  0
+****************************************
+Initial graph processing : 10.253818
+batch number is 225000
+average delta time 0.113280
+average total time 0.537048
+round  1
+****************************************
+Initial graph processing : 10.092023
+batch number is 225000
+average delta time 0.116390
+average total time 0.573103
+round  2
+****************************************
+Initial graph processing : 11.151807
+batch number is 300000
+average delta time 0.174258
+average total time 0.789900
+round  0
+****************************************
+Initial graph processing : 13.056396
+batch number is 300000
+average delta time 0.145789
+average total time 0.681351
+round  1
+****************************************
+Initial graph processing : 9.536843
+batch number is 300000
+average delta time 0.129396
+average total time 0.653617
+round  2
+****************************************
+Initial graph processing : 11.214542
+batch number is 375000
+average delta time 0.126581
+average total time 0.814681
+round  0
+****************************************
+Initial graph processing : 11.050477
+batch number is 375000
+average delta time 0.115034
+average total time 0.776095
+round  1
+****************************************
+Initial graph processing : 11.636148
+batch number is 375000
+average delta time 0.161069
+average total time 0.805122
+round  2
+****************************************
+Initial graph processing : 9.220251
+batch number is 450000
+average delta time 0.106938
+average total time 0.770730
+round  0
+****************************************
+Initial graph processing : 12.403117
+batch number is 450000
+average delta time 6.873459
+average total time 7.549322
+round  1
+****************************************
+Initial graph processing : 11.722138
+batch number is 450000
+average delta time 0.117512
+average total time 0.732268
+round  2
+****************************************
+Initial graph processing : 11.959655
+batch number is 525000
+average delta time 0.135526
+average total time 0.899634
+round  0
+****************************************
+Initial graph processing : 9.598348
+batch number is 525000
+average delta time 0.127345
+average total time 0.779254
+round  1
+****************************************
+Initial graph processing : 9.766999
+batch number is 525000
+average delta time 0.130369
+average total time 0.944315
+round  2
+****************************************
+Initial graph processing : 9.575884
+batch number is 600000
+average delta time 0.120648
+average total time 0.860489
+round  0
+****************************************
+Initial graph processing : 11.177505
+batch number is 600000
+average delta time 0.157192
+average total time 1.009794
+round  1
+****************************************
+Initial graph processing : 11.792042
+batch number is 600000
+average delta time 0.140530
+average total time 1.019114
+round  2
+****************************************
+Initial graph processing : 9.768522
+batch number is 675000
+average delta time 0.129623
+average total time 0.947554
+round  0
+****************************************
+Initial graph processing : 9.996477
+batch number is 675000
+average delta time 0.143216
+average total time 1.061749
+round  1
+****************************************
+Initial graph processing : 12.175346
+batch number is 675000
+average delta time 0.148320
+average total time 0.887309
+round  2
+****************************************
+Initial graph processing : 11.245504
+batch number is 750000
+average delta time 0.133529
+average total time 1.078410
+round  0
+****************************************
+Initial graph processing : 9.888444
+batch number is 750000
+average delta time 0.153777
+average total time 1.117800
+round  1
+****************************************
+Initial graph processing : 11.166306
+batch number is 750000
+average delta time 0.168800
+average total time 1.153066
+round  2
+****************************************
+Initial graph processing : 10.898529
+batch number is 825000
+average delta time 0.144765
+average total time 1.068392
+round  0
+****************************************
+Initial graph processing : 11.676801
+batch number is 825000
+average delta time 0.174267
+average total time 1.121096
+round  1
+****************************************
+Initial graph processing : 10.117442
+batch number is 825000
+average delta time 0.133388
+average total time 1.015578
+round  2
+****************************************
+Initial graph processing : 9.738731
+batch number is 900000
+average delta time 0.149234
+average total time 1.381550
+round  0
+****************************************
+Initial graph processing : 7.494260
+batch number is 900000
+average delta time 0.124042
+average total time 1.198510
+round  1
+****************************************
+Initial graph processing : 8.369078
+batch number is 900000
+average delta time 0.131648
+average total time 1.024082
+round  2
+****************************************
+Initial graph processing : 6.608017
+batch number is 975000
+average delta time 0.128296
+average total time 1.241069
+round  0
+****************************************
+Initial graph processing : 11.478244
+batch number is 975000
+round  1
+****************************************
+Initial graph processing : 11.331602
+batch number is 975000
+average delta time 0.135254
+average total time 1.189597
+round  2
+****************************************
+Initial graph processing : 11.861569
+batch number is 1050000
+average delta time 0.173106
+average total time 1.465133
+round  0
+****************************************
+Initial graph processing : 6.905532
+batch number is 1050000
+average delta time 0.148534
+average total time 1.336511
+round  1
+****************************************
+Initial graph processing : 11.247272
+batch number is 1050000
+average delta time 0.139668
+average total time 1.243567
+round  2
+****************************************
+Initial graph processing : 11.104821
+batch number is 1125000
+average delta time 0.152091
+average total time 1.445983
+round  0
+****************************************
+Initial graph processing : 10.798409
+batch number is 1125000
+average delta time 0.147097
+average total time 1.186770
+round  1
+****************************************
+Initial graph processing : 7.069926
+batch number is 1125000
+average delta time 0.138671
+average total time 1.393706
+round  2
+****************************************
+Initial graph processing : 8.696439
+batch number is 1200000
+average delta time 0.141082
+average total time 1.363011
+round  0
+****************************************
+Initial graph processing : 9.368845
+batch number is 1200000
+average delta time 0.153388
+average total time 1.459833
+round  1
+****************************************
+Initial graph processing : 8.935726
+batch number is 1200000
+average delta time 0.135944
+average total time 1.571585
+round  2
+****************************************
+Initial graph processing : 10.979483
+batch number is 1275000
+average delta time 0.160044
+average total time 1.509759
+round  0
+****************************************
+Initial graph processing : 7.647961
+batch number is 1275000
+average delta time 0.138945
+average total time 1.560388
+round  1
+****************************************
+Initial graph processing : 10.901158
+batch number is 1275000
+average delta time 0.178573
+average total time 1.476661
+round  2
+****************************************
+Initial graph processing : 8.971035
+batch number is 1350000
+average delta time 0.151857
+average total time 1.206171
+round  0
+****************************************
+Initial graph processing : 11.569272
+batch number is 1350000
+average delta time 0.153051
+average total time 1.428034
+round  1
+****************************************
+Initial graph processing : 11.112588
+batch number is 1350000
+average delta time 6.889055
+average total time 8.281151
+round  2
+****************************************
+Initial graph processing : 9.377904
+batch number is 1425000
+average delta time 0.135243
+average total time 1.485310
+round  0
+****************************************
+Initial graph processing : 11.723553
+batch number is 1425000
+average delta time 0.174522
+average total time 1.507105
+round  1
+****************************************
+Initial graph processing : 6.891554
+batch number is 1425000
+round  2
+****************************************
+Initial graph processing : 12.827261
+batch number is 1500000
+round  0
+****************************************
+Initial graph processing : 9.451314
+batch number is 1500000
+average delta time 0.169364
+average total time 1.733035
+round  1
+****************************************
+Initial graph processing : 9.474432
+batch number is 1500000
+round  2
+****************************************
+Initial graph processing : 11.274854
+batch number is 1575000
+average delta time 0.168743
+average total time 1.692071
+round  0
+****************************************
+Initial graph processing : 8.983157
+batch number is 1575000
+average delta time 0.150554
+average total time 1.419727
+round  1
+****************************************
+Initial graph processing : 9.543524
+batch number is 1575000
+average delta time 0.157123
+average total time 1.811710
+round  2
+****************************************
+Initial graph processing : 10.638872
+batch number is 1650000
+average delta time 0.155132
+average total time 1.781812
+round  0
+****************************************
+Initial graph processing : 7.114305
+batch number is 1650000
+round  1
+****************************************
+Initial graph processing : 7.194260
+batch number is 1650000
+average delta time 0.155297
+average total time 1.791335
+round  2
+****************************************
+Initial graph processing : 6.673032
+batch number is 1725000
+average delta time 0.145894
+average total time 1.459385
+round  0
+****************************************
+Initial graph processing : 9.798480
+batch number is 1725000
+average delta time 0.196006
+average total time 1.855162
+round  1
+****************************************
+Initial graph processing : 11.132656
+batch number is 1725000
+average delta time 0.181947
+average total time 1.892024
+round  2
+****************************************
+Initial graph processing : 12.061661
+batch number is 1800000
+average delta time 0.161749
+average total time 1.588289
+round  0
+****************************************
+Initial graph processing : 10.898909
+batch number is 1800000
+average delta time 0.179540
+average total time 1.819173
+round  1
+****************************************
+Initial graph processing : 11.292738
+batch number is 1800000
+average delta time 0.202738
+average total time 1.847018
+round  2
+****************************************
+Initial graph processing : 6.284835
+batch number is 1875000
+average delta time 24.564656
+average total time 25.932283
+round  0
+****************************************
+Initial graph processing : 10.207655
+batch number is 1875000
+average delta time 0.193743
+average total time 1.916238
+round  1
+****************************************
+Initial graph processing : 11.865617
+batch number is 1875000
+round  2
+****************************************
+Initial graph processing : 9.709049
+batch number is 1950000
+average delta time 0.187172
+average total time 1.526022
+round  0
+****************************************
+Initial graph processing : 7.742312
+batch number is 1950000
+average delta time 0.137416
+average total time 1.945900
+round  1
+****************************************
+Initial graph processing : 10.702826
+batch number is 1950000
+average delta time 0.177378
+average total time 1.938052
+round  2
+****************************************
+Initial graph processing : 6.919585
+batch number is 2025000
+average delta time 0.143438
+average total time 1.977161
+round  0
+****************************************
+Initial graph processing : 10.170764
+batch number is 2025000
+average delta time 0.193802
+average total time 1.997222
+round  1
+****************************************
+Initial graph processing : 7.528545
+batch number is 2025000
+round  2
+****************************************
+Initial graph processing : 10.690106
+batch number is 2100000
+average delta time 0.167388
+average total time 2.153440
+round  0
+****************************************
+Initial graph processing : 10.974975
+batch number is 2100000
+average delta time 0.201095
+average total time 2.113064
+round  1
+****************************************
+Initial graph processing : 10.321495
+batch number is 2100000
+average delta time 0.153632
+average total time 1.600683
+round  2
+****************************************
+Initial graph processing : 7.044088
+batch number is 2175000
+average delta time 0.144180
+average total time 1.959288
+round  0
+****************************************
+Initial graph processing : 10.141277
+batch number is 2175000
+round  1
+****************************************
+Initial graph processing : 10.770848
+batch number is 2175000
+average delta time 0.185206
+average total time 2.074208
+round  2
+****************************************
+Initial graph processing : 9.432971
+batch number is 2250000
+average delta time 0.202027
+average total time 2.088355
+round  0
+****************************************
+Initial graph processing : 7.144565
+batch number is 2250000
+average delta time 0.168455
+average total time 2.383425
+round  1
+****************************************
+Initial graph processing : 9.806562
+batch number is 2250000
+round  2
+****************************************
+Initial graph processing : 7.047999
+batch number is 2325000
+average delta time 0.179789
+average total time 2.156111
+round  0
+****************************************
+Initial graph processing : 9.735994
+batch number is 2325000
+average delta time 0.180351
+average total time 2.192975
+round  1
+****************************************
+Initial graph processing : 10.906504
+batch number is 2325000
+average delta time 0.191767
+average total time 2.248862
+round  2
+****************************************
+Initial graph processing : 9.506540
+batch number is 2400000
+average delta time 0.194231
+average total time 2.413260
+round  0
+****************************************
+Initial graph processing : 7.044310
+batch number is 2400000
+average delta time 0.196692
+average total time 2.425649
+round  1
+****************************************
+Initial graph processing : 9.587071
+batch number is 2400000
+average delta time 0.210864
+average total time 2.121117
+round  2
+****************************************
+Initial graph processing : 9.974657
+batch number is 2475000
+average delta time 0.188961
+average total time 2.376602
+round  0
+****************************************
+Initial graph processing : 12.505680
+batch number is 2475000
+average delta time 0.201430
+average total time 2.157820
+round  1
+****************************************
+Initial graph processing : 6.863327
+batch number is 2475000
+average delta time 0.155087
+average total time 2.331850
+round  2
+****************************************
+Initial graph processing : 9.673072
+batch number is 2550000
+average delta time 0.208556
+average total time 2.715809
+round  0
+****************************************
+Initial graph processing : 11.023285
+batch number is 2550000
+average delta time 0.208873
+average total time 2.440507
+round  1
+****************************************
+Initial graph processing : 10.041321
+batch number is 2550000
+average delta time 0.201969
+average total time 2.118168
+round  2
+****************************************
+Initial graph processing : 11.363792
+batch number is 2625000
+average delta time 0.222203
+average total time 2.297777
+round  0
+****************************************
+Initial graph processing : 9.243726
+batch number is 2625000
+average delta time 0.187403
+average total time 2.308062
+round  1
+****************************************
+Initial graph processing : 10.160820
+batch number is 2625000
+round  2
+****************************************
+Initial graph processing : 6.756776
+batch number is 2700000
+average delta time 0.170595
+average total time 2.029783
+round  0
+****************************************
+Initial graph processing : 11.862090
+batch number is 2700000
+average delta time 0.212792
+average total time 2.330765
+round  1
+****************************************
+Initial graph processing : 8.255440
+batch number is 2700000
+average delta time 0.202769
+average total time 2.744050
+round  2
+****************************************
+Initial graph processing : 12.124729
+batch number is 2775000
+average delta time 0.226196
+average total time 2.343454
+round  0
+****************************************
+Initial graph processing : 9.216002
+batch number is 2775000
+round  1
+****************************************
+Initial graph processing : 11.456075
+batch number is 2775000
+average delta time 0.214531
+average total time 2.558210
+round  2
+****************************************
+Initial graph processing : 11.411251
+batch number is 2850000
+round  0
+****************************************
+Initial graph processing : 6.320454
+batch number is 2850000
+round  1
+****************************************
+Initial graph processing : 9.724061
+batch number is 2850000
+average delta time 0.226370
+average total time 2.348281
+round  2
+****************************************
+Initial graph processing : 9.576878
+batch number is 2925000
+average delta time 0.191147
+average total time 2.505366
+round  0
+****************************************
+Initial graph processing : 7.076003
+batch number is 2925000
+average delta time 0.167922
+average total time 2.433042
+round  1
+****************************************
+Initial graph processing : 9.933780
+batch number is 2925000
+round  2
+****************************************
+Initial graph processing : 10.326854
+batch number is 3000000
+average delta time 0.174627
+average total time 2.185105
+round  0
+****************************************
+Initial graph processing : 7.072540
+batch number is 3000000
+round  1
+****************************************
+Initial graph processing : 10.865441
+batch number is 3000000
+average delta time 0.278474
+average total time 2.532439
+round  2
+****************************************
+Initial graph processing : 7.270908
+batch number is 3075000
+average delta time 0.176770
+average total time 2.731589
+round  0
+****************************************
+Initial graph processing : 9.952020
+batch number is 3075000
+round  1
+****************************************
+Initial graph processing : 9.700142
+batch number is 3075000
+average delta time 0.196908
+average total time 2.639462
+round  2
+****************************************
+Initial graph processing : 7.122242
+batch number is 3150000
+round  0
+****************************************
+Initial graph processing : 11.785861
+batch number is 3150000
+round  1
+****************************************
+Initial graph processing : 9.760065
+batch number is 3150000
+average delta time 0.220062
+average total time 2.683314
+round  2
+****************************************
+Initial graph processing : 9.666791
+batch number is 3225000
+round  0
+****************************************
+Initial graph processing : 10.500898
+batch number is 3225000
+round  1
+****************************************
+Initial graph processing : 9.356356
+batch number is 3225000
+round  2
+****************************************
+Initial graph processing : 9.695091
+batch number is 3300000
+round  0
+****************************************
+Initial graph processing : 10.624453
+batch number is 3300000
+average delta time 0.281355
+average total time 2.942651
+round  1
+****************************************
+Initial graph processing : 7.265501
+batch number is 3300000
+average delta time 0.220933
+average total time 2.817362
+round  2
+****************************************
+Initial graph processing : 11.140363
+batch number is 3375000
+average delta time 0.231933
+average total time 2.638162
+round  0
+****************************************
+Initial graph processing : 10.483209
+batch number is 3375000
+average delta time 0.248892
+average total time 2.732328
+round  1
+****************************************
+Initial graph processing : 11.867350
+batch number is 3375000
+average delta time 0.238715
+average total time 2.542162
+round  2
+****************************************
+Initial graph processing : 12.421859
+batch number is 3450000
+round  0
+****************************************
+Initial graph processing : 10.914474
+batch number is 3450000
+average delta time 0.221707
+average total time 2.771831
+round  1
+****************************************
+Initial graph processing : 11.424181
+batch number is 3450000
+average delta time 0.227736
+average total time 2.701454
+round  2
+****************************************
+Initial graph processing : 7.349314
+batch number is 3525000
+average delta time 0.185566
+average total time 3.150489
+round  0
+****************************************
+Initial graph processing : 8.315754
+batch number is 3525000
+average delta time 0.234368
+average total time 3.029777
+round  1
+****************************************
+Initial graph processing : 6.788860
+batch number is 3525000
+round  2
+****************************************
+Initial graph processing : 10.082798
+batch number is 3600000
+average delta time 0.250781
+average total time 2.957312
+round  0
+****************************************
+Initial graph processing : 10.033056
+batch number is 3600000
+average delta time 0.199754
+average total time 2.852871
+round  1
+****************************************
+Initial graph processing : 10.612084
+batch number is 3600000
+average delta time 0.199861
+average total time 2.652869
+round  2
+****************************************
+Initial graph processing : 10.871910
+batch number is 3675000
+average delta time 0.217533
+average total time 2.637009
+round  0
+****************************************
+Initial graph processing : 8.871945
+batch number is 3675000
+average delta time 0.220580
+average total time 2.983917
+round  1
+****************************************
+Initial graph processing : 10.480183
+batch number is 3675000
+round  2
+****************************************
+Initial graph processing : 10.028808
+batch number is 3750000
+average delta time 0.237529
+average total time 2.442806
+round  0
+****************************************
+Initial graph processing : 7.032287
+batch number is 3750000
+average delta time 0.204256
+average total time 2.512266
+round  1
+****************************************
+Initial graph processing : 11.284807
+batch number is 3750000
+average delta time 0.222878
+average total time 2.911166
+round  2
+****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TT start
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++
+round  0
+****************************************
+round  1
+****************************************
+round  2
+****************************************
+++++++++++++++++++++++++++++++++++++++++++++++

@@ -27,17 +27,17 @@
 #define MAX_PARENT 4294967295
 
 // ======================================================================
-// BFSINFO
+// WCCINFO
 // ======================================================================
-class BfsInfo {
+class WccInfo {
 public:
   uintV source_vertex;
 
-  BfsInfo() : source_vertex(0) {}
+  WccInfo() : source_vertex(0) {}
 
-  BfsInfo(uintV _source_vertex) : source_vertex(_source_vertex) {}
+  WccInfo(uintV _source_vertex) : source_vertex(_source_vertex) {}
 
-  void copy(const BfsInfo &object) { source_vertex = object.source_vertex; }
+  void copy(const WccInfo &object) { source_vertex = object.source_vertex; }
 
   void processUpdates(edgeArray &edge_additions, edgeArray &edge_deletions) {}
 
@@ -53,11 +53,12 @@ template <class VertexValueType, class GlobalInfoType>
 inline void initializeVertexValue(const uintV &v,
                                   VertexValueType &v_vertex_value,
                                   const GlobalInfoType &global_info) {
-  if (v != global_info.source_vertex) {
-    v_vertex_value = 0;
-  } else {
-    v_vertex_value = 1;
-  }
+  // if (v != global_info.source_vertex) {
+  //   v_vertex_value = 0;
+  // } else {
+  //   v_vertex_value = 1;
+  // }
+  v_vertex_value = v;
 }
 
 // ======================================================================
@@ -80,12 +81,21 @@ inline bool
 edgeFunction(const uintV &u, const uintV &v, const EdgeDataType &edge_weight,
              const VertexValueType &u_value, VertexValueType &v_value,
              GlobalInfoType &global_info) {
-  if (u_value == 0) {
+  // if (u_value == 0) {
+  //   return false;
+  // } else {
+  //   v_value = 1;
+  //   return true;
+  // }
+  if (u_value == v_value)
+  {
     return false;
-  } else {
-    v_value = 1;
+  }
+  else{
+    v_value = u_value;
     return true;
   }
+  
 }
 
 // ======================================================================
@@ -97,7 +107,8 @@ template <class VertexValueType, class GlobalInfoType>
 inline bool shouldPropagate(const VertexValueType &old_value,
                             const VertexValueType &new_value,
                             GlobalInfoType &global_info) {
-  return (old_value == 1) && (new_value == 0);
+  // return (old_value == 1) && (new_value == 0);
+  return (old_value!=new_value);
 }
 
 // ======================================================================
@@ -116,10 +127,10 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   // {
   long n = G.n;
   int source_vertex = config.getOptionLongValue("-source", 0);
-  BfsInfo global_info(source_vertex);
+  WccInfo global_info(source_vertex);
 
   // cout << "Initializing engine ....\n";
-  KickStarterEngine<vertex, uint16_t, BfsInfo> engine(G, global_info, config);
+  KickStarterEngine<vertex, uint16_t, WccInfo> engine(G, global_info, config);
   engine.init();
   // cout << "Finished initializing engine\n";
   // engine.run();
@@ -127,7 +138,6 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
     // uintE number;
     // cout<<"enter the number for basic hop: ";
     // cin>>number;  
-  // engine.initialCompute();
   whole_time += engine.test_run(number);
   // ~engine();
   // engine.del_KickStarterEngine();
