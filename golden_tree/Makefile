@@ -65,7 +65,7 @@ OTHERS=../core/main.h
 
 
 # $(info ************  Using Aspen Library ************)
-ALL=BFS SSSP
+ALL=BFS SSSP SSWP SSNP
 
 # make
 
