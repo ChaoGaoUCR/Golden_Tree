@@ -147,16 +147,16 @@ template <class vertex> void compute(graph<vertex> &G, commandLine config) {
   int weight_cap = config.getOptionLongValue("-weight_cap", 5);
   SsspInfo global_info(source_vertex, weight_cap);
 
-  cout << "Initializing engine ....\n";
+  // cout << "Initializing engine ....\n";
   GoldenTreeEngine<vertex, uint16_t, SsspInfo> engine(G, global_info, config);
   engine.init();
-  cout << "Finished initializing engine\n";
+  // cout << "Finished initializing engine\n";
 
   // engine.initialCompute();
   // engine.printOutput("static_graph.txt");
   uintE number = engine.ingestor.change_edge_number;
   // cin>>number;
-  cout<<"enter the number for basic hop: "<< number<<endl;
+  cout<<"the number for basic hop: "<< number<<endl;
 
   engine.golden_test(number);
   // engine.unit_test(number);
