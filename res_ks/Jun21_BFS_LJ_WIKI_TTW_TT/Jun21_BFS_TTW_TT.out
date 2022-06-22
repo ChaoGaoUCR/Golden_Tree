@@ -1,0 +1,1600 @@
+************  Using CILK ************
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  BFS.C -L../lib/mimalloc/out/release -lmimalloc  -o BFS
+TTW start
+enter the number for basic hop: 75000
+time = 0.016416
+
+enter the number for basic hop: 75000
+time = 0.016388
+
+enter the number for basic hop: 75000
+time = 0.018019
+
+enter the number for basic hop: 75000
+time = 0.016533
+
+enter the number for basic hop: 75000
+time = 0.018420
+
+----------------------------------------------
+enter the number for basic hop: 150000
+time = 0.020793
+
+enter the number for basic hop: 150000
+time = 0.016616
+
+enter the number for basic hop: 150000
+time = 0.022155
+
+enter the number for basic hop: 150000
+time = 0.022273
+
+enter the number for basic hop: 150000
+time = 0.019516
+
+----------------------------------------------
+enter the number for basic hop: 225000
+time = 0.023287
+
+enter the number for basic hop: 225000
+time = 0.020095
+
+enter the number for basic hop: 225000
+time = 0.023877
+
+enter the number for basic hop: 225000
+time = 0.022155
+
+enter the number for basic hop: 225000
+time = 0.026979
+
+----------------------------------------------
+enter the number for basic hop: 300000
+time = 0.023899
+
+enter the number for basic hop: 300000
+time = 0.021628
+
+enter the number for basic hop: 300000
+time = 0.020887
+
+enter the number for basic hop: 300000
+time = 0.022475
+
+enter the number for basic hop: 300000
+time = 0.026883
+
+----------------------------------------------
+enter the number for basic hop: 375000
+time = 0.029558
+
+enter the number for basic hop: 375000
+time = 0.026716
+
+enter the number for basic hop: 375000
+time = 0.027087
+
+enter the number for basic hop: 375000
+time = 0.025187
+
+enter the number for basic hop: 375000
+time = 0.025435
+
+----------------------------------------------
+enter the number for basic hop: 450000
+time = 0.029303
+
+enter the number for basic hop: 450000
+time = 0.028585
+
+enter the number for basic hop: 450000
+time = 0.027662
+
+enter the number for basic hop: 450000
+time = 0.024610
+
+enter the number for basic hop: 450000
+time = 0.023874
+
+----------------------------------------------
+enter the number for basic hop: 525000
+time = 0.029956
+
+enter the number for basic hop: 525000
+time = 0.027410
+
+enter the number for basic hop: 525000
+time = 0.026936
+
+enter the number for basic hop: 525000
+time = 0.029132
+
+enter the number for basic hop: 525000
+time = 0.026614
+
+----------------------------------------------
+enter the number for basic hop: 600000
+time = 0.027595
+
+enter the number for basic hop: 600000
+time = 0.031830
+
+enter the number for basic hop: 600000
+time = 0.030272
+
+enter the number for basic hop: 600000
+time = 0.030068
+
+enter the number for basic hop: 600000
+time = 0.026765
+
+----------------------------------------------
+enter the number for basic hop: 675000
+time = 0.027656
+
+enter the number for basic hop: 675000
+time = 0.031686
+
+enter the number for basic hop: 675000
+time = 0.034436
+
+enter the number for basic hop: 675000
+time = 0.030682
+
+enter the number for basic hop: 675000
+time = 0.029705
+
+----------------------------------------------
+enter the number for basic hop: 750000
+time = 0.030985
+
+enter the number for basic hop: 750000
+time = 0.030288
+
+enter the number for basic hop: 750000
+time = 0.032703
+
+enter the number for basic hop: 750000
+time = 0.030332
+
+enter the number for basic hop: 750000
+time = 0.030139
+
+----------------------------------------------
+enter the number for basic hop: 825000
+time = 0.031354
+
+enter the number for basic hop: 825000
+time = 0.033740
+
+enter the number for basic hop: 825000
+time = 0.032037
+
+enter the number for basic hop: 825000
+time = 0.035707
+
+enter the number for basic hop: 825000
+time = 0.032178
+
+----------------------------------------------
+enter the number for basic hop: 900000
+time = 0.031684
+
+enter the number for basic hop: 900000
+time = 0.031946
+
+enter the number for basic hop: 900000
+time = 0.027919
+
+enter the number for basic hop: 900000
+time = 0.035091
+
+enter the number for basic hop: 900000
+time = 0.035106
+
+----------------------------------------------
+enter the number for basic hop: 975000
+time = 0.039297
+
+enter the number for basic hop: 975000
+time = 0.035958
+
+enter the number for basic hop: 975000
+time = 0.036293
+
+enter the number for basic hop: 975000
+time = 0.040193
+
+enter the number for basic hop: 975000
+time = 0.035039
+
+----------------------------------------------
+enter the number for basic hop: 1050000
+time = 0.036919
+
+enter the number for basic hop: 1050000
+time = 0.035804
+
+enter the number for basic hop: 1050000
+time = 0.034015
+
+enter the number for basic hop: 1050000
+time = 0.036547
+
+enter the number for basic hop: 1050000
+time = 0.034453
+
+----------------------------------------------
+enter the number for basic hop: 1125000
+time = 0.040759
+
+enter the number for basic hop: 1125000
+time = 0.036257
+
+enter the number for basic hop: 1125000
+time = 0.036588
+
+enter the number for basic hop: 1125000
+time = 0.040986
+
+enter the number for basic hop: 1125000
+time = 0.039988
+
+----------------------------------------------
+enter the number for basic hop: 1200000
+time = 0.037711
+
+enter the number for basic hop: 1200000
+time = 0.042270
+
+enter the number for basic hop: 1200000
+time = 0.037553
+
+enter the number for basic hop: 1200000
+time = 0.039166
+
+enter the number for basic hop: 1200000
+time = 0.039816
+
+----------------------------------------------
+enter the number for basic hop: 1275000
+time = 0.046254
+
+enter the number for basic hop: 1275000
+time = 0.043315
+
+enter the number for basic hop: 1275000
+time = 0.044154
+
+enter the number for basic hop: 1275000
+time = 0.039103
+
+enter the number for basic hop: 1275000
+time = 0.043592
+
+----------------------------------------------
+enter the number for basic hop: 1350000
+time = 0.032594
+
+enter the number for basic hop: 1350000
+time = 0.040003
+
+enter the number for basic hop: 1350000
+time = 0.040330
+
+enter the number for basic hop: 1350000
+time = 0.040708
+
+enter the number for basic hop: 1350000
+time = 0.046293
+
+----------------------------------------------
+enter the number for basic hop: 1425000
+time = 0.045899
+
+enter the number for basic hop: 1425000
+time = 0.041345
+
+enter the number for basic hop: 1425000
+time = 0.035323
+
+enter the number for basic hop: 1425000
+time = 0.037421
+
+enter the number for basic hop: 1425000
+time = 0.044069
+
+----------------------------------------------
+enter the number for basic hop: 1500000
+time = 0.042430
+
+enter the number for basic hop: 1500000
+time = 0.045876
+
+enter the number for basic hop: 1500000
+time = 0.046916
+
+enter the number for basic hop: 1500000
+time = 0.042159
+
+enter the number for basic hop: 1500000
+time = 0.037629
+
+----------------------------------------------
+enter the number for basic hop: 1575000
+time = 0.044925
+
+enter the number for basic hop: 1575000
+time = 0.042080
+
+enter the number for basic hop: 1575000
+time = 0.042843
+
+enter the number for basic hop: 1575000
+time = 0.034199
+
+enter the number for basic hop: 1575000
+time = 0.046298
+
+----------------------------------------------
+enter the number for basic hop: 1650000
+time = 0.049811
+
+enter the number for basic hop: 1650000
+time = 0.049514
+
+enter the number for basic hop: 1650000
+time = 0.033866
+
+enter the number for basic hop: 1650000
+time = 0.048008
+
+enter the number for basic hop: 1650000
+time = 0.048748
+
+----------------------------------------------
+enter the number for basic hop: 1725000
+time = 0.045128
+
+enter the number for basic hop: 1725000
+time = 0.049220
+
+enter the number for basic hop: 1725000
+time = 0.047029
+
+enter the number for basic hop: 1725000
+time = 0.043950
+
+enter the number for basic hop: 1725000
+time = 0.052960
+
+----------------------------------------------
+enter the number for basic hop: 1800000
+time = 0.052344
+
+enter the number for basic hop: 1800000
+time = 0.047908
+
+enter the number for basic hop: 1800000
+time = 0.044922
+
+enter the number for basic hop: 1800000
+time = 0.053012
+
+enter the number for basic hop: 1800000
+time = 0.051909
+
+----------------------------------------------
+enter the number for basic hop: 1875000
+time = 0.047991
+
+enter the number for basic hop: 1875000
+time = 0.054312
+
+enter the number for basic hop: 1875000
+time = 0.047078
+
+enter the number for basic hop: 1875000
+time = 0.053193
+
+enter the number for basic hop: 1875000
+time = 0.059420
+
+----------------------------------------------
+enter the number for basic hop: 1950000
+time = 0.056863
+
+enter the number for basic hop: 1950000
+time = 0.054259
+
+enter the number for basic hop: 1950000
+time = 0.049569
+
+enter the number for basic hop: 1950000
+time = 0.043312
+
+enter the number for basic hop: 1950000
+time = 0.048302
+
+----------------------------------------------
+enter the number for basic hop: 2025000
+time = 0.055923
+
+enter the number for basic hop: 2025000
+time = 0.048429
+
+enter the number for basic hop: 2025000
+time = 0.056005
+
+enter the number for basic hop: 2025000
+time = 0.048037
+
+enter the number for basic hop: 2025000
+time = 0.050767
+
+----------------------------------------------
+enter the number for basic hop: 2100000
+time = 0.053747
+
+enter the number for basic hop: 2100000
+time = 0.047505
+
+enter the number for basic hop: 2100000
+time = 0.056855
+
+enter the number for basic hop: 2100000
+time = 0.057179
+
+enter the number for basic hop: 2100000
+time = 0.052973
+
+----------------------------------------------
+enter the number for basic hop: 2175000
+time = 0.061514
+
+enter the number for basic hop: 2175000
+time = 0.054487
+
+enter the number for basic hop: 2175000
+time = 0.047907
+
+enter the number for basic hop: 2175000
+time = 0.042449
+
+enter the number for basic hop: 2175000
+time = 0.057430
+
+----------------------------------------------
+enter the number for basic hop: 2250000
+time = 0.051920
+
+enter the number for basic hop: 2250000
+time = 0.049043
+
+enter the number for basic hop: 2250000
+time = 0.057710
+
+enter the number for basic hop: 2250000
+time = 0.058859
+
+enter the number for basic hop: 2250000
+time = 0.059652
+
+----------------------------------------------
+enter the number for basic hop: 2325000
+time = 0.066205
+
+enter the number for basic hop: 2325000
+time = 0.043976
+
+enter the number for basic hop: 2325000
+time = 0.059407
+
+enter the number for basic hop: 2325000
+time = 0.063907
+
+enter the number for basic hop: 2325000
+time = 0.060416
+
+----------------------------------------------
+enter the number for basic hop: 2400000
+time = 0.054095
+
+enter the number for basic hop: 2400000
+time = 0.063533
+
+enter the number for basic hop: 2400000
+time = 0.054677
+
+enter the number for basic hop: 2400000
+time = 0.061145
+
+enter the number for basic hop: 2400000
+time = 0.056834
+
+----------------------------------------------
+enter the number for basic hop: 2475000
+time = 0.058075
+
+enter the number for basic hop: 2475000
+time = 0.055044
+
+enter the number for basic hop: 2475000
+time = 0.057937
+
+enter the number for basic hop: 2475000
+time = 0.059775
+
+enter the number for basic hop: 2475000
+time = 0.051983
+
+----------------------------------------------
+enter the number for basic hop: 2550000
+time = 0.054032
+
+enter the number for basic hop: 2550000
+time = 0.046050
+
+enter the number for basic hop: 2550000
+time = 0.063104
+
+enter the number for basic hop: 2550000
+time = 0.062029
+
+enter the number for basic hop: 2550000
+time = 0.065411
+
+----------------------------------------------
+enter the number for basic hop: 2625000
+time = 0.057008
+
+enter the number for basic hop: 2625000
+time = 0.056730
+
+enter the number for basic hop: 2625000
+time = 0.062117
+
+enter the number for basic hop: 2625000
+time = 0.057060
+
+enter the number for basic hop: 2625000
+time = 0.064014
+
+----------------------------------------------
+enter the number for basic hop: 2700000
+time = 0.074410
+
+enter the number for basic hop: 2700000
+time = 0.055391
+
+enter the number for basic hop: 2700000
+time = 0.061680
+
+enter the number for basic hop: 2700000
+time = 0.061887
+
+enter the number for basic hop: 2700000
+time = 0.058913
+
+----------------------------------------------
+enter the number for basic hop: 2775000
+time = 0.050251
+
+enter the number for basic hop: 2775000
+time = 0.061327
+
+enter the number for basic hop: 2775000
+time = 0.064927
+
+enter the number for basic hop: 2775000
+time = 0.066839
+
+enter the number for basic hop: 2775000
+time = 0.062041
+
+----------------------------------------------
+enter the number for basic hop: 2850000
+time = 0.059461
+
+enter the number for basic hop: 2850000
+time = 0.068510
+
+enter the number for basic hop: 2850000
+time = 0.065371
+
+enter the number for basic hop: 2850000
+time = 0.069580
+
+enter the number for basic hop: 2850000
+time = 0.063366
+
+----------------------------------------------
+enter the number for basic hop: 2925000
+time = 0.063550
+
+enter the number for basic hop: 2925000
+time = 0.069294
+
+enter the number for basic hop: 2925000
+time = 0.067067
+
+enter the number for basic hop: 2925000
+time = 0.056248
+
+enter the number for basic hop: 2925000
+time = 0.060831
+
+----------------------------------------------
+enter the number for basic hop: 3000000
+time = 0.059827
+
+enter the number for basic hop: 3000000
+time = 0.060415
+
+enter the number for basic hop: 3000000
+time = 0.060788
+
+enter the number for basic hop: 3000000
+time = 0.056867
+
+enter the number for basic hop: 3000000
+time = 0.068428
+
+----------------------------------------------
+enter the number for basic hop: 3075000
+time = 0.072113
+
+enter the number for basic hop: 3075000
+time = 0.063184
+
+enter the number for basic hop: 3075000
+time = 0.061745
+
+enter the number for basic hop: 3075000
+time = 0.066521
+
+enter the number for basic hop: 3075000
+time = 0.064241
+
+----------------------------------------------
+enter the number for basic hop: 3150000
+time = 0.061749
+
+enter the number for basic hop: 3150000
+time = 0.064469
+
+enter the number for basic hop: 3150000
+time = 0.063807
+
+enter the number for basic hop: 3150000
+time = 0.068537
+
+enter the number for basic hop: 3150000
+time = 0.078592
+
+----------------------------------------------
+enter the number for basic hop: 3225000
+time = 0.079025
+
+enter the number for basic hop: 3225000
+time = 0.063715
+
+enter the number for basic hop: 3225000
+time = 0.081631
+
+enter the number for basic hop: 3225000
+time = 0.071628
+
+enter the number for basic hop: 3225000
+time = 0.064231
+
+----------------------------------------------
+enter the number for basic hop: 3300000
+time = 0.067793
+
+enter the number for basic hop: 3300000
+time = 0.079779
+
+enter the number for basic hop: 3300000
+time = 0.062437
+
+enter the number for basic hop: 3300000
+time = 0.074670
+
+enter the number for basic hop: 3300000
+time = 0.056275
+
+----------------------------------------------
+enter the number for basic hop: 3375000
+time = 0.069060
+
+enter the number for basic hop: 3375000
+time = 0.066101
+
+enter the number for basic hop: 3375000
+time = 0.074712
+
+enter the number for basic hop: 3375000
+time = 0.064161
+
+enter the number for basic hop: 3375000
+time = 0.064324
+
+----------------------------------------------
+enter the number for basic hop: 3450000
+time = 0.069169
+
+enter the number for basic hop: 3450000
+time = 0.082970
+
+enter the number for basic hop: 3450000
+time = 0.071382
+
+enter the number for basic hop: 3450000
+time = 0.078886
+
+enter the number for basic hop: 3450000
+time = 0.076539
+
+----------------------------------------------
+enter the number for basic hop: 3525000
+time = 0.068649
+
+enter the number for basic hop: 3525000
+time = 0.065672
+
+enter the number for basic hop: 3525000
+time = 0.076775
+
+enter the number for basic hop: 3525000
+time = 0.078693
+
+enter the number for basic hop: 3525000
+time = 0.063651
+
+----------------------------------------------
+enter the number for basic hop: 3600000
+time = 0.065401
+
+enter the number for basic hop: 3600000
+time = 0.073549
+
+enter the number for basic hop: 3600000
+time = 0.080538
+
+enter the number for basic hop: 3600000
+time = 0.071626
+
+enter the number for basic hop: 3600000
+time = 0.069011
+
+----------------------------------------------
+enter the number for basic hop: 3675000
+time = 0.079374
+
+enter the number for basic hop: 3675000
+time = 0.068169
+
+enter the number for basic hop: 3675000
+time = 0.056028
+
+enter the number for basic hop: 3675000
+time = 0.066223
+
+enter the number for basic hop: 3675000
+time = 0.082725
+
+----------------------------------------------
+enter the number for basic hop: 3750000
+time = 0.075621
+
+enter the number for basic hop: 3750000
+time = 0.073564
+
+enter the number for basic hop: 3750000
+time = 0.076925
+
+enter the number for basic hop: 3750000
+time = 0.071572
+
+enter the number for basic hop: 3750000
+time = 0.055484
+
+----------------------------------------------
+TT start
+enter the number for basic hop: 100000
+enter the number for basic hop: 100000
+enter the number for basic hop: 100000
+time = 0.440815
+
+enter the number for basic hop: 100000
+time = 0.468853
+
+enter the number for basic hop: 100000
+time = 0.647867
+
+----------------------------------------------
+enter the number for basic hop: 200000
+time = 0.540682
+
+enter the number for basic hop: 200000
+time = 0.423127
+
+enter the number for basic hop: 200000
+time = 0.530156
+
+enter the number for basic hop: 200000
+time = 0.636832
+
+enter the number for basic hop: 200000
+time = 0.490618
+
+----------------------------------------------
+enter the number for basic hop: 300000
+time = 0.587941
+
+enter the number for basic hop: 300000
+time = 0.601402
+
+enter the number for basic hop: 300000
+time = 0.661952
+
+enter the number for basic hop: 300000
+time = 0.555194
+
+enter the number for basic hop: 300000
+time = 0.521541
+
+----------------------------------------------
+enter the number for basic hop: 400000
+time = 0.532084
+
+enter the number for basic hop: 400000
+time = 0.706201
+
+enter the number for basic hop: 400000
+time = 0.487183
+
+enter the number for basic hop: 400000
+time = 0.597872
+
+enter the number for basic hop: 400000
+time = 0.553752
+
+----------------------------------------------
+enter the number for basic hop: 500000
+time = 0.640676
+
+enter the number for basic hop: 500000
+time = 0.496287
+
+enter the number for basic hop: 500000
+time = 0.496588
+
+enter the number for basic hop: 500000
+time = 0.483270
+
+enter the number for basic hop: 500000
+time = 0.495162
+
+----------------------------------------------
+enter the number for basic hop: 600000
+time = 0.520252
+
+enter the number for basic hop: 600000
+time = 0.480095
+
+enter the number for basic hop: 600000
+time = 0.538791
+
+enter the number for basic hop: 600000
+time = 0.543539
+
+enter the number for basic hop: 600000
+time = 0.497802
+
+----------------------------------------------
+enter the number for basic hop: 700000
+time = 0.592974
+
+enter the number for basic hop: 700000
+time = 0.498429
+
+enter the number for basic hop: 700000
+time = 0.603871
+
+enter the number for basic hop: 700000
+time = 0.493155
+
+enter the number for basic hop: 700000
+time = 0.594046
+
+----------------------------------------------
+enter the number for basic hop: 800000
+time = 0.489196
+
+enter the number for basic hop: 800000
+time = 0.560666
+
+enter the number for basic hop: 800000
+time = 0.483126
+
+enter the number for basic hop: 800000
+time = 0.608966
+
+enter the number for basic hop: 800000
+time = 0.555882
+
+----------------------------------------------
+enter the number for basic hop: 900000
+time = 0.476341
+
+enter the number for basic hop: 900000
+time = 0.628229
+
+enter the number for basic hop: 900000
+time = 0.544737
+
+enter the number for basic hop: 900000
+time = 0.606564
+
+enter the number for basic hop: 900000
+time = 0.680979
+
+----------------------------------------------
+enter the number for basic hop: 1000000
+time = 0.639875
+
+enter the number for basic hop: 1000000
+time = 0.501096
+
+enter the number for basic hop: 1000000
+time = 0.634942
+
+enter the number for basic hop: 1000000
+time = 0.478513
+
+enter the number for basic hop: 1000000
+time = 0.610804
+
+----------------------------------------------
+enter the number for basic hop: 1100000
+time = 0.472508
+
+enter the number for basic hop: 1100000
+time = 0.489628
+
+enter the number for basic hop: 1100000
+time = 0.490730
+
+enter the number for basic hop: 1100000
+time = 0.668097
+
+enter the number for basic hop: 1100000
+time = 0.498105
+
+----------------------------------------------
+enter the number for basic hop: 1200000
+time = 0.490385
+
+enter the number for basic hop: 1200000
+time = 0.485138
+
+enter the number for basic hop: 1200000
+time = 0.597579
+
+enter the number for basic hop: 1200000
+time = 0.495879
+
+enter the number for basic hop: 1200000
+time = 0.598867
+
+----------------------------------------------
+enter the number for basic hop: 1300000
+time = 0.488815
+
+enter the number for basic hop: 1300000
+time = 0.609094
+
+enter the number for basic hop: 1300000
+time = 0.490184
+
+enter the number for basic hop: 1300000
+time = 0.505454
+
+enter the number for basic hop: 1300000
+time = 0.509675
+
+----------------------------------------------
+enter the number for basic hop: 1400000
+time = 0.508831
+
+enter the number for basic hop: 1400000
+time = 0.484835
+
+enter the number for basic hop: 1400000
+time = 0.561205
+
+enter the number for basic hop: 1400000
+time = 0.513755
+
+enter the number for basic hop: 1400000
+time = 0.601516
+
+----------------------------------------------
+enter the number for basic hop: 1500000
+time = 0.492019
+
+enter the number for basic hop: 1500000
+time = 0.503991
+
+enter the number for basic hop: 1500000
+time = 0.508668
+
+enter the number for basic hop: 1500000
+time = 0.635814
+
+enter the number for basic hop: 1500000
+time = 0.473197
+
+----------------------------------------------
+enter the number for basic hop: 1600000
+time = 0.641481
+
+enter the number for basic hop: 1600000
+time = 0.507514
+
+enter the number for basic hop: 1600000
+time = 0.621168
+
+enter the number for basic hop: 1600000
+time = 0.479034
+
+enter the number for basic hop: 1600000
+time = 0.496630
+
+----------------------------------------------
+enter the number for basic hop: 1700000
+time = 0.639486
+
+enter the number for basic hop: 1700000
+time = 0.645788
+
+enter the number for basic hop: 1700000
+time = 0.776209
+
+enter the number for basic hop: 1700000
+time = 0.489650
+
+enter the number for basic hop: 1700000
+time = 0.637928
+
+----------------------------------------------
+enter the number for basic hop: 1800000
+time = 0.617285
+
+enter the number for basic hop: 1800000
+time = 0.628998
+
+enter the number for basic hop: 1800000
+time = 0.553951
+
+enter the number for basic hop: 1800000
+time = 0.487141
+
+enter the number for basic hop: 1800000
+time = 0.636960
+
+----------------------------------------------
+enter the number for basic hop: 1900000
+time = 0.491594
+
+enter the number for basic hop: 1900000
+time = 0.502165
+
+enter the number for basic hop: 1900000
+time = 0.518441
+
+enter the number for basic hop: 1900000
+time = 0.493717
+
+enter the number for basic hop: 1900000
+time = 0.498317
+
+----------------------------------------------
+enter the number for basic hop: 2000000
+time = 0.488921
+
+enter the number for basic hop: 2000000
+time = 0.639563
+
+enter the number for basic hop: 2000000
+time = 0.498630
+
+enter the number for basic hop: 2000000
+time = 0.630330
+
+enter the number for basic hop: 2000000
+time = 0.596365
+
+----------------------------------------------
+enter the number for basic hop: 2100000
+time = 0.628245
+
+enter the number for basic hop: 2100000
+time = 0.475630
+
+enter the number for basic hop: 2100000
+time = 0.573103
+
+enter the number for basic hop: 2100000
+time = 0.607793
+
+enter the number for basic hop: 2100000
+time = 0.773459
+
+----------------------------------------------
+enter the number for basic hop: 2200000
+time = 0.564532
+
+enter the number for basic hop: 2200000
+time = 0.713505
+
+enter the number for basic hop: 2200000
+time = 0.601506
+
+enter the number for basic hop: 2200000
+time = 0.833387
+
+enter the number for basic hop: 2200000
+time = 0.546702
+
+----------------------------------------------
+enter the number for basic hop: 2300000
+time = 0.493009
+
+enter the number for basic hop: 2300000
+time = 0.728987
+
+enter the number for basic hop: 2300000
+time = 0.510894
+
+enter the number for basic hop: 2300000
+time = 0.624486
+
+enter the number for basic hop: 2300000
+time = 0.560530
+
+----------------------------------------------
+enter the number for basic hop: 2400000
+time = 0.610891
+
+enter the number for basic hop: 2400000
+time = 0.485854
+
+enter the number for basic hop: 2400000
+time = 0.486427
+
+enter the number for basic hop: 2400000
+time = 0.495932
+
+enter the number for basic hop: 2400000
+time = 0.471850
+
+----------------------------------------------
+enter the number for basic hop: 2500000
+time = 0.567717
+
+enter the number for basic hop: 2500000
+time = 0.475367
+
+enter the number for basic hop: 2500000
+time = 0.513522
+
+enter the number for basic hop: 2500000
+time = 0.506533
+
+enter the number for basic hop: 2500000
+time = 0.567626
+
+----------------------------------------------
+enter the number for basic hop: 2600000
+time = 0.575337
+
+enter the number for basic hop: 2600000
+time = 0.768168
+
+enter the number for basic hop: 2600000
+time = 0.684603
+
+enter the number for basic hop: 2600000
+time = 0.610401
+
+enter the number for basic hop: 2600000
+time = 0.529758
+
+----------------------------------------------
+enter the number for basic hop: 2700000
+time = 0.503842
+
+enter the number for basic hop: 2700000
+time = 0.645117
+
+enter the number for basic hop: 2700000
+time = 0.774889
+
+enter the number for basic hop: 2700000
+time = 0.595993
+
+enter the number for basic hop: 2700000
+time = 0.632581
+
+----------------------------------------------
+enter the number for basic hop: 2800000
+time = 0.625742
+
+enter the number for basic hop: 2800000
+time = 0.478467
+
+enter the number for basic hop: 2800000
+time = 0.646162
+
+enter the number for basic hop: 2800000
+time = 0.494470
+
+enter the number for basic hop: 2800000
+time = 0.530528
+
+----------------------------------------------
+enter the number for basic hop: 2900000
+time = 0.599594
+
+enter the number for basic hop: 2900000
+time = 0.539906
+
+enter the number for basic hop: 2900000
+time = 0.483280
+
+enter the number for basic hop: 2900000
+time = 0.636180
+
+enter the number for basic hop: 2900000
+time = 0.508210
+
+----------------------------------------------
+enter the number for basic hop: 3000000
+time = 0.541301
+
+enter the number for basic hop: 3000000
+time = 0.710523
+
+enter the number for basic hop: 3000000
+time = 0.619759
+
+enter the number for basic hop: 3000000
+time = 0.650554
+
+enter the number for basic hop: 3000000
+time = 0.521824
+
+----------------------------------------------
+enter the number for basic hop: 3100000
+time = 0.699462
+
+enter the number for basic hop: 3100000
+time = 0.514903
+
+enter the number for basic hop: 3100000
+time = 0.669300
+
+enter the number for basic hop: 3100000
+time = 0.594962
+
+enter the number for basic hop: 3100000
+time = 0.682569
+
+----------------------------------------------
+enter the number for basic hop: 3200000
+time = 0.583844
+
+enter the number for basic hop: 3200000
+time = 0.476438
+
+enter the number for basic hop: 3200000
+time = 0.728140
+
+enter the number for basic hop: 3200000
+time = 0.544922
+
+enter the number for basic hop: 3200000
+time = 0.509606
+
+----------------------------------------------
+enter the number for basic hop: 3300000
+time = 0.498991
+
+enter the number for basic hop: 3300000
+time = 0.720681
+
+enter the number for basic hop: 3300000
+time = 0.477961
+
+enter the number for basic hop: 3300000
+time = 0.645419
+
+enter the number for basic hop: 3300000
+time = 0.601648
+
+----------------------------------------------
+enter the number for basic hop: 3400000
+time = 0.672298
+
+enter the number for basic hop: 3400000
+time = 0.606258
+
+enter the number for basic hop: 3400000
+time = 0.533411
+
+enter the number for basic hop: 3400000
+time = 0.583080
+
+enter the number for basic hop: 3400000
+time = 0.484758
+
+----------------------------------------------
+enter the number for basic hop: 3500000
+time = 0.636841
+
+enter the number for basic hop: 3500000
+time = 0.475941
+
+enter the number for basic hop: 3500000
+time = 0.633071
+
+enter the number for basic hop: 3500000
+time = 0.561854
+
+enter the number for basic hop: 3500000
+time = 0.520081
+
+----------------------------------------------
+enter the number for basic hop: 3600000
+time = 0.639467
+
+enter the number for basic hop: 3600000
+time = 0.611943
+
+enter the number for basic hop: 3600000
+time = 0.711755
+
+enter the number for basic hop: 3600000
+time = 0.673796
+
+enter the number for basic hop: 3600000
+time = 0.733085
+
+----------------------------------------------
+enter the number for basic hop: 3700000
+time = 0.729919
+
+enter the number for basic hop: 3700000
+time = 0.739969
+
+enter the number for basic hop: 3700000
+time = 0.487464
+
+enter the number for basic hop: 3700000
+time = 0.667417
+
+enter the number for basic hop: 3700000
+time = 0.492239
+
+----------------------------------------------
+enter the number for basic hop: 3800000
+time = 0.619280
+
+enter the number for basic hop: 3800000
+time = 0.564613
+
+enter the number for basic hop: 3800000
+time = 0.580709
+
+enter the number for basic hop: 3800000
+time = 0.606167
+
+enter the number for basic hop: 3800000
+time = 0.555327
+
+----------------------------------------------
+enter the number for basic hop: 3900000
+time = 0.632563
+
+enter the number for basic hop: 3900000
+time = 0.601411
+
+enter the number for basic hop: 3900000
+time = 0.697800
+
+enter the number for basic hop: 3900000
+time = 0.544336
+
+enter the number for basic hop: 3900000
+time = 0.630313
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+time = 0.490847
+
+enter the number for basic hop: 4000000
+time = 0.527626
+
+enter the number for basic hop: 4000000
+time = 0.657014
+
+enter the number for basic hop: 4000000
+time = 0.569672
+
+enter the number for basic hop: 4000000
+time = 0.632932
+
+----------------------------------------------
+enter the number for basic hop: 4100000
+time = 0.526696
+
+enter the number for basic hop: 4100000
+time = 0.511758
+
+enter the number for basic hop: 4100000
+time = 0.630573
+
+enter the number for basic hop: 4100000
+time = 0.623209
+
+enter the number for basic hop: 4100000
+time = 0.480601
+
+----------------------------------------------
+enter the number for basic hop: 4200000
+time = 0.616355
+
+enter the number for basic hop: 4200000
+time = 0.613170
+
+enter the number for basic hop: 4200000
+time = 0.710540
+
+enter the number for basic hop: 4200000
+time = 0.531268
+
+enter the number for basic hop: 4200000
+time = 0.527518
+
+----------------------------------------------
+enter the number for basic hop: 4300000
+time = 0.690524
+
+enter the number for basic hop: 4300000
+time = 0.553327
+
+enter the number for basic hop: 4300000
+time = 0.786967
+
+enter the number for basic hop: 4300000
+time = 0.756297
+
+enter the number for basic hop: 4300000
+time = 0.705198
+
+----------------------------------------------
+enter the number for basic hop: 4400000
+time = 0.657737
+
+enter the number for basic hop: 4400000
+time = 0.529872
+
+enter the number for basic hop: 4400000
+time = 0.650984
+
+enter the number for basic hop: 4400000
+time = 0.662198
+
+enter the number for basic hop: 4400000
+time = 0.505129
+
+----------------------------------------------
+enter the number for basic hop: 4500000
+time = 0.525646
+
+enter the number for basic hop: 4500000
+time = 0.632271
+
+enter the number for basic hop: 4500000
+time = 0.548158
+
+enter the number for basic hop: 4500000
+time = 0.565126
+
+enter the number for basic hop: 4500000
+time = 0.562157
+
+----------------------------------------------
+enter the number for basic hop: 4600000
+time = 0.576301
+
+enter the number for basic hop: 4600000
+time = 0.679694
+
+enter the number for basic hop: 4600000
+time = 0.505959
+
+enter the number for basic hop: 4600000
+time = 0.677556
+
+enter the number for basic hop: 4600000
+time = 0.562850
+
+----------------------------------------------
+enter the number for basic hop: 4700000
+time = 0.664565
+
+enter the number for basic hop: 4700000
+time = 0.527041
+
+enter the number for basic hop: 4700000
+time = 0.683040
+
+enter the number for basic hop: 4700000
+time = 0.652667
+
+enter the number for basic hop: 4700000
+time = 0.596451
+
+----------------------------------------------
+enter the number for basic hop: 4800000
+time = 0.753708
+
+enter the number for basic hop: 4800000
+time = 0.716226
+
+enter the number for basic hop: 4800000
+time = 0.700057
+
+enter the number for basic hop: 4800000
+time = 0.769203
+
+enter the number for basic hop: 4800000
+time = 0.562820
+
+----------------------------------------------
+enter the number for basic hop: 4900000
+time = 0.647595
+
+enter the number for basic hop: 4900000
+time = 0.541780
+
+enter the number for basic hop: 4900000
+time = 0.632097
+
+enter the number for basic hop: 4900000
+time = 0.624466
+
+enter the number for basic hop: 4900000
+time = 0.724807
+
+----------------------------------------------
+enter the number for basic hop: 5000000
+time = 0.581019
+
+enter the number for basic hop: 5000000
+time = 0.706421
+
+enter the number for basic hop: 5000000
+time = 0.710162
+
+enter the number for basic hop: 5000000
+time = 0.712378
+
+enter the number for basic hop: 5000000
+time = 0.726567
+
+----------------------------------------------
