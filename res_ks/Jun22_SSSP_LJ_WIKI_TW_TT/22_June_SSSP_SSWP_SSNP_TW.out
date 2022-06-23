@@ -1,0 +1,1318 @@
+************  Using CILK ************
+make: 'SSWP' is up to date.
+make: 'SSNP' is up to date.
+make: 'SSSP' is up to date.
+TTW start
+SSSP start
+the number for basic hop: 75000
+Initial graph processing : 7.389601
+time = 0.019357
+
+the number for basic hop: 75000
+Initial graph processing : 4.032670
+time = 0.017712
+
+the number for basic hop: 75000
+Initial graph processing : 7.618579
+time = 0.019398
+
+the number for basic hop: 75000
+Initial graph processing : 7.094798
+time = 0.021264
+
+the number for basic hop: 75000
+Initial graph processing : 7.310904
+time = 0.022290
+
+----------------------------------------------
+the number for basic hop: 150000
+Initial graph processing : 8.135115
+time = 0.034844
+
+the number for basic hop: 150000
+Initial graph processing : 5.914001
+time = 0.020725
+
+the number for basic hop: 150000
+Initial graph processing : 4.548486
+time = 0.018909
+
+the number for basic hop: 150000
+Initial graph processing : 5.020959
+time = 0.021344
+
+the number for basic hop: 150000
+Initial graph processing : 7.798630
+time = 0.023718
+
+----------------------------------------------
+the number for basic hop: 225000
+Initial graph processing : 4.664743
+time = 0.024333
+
+the number for basic hop: 225000
+Initial graph processing : 3.934536
+time = 0.021252
+
+the number for basic hop: 225000
+Initial graph processing : 7.882456
+time = 0.029045
+
+the number for basic hop: 225000
+Initial graph processing : 8.297047
+time = 0.024701
+
+the number for basic hop: 225000
+Initial graph processing : 7.803738
+time = 0.028749
+
+----------------------------------------------
+the number for basic hop: 300000
+Initial graph processing : 5.678993
+time = 0.026832
+
+the number for basic hop: 300000
+Initial graph processing : 3.941063
+time = 0.021337
+
+the number for basic hop: 300000
+Initial graph processing : 4.584732
+time = 0.022184
+
+the number for basic hop: 300000
+Initial graph processing : 5.956263
+time = 0.024384
+
+the number for basic hop: 300000
+Initial graph processing : 7.699532
+time = 0.028825
+
+----------------------------------------------
+the number for basic hop: 375000
+Initial graph processing : 7.155785
+time = 0.033332
+
+the number for basic hop: 375000
+Initial graph processing : 7.755793
+time = 0.029001
+
+the number for basic hop: 375000
+Initial graph processing : 7.087851
+time = 0.026549
+
+the number for basic hop: 375000
+Initial graph processing : 7.097973
+time = 0.031509
+
+the number for basic hop: 375000
+Initial graph processing : 7.677868
+time = 0.031731
+
+----------------------------------------------
+the number for basic hop: 450000
+Initial graph processing : 7.497910
+time = 0.030191
+
+the number for basic hop: 450000
+Initial graph processing : 6.232019
+time = 0.027226
+
+the number for basic hop: 450000
+Initial graph processing : 4.308726
+time = 0.028530
+
+the number for basic hop: 450000
+Initial graph processing : 7.563160
+time = 0.043254
+
+the number for basic hop: 450000
+Initial graph processing : 6.420944
+time = 0.030764
+
+----------------------------------------------
+the number for basic hop: 525000
+Initial graph processing : 4.278421
+time = 0.028680
+
+the number for basic hop: 525000
+Initial graph processing : 5.242737
+time = 0.030979
+
+the number for basic hop: 525000
+Initial graph processing : 4.321994
+time = 0.029227
+
+the number for basic hop: 525000
+Initial graph processing : 7.830066
+time = 0.034476
+
+the number for basic hop: 525000
+Initial graph processing : 8.005907
+time = 0.039667
+
+----------------------------------------------
+the number for basic hop: 600000
+Initial graph processing : 4.132397
+time = 0.031262
+
+the number for basic hop: 600000
+Initial graph processing : 7.859039
+time = 0.044453
+
+the number for basic hop: 600000
+Initial graph processing : 9.773977
+time = 0.033345
+
+the number for basic hop: 600000
+Initial graph processing : 6.512463
+time = 0.035891
+
+the number for basic hop: 600000
+Initial graph processing : 7.975423
+time = 0.035635
+
+----------------------------------------------
+the number for basic hop: 675000
+Initial graph processing : 7.875752
+time = 0.035780
+
+the number for basic hop: 675000
+Initial graph processing : 7.458536
+time = 0.039627
+
+the number for basic hop: 675000
+Initial graph processing : 8.359682
+time = 0.036687
+
+the number for basic hop: 675000
+Initial graph processing : 5.532411
+time = 0.035444
+
+the number for basic hop: 675000
+Initial graph processing : 4.535928
+time = 0.033470
+
+----------------------------------------------
+the number for basic hop: 750000
+Initial graph processing : 8.861002
+time = 0.042114
+
+the number for basic hop: 750000
+Initial graph processing : 7.835327
+time = 0.042562
+
+the number for basic hop: 750000
+Initial graph processing : 6.854085
+time = 0.046580
+
+the number for basic hop: 750000
+Initial graph processing : 6.804850
+time = 0.041356
+
+the number for basic hop: 750000
+Initial graph processing : 8.761861
+time = 0.040387
+
+----------------------------------------------
+the number for basic hop: 825000
+Initial graph processing : 4.180374
+time = 0.033970
+
+the number for basic hop: 825000
+Initial graph processing : 6.472755
+time = 0.043629
+
+the number for basic hop: 825000
+Initial graph processing : 7.376266
+time = 0.041739
+
+the number for basic hop: 825000
+Initial graph processing : 10.718962
+time = 0.039157
+
+the number for basic hop: 825000
+Initial graph processing : 7.766102
+time = 0.046068
+
+----------------------------------------------
+the number for basic hop: 900000
+Initial graph processing : 7.051867
+time = 0.048266
+
+the number for basic hop: 900000
+Initial graph processing : 7.145554
+time = 0.037978
+
+the number for basic hop: 900000
+Initial graph processing : 7.161145
+time = 0.043375
+
+the number for basic hop: 900000
+Initial graph processing : 7.971463
+time = 0.041080
+
+the number for basic hop: 900000
+Initial graph processing : 7.905016
+time = 0.041801
+
+----------------------------------------------
+the number for basic hop: 975000
+Initial graph processing : 6.504897
+time = 0.044103
+
+the number for basic hop: 975000
+Initial graph processing : 7.523001
+time = 0.046567
+
+the number for basic hop: 975000
+Initial graph processing : 7.624247
+time = 0.046268
+
+the number for basic hop: 975000
+Initial graph processing : 4.409614
+time = 0.035944
+
+the number for basic hop: 975000
+Initial graph processing : 3.795911
+time = 0.031295
+
+----------------------------------------------
+the number for basic hop: 1050000
+Initial graph processing : 7.931531
+time = 0.050241
+
+the number for basic hop: 1050000
+Initial graph processing : 5.002422
+time = 0.040454
+
+the number for basic hop: 1050000
+Initial graph processing : 8.874941
+time = 0.046263
+
+the number for basic hop: 1050000
+Initial graph processing : 4.454182
+time = 0.035446
+
+the number for basic hop: 1050000
+Initial graph processing : 7.562481
+time = 0.049890
+
+----------------------------------------------
+the number for basic hop: 1125000
+Initial graph processing : 7.117814
+time = 0.044672
+
+the number for basic hop: 1125000
+Initial graph processing : 6.433056
+time = 0.051707
+
+the number for basic hop: 1125000
+Initial graph processing : 4.157133
+time = 0.036369
+
+the number for basic hop: 1125000
+Initial graph processing : 6.750739
+time = 0.056774
+
+the number for basic hop: 1125000
+Initial graph processing : 7.630520
+time = 0.046462
+
+----------------------------------------------
+the number for basic hop: 1200000
+Initial graph processing : 7.403535
+time = 0.049963
+
+the number for basic hop: 1200000
+Initial graph processing : 10.729949
+time = 0.051837
+
+the number for basic hop: 1200000
+Initial graph processing : 6.955235
+time = 0.056444
+
+the number for basic hop: 1200000
+Initial graph processing : 7.171818
+time = 0.048269
+
+the number for basic hop: 1200000
+Initial graph processing : 6.977264
+time = 0.049047
+
+----------------------------------------------
+the number for basic hop: 1275000
+Initial graph processing : 9.088991
+time = 0.052349
+
+the number for basic hop: 1275000
+Initial graph processing : 11.634833
+time = 0.050494
+
+the number for basic hop: 1275000
+Initial graph processing : 7.467442
+time = 0.054322
+
+the number for basic hop: 1275000
+Initial graph processing : 7.080883
+time = 0.047825
+
+the number for basic hop: 1275000
+Initial graph processing : 8.962372
+time = 0.054021
+
+----------------------------------------------
+the number for basic hop: 1350000
+Initial graph processing : 9.794350
+time = 0.053335
+
+the number for basic hop: 1350000
+Initial graph processing : 11.445517
+time = 0.050083
+
+the number for basic hop: 1350000
+Initial graph processing : 4.205153
+time = 0.039169
+
+the number for basic hop: 1350000
+Initial graph processing : 7.000542
+time = 0.054413
+
+the number for basic hop: 1350000
+Initial graph processing : 7.736235
+time = 0.064824
+
+----------------------------------------------
+the number for basic hop: 1425000
+Initial graph processing : 5.371050
+time = 0.051380
+
+the number for basic hop: 1425000
+Initial graph processing : 7.698794
+time = 0.058814
+
+the number for basic hop: 1425000
+Initial graph processing : 8.903375
+time = 0.056592
+
+the number for basic hop: 1425000
+Initial graph processing : 5.262065
+time = 0.047867
+
+the number for basic hop: 1425000
+Initial graph processing : 4.815370
+time = 0.050965
+
+----------------------------------------------
+the number for basic hop: 1500000
+Initial graph processing : 8.117165
+time = 0.056308
+
+the number for basic hop: 1500000
+Initial graph processing : 6.919761
+time = 0.060982
+
+the number for basic hop: 1500000
+Initial graph processing : 7.509569
+time = 0.058325
+
+the number for basic hop: 1500000
+Initial graph processing : 8.094045
+time = 0.053579
+
+the number for basic hop: 1500000
+Initial graph processing : 7.099948
+time = 0.057701
+
+----------------------------------------------
+the number for basic hop: 1575000
+Initial graph processing : 9.523858
+time = 0.057255
+
+the number for basic hop: 1575000
+Initial graph processing : 7.689876
+time = 0.059302
+
+the number for basic hop: 1575000
+Initial graph processing : 9.956977
+time = 0.059623
+
+the number for basic hop: 1575000
+Initial graph processing : 6.634328
+time = 0.058049
+
+the number for basic hop: 1575000
+Initial graph processing : 4.703221
+time = 0.043511
+
+----------------------------------------------
+the number for basic hop: 1650000
+Initial graph processing : 8.693421
+time = 0.059639
+
+the number for basic hop: 1650000
+Initial graph processing : 7.861118
+time = 0.058945
+
+the number for basic hop: 1650000
+Initial graph processing : 7.346791
+time = 0.060085
+
+the number for basic hop: 1650000
+Initial graph processing : 7.557997
+time = 0.063305
+
+the number for basic hop: 1650000
+Initial graph processing : 8.499236
+time = 0.059176
+
+----------------------------------------------
+the number for basic hop: 1725000
+Initial graph processing : 6.912969
+time = 0.066031
+
+the number for basic hop: 1725000
+Initial graph processing : 7.950607
+time = 0.066502
+
+the number for basic hop: 1725000
+Initial graph processing : 5.031195
+time = 0.053806
+
+the number for basic hop: 1725000
+Initial graph processing : 8.273123
+time = 0.061469
+
+the number for basic hop: 1725000
+Initial graph processing : 8.167225
+time = 0.064724
+
+----------------------------------------------
+the number for basic hop: 1800000
+Initial graph processing : 7.158149
+time = 0.065908
+
+the number for basic hop: 1800000
+Initial graph processing : 6.012985
+time = 0.057065
+
+the number for basic hop: 1800000
+Initial graph processing : 6.189095
+time = 0.065530
+
+the number for basic hop: 1800000
+Initial graph processing : 7.065741
+time = 0.067600
+
+the number for basic hop: 1800000
+Initial graph processing : 5.514505
+time = 0.052273
+
+----------------------------------------------
+the number for basic hop: 1875000
+Initial graph processing : 8.910297
+time = 0.065382
+
+the number for basic hop: 1875000
+Initial graph processing : 6.770517
+time = 0.064609
+
+the number for basic hop: 1875000
+Initial graph processing : 9.521643
+time = 0.066732
+
+the number for basic hop: 1875000
+Initial graph processing : 3.997368
+time = 0.045374
+
+the number for basic hop: 1875000
+Initial graph processing : 7.958839
+time = 0.068127
+
+----------------------------------------------
+the number for basic hop: 1950000
+Initial graph processing : 4.025308
+time = 0.051764
+
+the number for basic hop: 1950000
+Initial graph processing : 6.813059
+time = 0.070617
+
+the number for basic hop: 1950000
+Initial graph processing : 6.741157
+time = 0.066042
+
+the number for basic hop: 1950000
+Initial graph processing : 4.849482
+time = 0.049428
+
+the number for basic hop: 1950000
+Initial graph processing : 8.795237
+time = 0.064793
+
+----------------------------------------------
+the number for basic hop: 2025000
+Initial graph processing : 5.462883
+time = 0.061694
+
+the number for basic hop: 2025000
+Initial graph processing : 7.039549
+time = 0.068008
+
+the number for basic hop: 2025000
+Initial graph processing : 7.593927
+time = 0.070762
+
+the number for basic hop: 2025000
+Initial graph processing : 8.026604
+time = 0.076573
+
+the number for basic hop: 2025000
+Initial graph processing : 7.121269
+time = 0.061548
+
+----------------------------------------------
+the number for basic hop: 2100000
+Initial graph processing : 6.308931
+time = 0.066569
+
+the number for basic hop: 2100000
+Initial graph processing : 8.174552
+time = 0.065715
+
+the number for basic hop: 2100000
+Initial graph processing : 10.703973
+time = 0.068062
+
+the number for basic hop: 2100000
+Initial graph processing : 7.640214
+time = 0.075093
+
+the number for basic hop: 2100000
+Initial graph processing : 8.851719
+time = 0.079881
+
+----------------------------------------------
+the number for basic hop: 2175000
+Initial graph processing : 6.900001
+time = 0.078125
+
+the number for basic hop: 2175000
+Initial graph processing : 4.156280
+time = 0.048740
+
+the number for basic hop: 2175000
+Initial graph processing : 7.961329
+time = 0.075205
+
+the number for basic hop: 2175000
+Initial graph processing : 5.052520
+time = 0.060383
+
+the number for basic hop: 2175000
+Initial graph processing : 8.650783
+time = 0.074494
+
+----------------------------------------------
+the number for basic hop: 2250000
+Initial graph processing : 4.933754
+time = 0.051987
+
+the number for basic hop: 2250000
+Initial graph processing : 7.940816
+time = 0.069818
+
+the number for basic hop: 2250000
+Initial graph processing : 7.585617
+time = 0.073422
+
+the number for basic hop: 2250000
+Initial graph processing : 8.528938
+time = 0.070148
+
+the number for basic hop: 2250000
+Initial graph processing : 7.132821
+time = 0.075109
+
+----------------------------------------------
+the number for basic hop: 2325000
+Initial graph processing : 7.446412
+time = 0.067414
+
+the number for basic hop: 2325000
+Initial graph processing : 6.192188
+time = 0.073555
+
+the number for basic hop: 2325000
+Initial graph processing : 6.476133
+time = 0.076456
+
+the number for basic hop: 2325000
+Initial graph processing : 5.024545
+time = 0.065675
+
+the number for basic hop: 2325000
+Initial graph processing : 8.499375
+time = 0.088164
+
+----------------------------------------------
+the number for basic hop: 2400000
+Initial graph processing : 9.067373
+time = 0.081671
+
+the number for basic hop: 2400000
+Initial graph processing : 8.704955
+time = 0.070785
+
+the number for basic hop: 2400000
+Initial graph processing : 3.950436
+time = 0.056380
+
+the number for basic hop: 2400000
+Initial graph processing : 7.178809
+time = 0.070566
+
+the number for basic hop: 2400000
+Initial graph processing : 7.836327
+time = 0.077615
+
+----------------------------------------------
+the number for basic hop: 2475000
+Initial graph processing : 6.847150
+time = 0.070990
+
+the number for basic hop: 2475000
+Initial graph processing : 4.171656
+time = 0.054799
+
+the number for basic hop: 2475000
+Initial graph processing : 7.795896
+time = 0.089529
+
+the number for basic hop: 2475000
+Initial graph processing : 5.307261
+time = 0.074551
+
+the number for basic hop: 2475000
+Initial graph processing : 7.165112
+time = 0.075082
+
+----------------------------------------------
+the number for basic hop: 2550000
+Initial graph processing : 5.669998
+time = 0.070178
+
+the number for basic hop: 2550000
+Initial graph processing : 4.451571
+time = 0.057367
+
+the number for basic hop: 2550000
+Initial graph processing : 4.346174
+time = 0.056108
+
+the number for basic hop: 2550000
+Initial graph processing : 7.530034
+time = 0.071326
+
+the number for basic hop: 2550000
+Initial graph processing : 6.348522
+time = 0.083877
+
+----------------------------------------------
+the number for basic hop: 2625000
+Initial graph processing : 6.693036
+time = 0.081934
+
+the number for basic hop: 2625000
+Initial graph processing : 4.708607
+time = 0.061608
+
+the number for basic hop: 2625000
+Initial graph processing : 8.808555
+time = 0.081071
+
+the number for basic hop: 2625000
+Initial graph processing : 6.804402
+time = 0.085061
+
+the number for basic hop: 2625000
+Initial graph processing : 6.356170
+time = 0.078698
+
+----------------------------------------------
+the number for basic hop: 2700000
+Initial graph processing : 8.784321
+time = 0.078128
+
+the number for basic hop: 2700000
+Initial graph processing : 8.084683
+time = 0.082953
+
+the number for basic hop: 2700000
+Initial graph processing : 9.262564
+time = 0.090482
+
+the number for basic hop: 2700000
+Initial graph processing : 7.439182
+time = 0.087436
+
+the number for basic hop: 2700000
+Initial graph processing : 7.788272
+time = 0.087224
+
+----------------------------------------------
+the number for basic hop: 2775000
+Initial graph processing : 8.746969
+time = 0.090353
+
+the number for basic hop: 2775000
+Initial graph processing : 9.220105
+time = 0.087338
+
+the number for basic hop: 2775000
+Initial graph processing : 9.508245
+time = 0.081435
+
+the number for basic hop: 2775000
+Initial graph processing : 4.145595
+time = 0.056725
+
+the number for basic hop: 2775000
+Initial graph processing : 3.555853
+time = 0.055704
+
+----------------------------------------------
+the number for basic hop: 2850000
+Initial graph processing : 6.555106
+time = 0.086401
+
+the number for basic hop: 2850000
+Initial graph processing : 4.796786
+time = 0.061656
+
+the number for basic hop: 2850000
+Initial graph processing : 10.082627
+time = 0.084177
+
+the number for basic hop: 2850000
+Initial graph processing : 8.152379
+time = 0.083604
+
+the number for basic hop: 2850000
+Initial graph processing : 6.896776
+time = 0.088546
+
+----------------------------------------------
+the number for basic hop: 2925000
+Initial graph processing : 8.067366
+time = 0.088658
+
+the number for basic hop: 2925000
+Initial graph processing : 5.120510
+time = 0.072287
+
+the number for basic hop: 2925000
+Initial graph processing : 7.563716
+time = 0.082096
+
+the number for basic hop: 2925000
+Initial graph processing : 7.570616
+time = 0.101398
+
+the number for basic hop: 2925000
+Initial graph processing : 4.280368
+time = 0.057464
+
+----------------------------------------------
+the number for basic hop: 3000000
+Initial graph processing : 8.272297
+time = 0.084657
+
+the number for basic hop: 3000000
+Initial graph processing : 8.815481
+time = 0.085999
+
+the number for basic hop: 3000000
+Initial graph processing : 7.329520
+time = 0.081567
+
+the number for basic hop: 3000000
+Initial graph processing : 5.799247
+time = 0.081887
+
+the number for basic hop: 3000000
+Initial graph processing : 5.494719
+time = 0.072497
+
+----------------------------------------------
+the number for basic hop: 3075000
+Initial graph processing : 8.006355
+time = 0.085079
+
+the number for basic hop: 3075000
+Initial graph processing : 9.153935
+time = 0.090045
+
+the number for basic hop: 3075000
+Initial graph processing : 8.405194
+time = 0.083143
+
+the number for basic hop: 3075000
+Initial graph processing : 7.712375
+time = 0.085807
+
+the number for basic hop: 3075000
+Initial graph processing : 6.161756
+time = 0.089318
+
+----------------------------------------------
+the number for basic hop: 3150000
+Initial graph processing : 7.638286
+time = 0.096552
+
+the number for basic hop: 3150000
+Initial graph processing : 6.901940
+time = 0.094621
+
+the number for basic hop: 3150000
+Initial graph processing : 7.834430
+time = 0.094761
+
+the number for basic hop: 3150000
+Initial graph processing : 7.467521
+time = 0.094281
+
+the number for basic hop: 3150000
+Initial graph processing : 7.587724
+time = 0.083911
+
+----------------------------------------------
+the number for basic hop: 3225000
+Initial graph processing : 7.185738
+time = 0.095603
+
+the number for basic hop: 3225000
+Initial graph processing : 7.246748
+time = 0.077046
+
+the number for basic hop: 3225000
+Initial graph processing : 6.577163
+time = 0.092280
+
+the number for basic hop: 3225000
+Initial graph processing : 4.532147
+time = 0.064518
+
+the number for basic hop: 3225000
+Initial graph processing : 6.943964
+time = 0.085483
+
+----------------------------------------------
+the number for basic hop: 3300000
+Initial graph processing : 7.851874
+time = 0.099474
+
+the number for basic hop: 3300000
+Initial graph processing : 7.856615
+time = 0.090399
+
+the number for basic hop: 3300000
+Initial graph processing : 8.712833
+time = 0.101503
+
+the number for basic hop: 3300000
+Initial graph processing : 6.787044
+time = 0.087443
+
+the number for basic hop: 3300000
+Initial graph processing : 4.462140
+time = 0.063927
+
+----------------------------------------------
+the number for basic hop: 3375000
+Initial graph processing : 6.663482
+time = 0.096734
+
+the number for basic hop: 3375000
+Initial graph processing : 8.074145
+time = 0.102577
+
+the number for basic hop: 3375000
+Initial graph processing : 6.943886
+time = 0.102582
+
+the number for basic hop: 3375000
+Initial graph processing : 6.369759
+time = 0.080890
+
+the number for basic hop: 3375000
+Initial graph processing : 6.971743
+time = 0.093685
+
+----------------------------------------------
+the number for basic hop: 3450000
+Initial graph processing : 7.848318
+time = 0.101038
+
+the number for basic hop: 3450000
+Initial graph processing : 7.327393
+time = 0.090630
+
+the number for basic hop: 3450000
+Initial graph processing : 8.563732
+time = 0.091697
+
+the number for basic hop: 3450000
+Initial graph processing : 9.087287
+time = 0.094838
+
+the number for basic hop: 3450000
+Initial graph processing : 7.042540
+time = 0.099888
+
+----------------------------------------------
+the number for basic hop: 3525000
+Initial graph processing : 4.642893
+time = 0.084471
+
+the number for basic hop: 3525000
+Initial graph processing : 7.987794
+time = 0.095644
+
+the number for basic hop: 3525000
+Initial graph processing : 10.645610
+time = 0.110005
+
+the number for basic hop: 3525000
+Initial graph processing : 5.191443
+time = 0.074544
+
+the number for basic hop: 3525000
+Initial graph processing : 5.689253
+time = 0.072826
+
+----------------------------------------------
+the number for basic hop: 3600000
+Initial graph processing : 4.165283
+time = 0.069096
+
+the number for basic hop: 3600000
+Initial graph processing : 7.946987
+time = 0.092317
+
+the number for basic hop: 3600000
+Initial graph processing : 6.744025
+time = 0.099072
+
+the number for basic hop: 3600000
+Initial graph processing : 7.068308
+time = 0.090895
+
+the number for basic hop: 3600000
+Initial graph processing : 4.954944
+time = 0.085283
+
+----------------------------------------------
+the number for basic hop: 3675000
+Initial graph processing : 7.579342
+time = 0.099174
+
+the number for basic hop: 3675000
+Initial graph processing : 4.673888
+time = 0.084398
+
+the number for basic hop: 3675000
+Initial graph processing : 8.387105
+time = 0.112212
+
+the number for basic hop: 3675000
+Initial graph processing : 9.638978
+time = 0.095195
+
+the number for basic hop: 3675000
+Initial graph processing : 8.789840
+time = 0.104800
+
+----------------------------------------------
+the number for basic hop: 3750000
+Initial graph processing : 6.890163
+time = 0.094478
+
+the number for basic hop: 3750000
+Initial graph processing : 6.910216
+time = 0.092119
+
+the number for basic hop: 3750000
+Initial graph processing : 7.478176
+time = 0.105044
+
+the number for basic hop: 3750000
+Initial graph processing : 6.913695
+time = 0.096004
+
+the number for basic hop: 3750000
+Initial graph processing : 7.480102
+time = 0.108871
+
+----------------------------------------------
+SSWP start
+TTW start
+enter the number for basic hop: 75000
+Initial graph processing : 6.566263
+time = 0.021268
+
+enter the number for basic hop: 75000
+Initial graph processing : 4.534916
+time = 0.018776
+
+enter the number for basic hop: 75000
+Initial graph processing : 5.747010
+time = 0.018879
+
+enter the number for basic hop: 75000
+Initial graph processing : 5.411229
+time = 0.020425
+
+enter the number for basic hop: 75000
+Initial graph processing : 6.263191
+time = 0.016193
+
+----------------------------------------------
+enter the number for basic hop: 150000
+Initial graph processing : 3.749509
+time = 0.018991
+
+enter the number for basic hop: 150000
+Initial graph processing : 7.350170
+time = 0.023571
+
+enter the number for basic hop: 150000
+Initial graph processing : 6.160452
+time = 0.022329
+
+enter the number for basic hop: 150000
+Initial graph processing : 5.795533
+time = 0.020158
+
+enter the number for basic hop: 150000
+Initial graph processing : 6.322889
+time = 0.022057
+
+----------------------------------------------
+enter the number for basic hop: 225000
+Initial graph processing : 5.414686
+time = 0.022408
+
+enter the number for basic hop: 225000
+Initial graph processing : 3.951786
+time = 0.025310
+
+enter the number for basic hop: 225000
+Initial graph processing : 6.828503
+time = 0.024256
+
+enter the number for basic hop: 225000
+Initial graph processing : 6.887435
+time = 0.026067
+
+enter the number for basic hop: 225000
+Initial graph processing : 6.017421
+time = 0.025719
+
+----------------------------------------------
+enter the number for basic hop: 300000
+Initial graph processing : 6.115805
+time = 0.027287
+
+enter the number for basic hop: 300000
+Initial graph processing : 6.879898
+time = 0.024902
+
+enter the number for basic hop: 300000
+Initial graph processing : 3.786571
+time = 0.024764
+
+enter the number for basic hop: 300000
+Initial graph processing : 5.615633
+time = 0.024946
+
+enter the number for basic hop: 300000
+Initial graph processing : 5.980951
+time = 0.033781
+
+----------------------------------------------
+enter the number for basic hop: 375000
+Initial graph processing : 3.460339
+time = 0.022683
+
+enter the number for basic hop: 375000
+Initial graph processing : 4.691338
+time = 0.027232
+
+enter the number for basic hop: 375000
+Initial graph processing : 5.376212
+time = 0.029256
+
+enter the number for basic hop: 375000
+Initial graph processing : 7.227589
+time = 0.028534
+
+enter the number for basic hop: 375000
+Initial graph processing : 6.099219
+time = 0.030941
+
+----------------------------------------------
+enter the number for basic hop: 450000
+Initial graph processing : 5.783282
+time = 0.030884
+
+enter the number for basic hop: 450000
+Initial graph processing : 6.599685
+time = 0.035592
+
+enter the number for basic hop: 450000
+Initial graph processing : 6.696610
+time = 0.029196
+
+enter the number for basic hop: 450000
+Initial graph processing : 5.489233
+time = 0.030259
+
+enter the number for basic hop: 450000
+Initial graph processing : 6.404775
+time = 0.033190
+
+----------------------------------------------
+enter the number for basic hop: 525000
+Initial graph processing : 5.648361
+time = 0.030992
+
+enter the number for basic hop: 525000
+Initial graph processing : 4.193085
+time = 0.027309
+
+enter the number for basic hop: 525000
+Initial graph processing : 5.617901
+time = 0.035326
+
+enter the number for basic hop: 525000
+Initial graph processing : 5.084279
+time = 0.029068
+
+enter the number for basic hop: 525000
+Initial graph processing : 4.096759
+time = 0.028879
+
+----------------------------------------------
+enter the number for basic hop: 600000
+Initial graph processing : 5.662377
+time = 0.029136
+
+enter the number for basic hop: 600000
+Initial graph processing : 6.152444
+time = 0.034849
+
+enter the number for basic hop: 600000
+Initial graph processing : 7.908350
+time = 0.034996
+
+enter the number for basic hop: 600000
+Initial graph processing : 6.606011
+time = 0.033063
+
+enter the number for basic hop: 600000
+Initial graph processing : 5.437413
+time = 0.038947
+
+----------------------------------------------
+enter the number for basic hop: 675000
+Initial graph processing : 6.116554
+time = 0.035400
+
+enter the number for basic hop: 675000
+Initial graph processing : 6.153374
+time = 0.032849
+
+enter the number for basic hop: 675000
+Initial graph processing : 6.390573
+time = 0.034965
+
+enter the number for basic hop: 675000
+Initial graph processing : 6.061605
+time = 0.031263
+
+enter the number for basic hop: 675000
+Initial graph processing : 6.713707
+time = 0.037396
+
+----------------------------------------------
+enter the number for basic hop: 750000
+Initial graph processing : 6.081700
+time = 0.035328
+
+enter the number for basic hop: 750000
+Initial graph processing : 6.817044
+time = 0.037628
+
+enter the number for basic hop: 750000
+Initial graph processing : 5.481332
+time = 0.039639
+
+enter the number for basic hop: 750000
+Initial graph processing : 6.173981
+time = 0.039540
+
+enter the number for basic hop: 750000
+Initial graph processing : 3.282461
+time = 0.034775
+
+----------------------------------------------
+enter the number for basic hop: 825000
+Initial graph processing : 6.580959
+time = 0.035360
+
+enter the number for basic hop: 825000
+Initial graph processing : 7.190464
+time = 0.043567
+
+enter the number for basic hop: 825000
+Initial graph processing : 5.690828
+time = 0.039088
+
+enter the number for basic hop: 825000
+Initial graph processing : 6.934418
+time = 0.042808
+
+enter the number for basic hop: 825000
+Initial graph processing : 3.331130
+time = 0.028733
+
+----------------------------------------------
+enter the number for basic hop: 900000
+Initial graph processing : 6.037982
+time = 0.042154
+
+enter the number for basic hop: 900000
+Initial graph processing : 6.032340
+time = 0.040911
+
+enter the number for basic hop: 900000
+Initial graph processing : 5.951254
+time = 0.039368
+
+enter the number for basic hop: 900000
+Initial graph processing : 5.714988
+time = 0.041687
+
+enter the number for basic hop: 900000
+Initial graph processing : 6.764892
+time = 0.037708
+
+----------------------------------------------
+enter the number for basic hop: 975000
+Initial graph processing : 5.747602
+time = 0.040452
+
+enter the number for basic hop: 975000
+Initial graph processing : 3.388851
+time = 0.034295
+
