@@ -1,0 +1,81 @@
+************  Using CILK ************
+make: 'BFS' is up to date.
+make: 'SSSP' is up to date.
+make: 'SSWP' is up to date.
+make: 'SSNP' is up to date.
+Twitter start
+enter the number for basic hop: 3750000
+Initial graph processing : 5.555721
+time = 0.083257
+
+----------------------------------------------
+enter the number for basic hop: 3750000
+Initial graph processing : 4.244819
+time = 0.089465
+
+----------------------------------------------
+enter the number for basic hop: 3750000
+Initial graph processing : 3.570914
+time = 0.063922
+
+----------------------------------------------
+enter the number for basic hop: 3750000
+Initial graph processing : 4.992840
+time = 0.085342
+
+----------------------------------------------
+enter the number for basic hop: 3750000
+Initial graph processing : 4.264733
+time = 0.077745
+
+----------------------------------------------
+enter the number for basic hop: 7500000
+Initial graph processing : 3.697930
+time = 0.123685
+
+----------------------------------------------
+enter the number for basic hop: 7500000
+Initial graph processing : 3.919997
+time = 0.091846
+
+----------------------------------------------
+enter the number for basic hop: 7500000
+Initial graph processing : 5.527077
+time = 0.138211
+
+----------------------------------------------
+enter the number for basic hop: 7500000
+Initial graph processing : 4.724888
+time = 0.124958
+
+----------------------------------------------
+enter the number for basic hop: 7500000
+Initial graph processing : 4.201246
+time = 0.137523
+
+----------------------------------------------
+the number for basic hop: 3750000
+Initial graph processing : 6.961106
+time = 0.096929
+
+----------------------------------------------
+the number for basic hop: 3750000
+Initial graph processing : 9.691937
+time = 0.120558
+
+----------------------------------------------
+the number for basic hop: 3750000
+Initial graph processing : 7.995339
+time = 0.120212
+
+----------------------------------------------
+the number for basic hop: 3750000
+Initial graph processing : 6.980979
+time = 0.104348
+
+----------------------------------------------
+the number for basic hop: 3750000
+Initial graph processing : 7.616664
+time = 0.109448
+
+----------------------------------------------

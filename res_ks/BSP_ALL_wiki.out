@@ -1,0 +1,152 @@
+************  Using CILK ************
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  BFS.C -L../lib/mimalloc/out/release -lmimalloc  -o BFS
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSSP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSSP
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSWP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSWP
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSNP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSNP
+Wiki start
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+Unable to open file: .../wiki/wiki.adj
+----------------------------------------------
+************  Using CILK ************
+make: 'BFS' is up to date.
+make: 'SSSP' is up to date.
+make: 'SSWP' is up to date.
+make: 'SSNP' is up to date.
+Wiki start
+enter the number for basic hop: 4000000
+Initial graph processing : 2.022726
+time = 0.030037
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 2.076294
+time = 0.028156
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 1.999165
+time = 0.037723
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 2.380496
+time = 0.041652
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 2.442929
+time = 0.034977
+
+----------------------------------------------
+the number for basic hop: 4000000
+Initial graph processing : 3.772616
+time = 0.066130
+
+----------------------------------------------
+the number for basic hop: 4000000
+Initial graph processing : 6.060972
+time = 0.065839
+
+----------------------------------------------
+the number for basic hop: 4000000
+Initial graph processing : 3.814749
+time = 0.054682
+
+----------------------------------------------
+the number for basic hop: 4000000
+Initial graph processing : 3.916905
+time = 0.431071
+
+----------------------------------------------
+the number for basic hop: 4000000
+Initial graph processing : 3.515111
+time = 0.055269
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 3.743597
+time = 0.050835
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 2.559859
+time = 0.076650
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 3.332551
+time = 0.051470
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 2.712918
+time = 0.060627
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 1.440585
+time = 0.055185
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 2.423602
+time = 0.071301
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 3.384146
+time = 0.065384
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 3.280418
+time = 0.068360
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 1.535512
+time = 0.050891
+
+----------------------------------------------
+enter the number for basic hop: 4000000
+Initial graph processing : 3.016005
+time = 0.066588
+
+----------------------------------------------
