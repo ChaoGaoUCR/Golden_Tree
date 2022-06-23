@@ -1,0 +1,93 @@
+************  Using CILK ************
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  BFS.C -L../lib/mimalloc/out/release -lmimalloc  -o BFS
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSSP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSSP
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSWP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSWP
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSNP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSNP
+LJ start
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Unable to open file: ../LJ/LJ.adj
+----------------------------------------------
+Wiki start
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Unable to open file: ../wen/wiki.adj
+----------------------------------------------
+Twitter start
+enter the number for basic hop: 3750000
+Initial graph processing : 6.124222
+time = 0.093119
+
+----------------------------------------------

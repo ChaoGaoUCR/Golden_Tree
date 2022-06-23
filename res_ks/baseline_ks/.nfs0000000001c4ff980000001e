@@ -1,0 +1,151 @@
+LJ start
+Initial graph processing : 1.252991
+batch number is 35000
+deletion time is 0.016292
+Finished addition computation: 0.007284
+average total time 0.065314
+----------------------------------------------
+Initial graph processing : 6.844556
+batch number is 35000
+deletion time is 0.024256
+Finished addition computation: 0.010633
+average total time 0.093782
+----------------------------------------------
+Initial graph processing : 0.693765
+batch number is 35000
+deletion time is 0.013578
+Finished addition computation: 0.010559
+average total time 0.072719
+----------------------------------------------
+Initial graph processing : 1.225712
+batch number is 35000
+deletion time is 0.017999
+Finished addition computation: 0.008148
+average total time 0.074550
+----------------------------------------------
+Initial graph processing : 1.159934
+batch number is 35000
+deletion time is 0.018651
+Finished addition computation: 0.007468
+average total time 0.076352
+----------------------------------------------
+Initial graph processing : 1.861735
+batch number is 70000
+deletion time is 0.019228
+Finished addition computation: 0.009638
+average total time 0.123994
+----------------------------------------------
+Initial graph processing : 1.374642
+batch number is 70000
+deletion time is 0.024350
+Finished addition computation: 0.011622
+average total time 0.099057
+----------------------------------------------
+Initial graph processing : 1.636417
+batch number is 70000
+deletion time is 0.017090
+Finished addition computation: 0.010220
+average total time 0.087022
+----------------------------------------------
+Initial graph processing : 1.358447
+batch number is 70000
+deletion time is 0.019349
+Finished addition computation: 0.010318
+average total time 0.093516
+----------------------------------------------
+Initial graph processing : 1.660159
+batch number is 70000
+deletion time is 0.017783
+Finished addition computation: 0.008335
+average total time 0.080730
+----------------------------------------------
+Initial graph processing : 1.171582
+batch number is 35000
+deletion time is 0.018511
+Finished addition computation: 0.008083
+average total time 0.066080
+----------------------------------------------
+Initial graph processing : 1.257214
+batch number is 35000
+deletion time is 0.019557
+Finished addition computation: 0.007812
+average total time 0.070955
+----------------------------------------------
+Initial graph processing : 1.322566
+batch number is 35000
+deletion time is 0.019039
+Finished addition computation: 0.008095
+average total time 0.075416
+----------------------------------------------
+Initial graph processing : 1.742823
+batch number is 35000
+deletion time is 0.013322
+Finished addition computation: 0.008034
+average total time 0.069787
+----------------------------------------------
+Initial graph processing : 1.383144
+batch number is 35000
+deletion time is 0.028026
+Finished addition computation: 0.007238
+average total time 0.082520
+----------------------------------------------
+Initial graph processing : 1.550044
+batch number is 70000
+deletion time is 0.023920
+Finished addition computation: 0.008676
+average total time 0.091572
+----------------------------------------------
+Initial graph processing : 1.311677
+batch number is 70000
+deletion time is 0.037705
+Finished addition computation: 0.010440
+average total time 0.102793
+----------------------------------------------
+Initial graph processing : 2.077492
+batch number is 70000
+deletion time is 0.032685
+Finished addition computation: 0.014579
+average total time 0.121715
+----------------------------------------------
+Initial graph processing : 1.905983
+batch number is 70000
+deletion time is 0.029120
+Finished addition computation: 0.010325
+average total time 0.105667
+----------------------------------------------
+Initial graph processing : 1.650414
+batch number is 70000
+deletion time is 0.018901
+Finished addition computation: 0.010530
+average total time 0.086948
+----------------------------------------------
+Wiki start
+LJ start
+Initial graph processing : 1.665729
+batch number is 35000
+average total time 0.068788
+Initial graph processing : 1.581651
+batch number is 35000
+average total time 0.069660
+Initial graph processing : 0.520365
+batch number is 35000
+average total time 0.077457
+Initial graph processing : 0.983014
+batch number is 35000
+average total time 0.089205
+Initial graph processing : 1.399658
+batch number is 35000
+average total time 0.065106
+----------------------------------------------
+Initial graph processing : 1.414917
+batch number is 70000
+average total time 0.088727
+Initial graph processing : 1.163374
+batch number is 70000
+average total time 0.101136
+Initial graph processing : 1.955303
+batch number is 70000
+average total time 0.238313
+Initial graph processing : 1.236423
+batch number is 70000
+average total time 0.099938

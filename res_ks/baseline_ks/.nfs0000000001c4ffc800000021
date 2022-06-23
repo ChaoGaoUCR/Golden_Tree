@@ -1,0 +1,58 @@
+LJ start
+batch number is 35000
+0.077316
+batch number is 35000
+0.074392
+batch number is 35000
+0.078061
+batch number is 35000
+0.071248
+batch number is 35000
+0.069252
+----------------------------------------------
+batch number is 70000
+0.117945
+batch number is 70000
+0.107566
+batch number is 70000
+0.110426
+batch number is 70000
+0.102686
+batch number is 70000
+0.112258
+----------------------------------------------
+Initial graph processing : 1.575941
+batch number is 35000
+average total time 0.097764
+Initial graph processing : 1.102285
+batch number is 35000
+average total time 0.070102
+Initial graph processing : 1.399231
+batch number is 35000
+average total time 0.075775
+Initial graph processing : 1.343977
+batch number is 35000
+average total time 0.064353
+Initial graph processing : 1.302921
+batch number is 35000
+average total time 0.091850
+----------------------------------------------
+Initial graph processing : 1.198513
+batch number is 70000
+average total time 0.087044
+Initial graph processing : 1.028055
+batch number is 70000
+average total time 0.084654
+Initial graph processing : 1.946105
+batch number is 70000
+average total time 0.081438
+Initial graph processing : 1.304043
+batch number is 70000
+average total time 0.090111
+Initial graph processing : 1.518731
+batch number is 70000
+average total time 0.102651
+----------------------------------------------
+Wiki start
+batch number is 40000
+0.085143

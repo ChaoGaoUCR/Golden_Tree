@@ -1,0 +1,70 @@
+************  Using CILK ************
+make: 'SSWP' is up to date.
+make: 'SSNP' is up to date.
+make: 'SSSP' is up to date.
+BFS Twitter
+enter the number for basic hop: 15000000
+Initial graph processing : 4.696179
+time = 0.240301
+
+enter the number for basic hop: 15000000
+Initial graph processing : 3.594639
+time = 0.208165
+
+enter the number for basic hop: 15000000
+Initial graph processing : 5.083458
+time = 0.194636
+
+enter the number for basic hop: 15000000
+Initial graph processing : 4.226893
+time = 0.235576
+
+enter the number for basic hop: 15000000
+Initial graph processing : 4.500828
+time = 0.229401
+
+----------------------------------------------
+SSWP start
+enter the number for basic hop: 15000000
+Initial graph processing : 5.275901
+time = 0.277166
+
+enter the number for basic hop: 15000000
+Initial graph processing : 6.659793
+time = 0.285540
+
+enter the number for basic hop: 15000000
+Initial graph processing : 6.061087
+time = 0.276072
+
+enter the number for basic hop: 15000000
+Initial graph processing : 5.967166
+time = 10.716107
+
+enter the number for basic hop: 15000000
+Initial graph processing : 4.306813
+time = 0.192532
+
+----------------------------------------------
+SSNP start
+enter the number for basic hop: 15000000
+Initial graph processing : 6.955651
+time = 0.338025
+
+enter the number for basic hop: 15000000
+Initial graph processing : 4.921230
+time = 0.287212
+
+enter the number for basic hop: 15000000
+Initial graph processing : 7.680021
+time = 0.311553
+
+enter the number for basic hop: 15000000
+Initial graph processing : 7.713459
+time = 0.309450
+
+enter the number for basic hop: 15000000
+Initial graph processing : 7.124986
+time = 0.335247
+
+----------------------------------------------
