@@ -11,7 +11,7 @@ make BFS SSSP SSWP SSNP
 # done
 # for ((i=0; i<5; i ++))
 # do
-#     ./SSWP -Snapshots 1 -E_number 8000000 ../wiki/wiki.adj
+#     ./SSWP -Snapshots 1 -E_number 2000000 ../wiki/wiki.adj
 #     echo "----------------------------------------------"    
 # done
 # for ((i=0; i<5; i ++))
@@ -21,7 +21,7 @@ make BFS SSSP SSWP SSNP
 # done
 # for ((i=0; i<5; i ++))
 # do
-#     ./SSNP -Snapshots 1 -E_number 8000000 ../wiki/wiki.adj
+#     ./SSNP -Snapshots 1 -E_number 2000000 ../wiki/wiki.adj
 #     echo "----------------------------------------------"    
 # done
 # echo "Wiki start"
@@ -32,7 +32,7 @@ make BFS SSSP SSWP SSNP
 # done
 # for ((i=0; i<5; i ++))
 # do
-#     ./SSWP -Snapshots 1 -E_number 80000000 ../wiki/wiki.adj
+#     ./SSWP -Snapshots 1 -E_number 20000000 ../wiki/wiki.adj
 #     echo "----------------------------------------------"    
 # done
 # for ((i=0; i<5; i ++))
@@ -42,7 +42,7 @@ make BFS SSSP SSWP SSNP
 # done
 # for ((i=0; i<5; i ++))
 # do
-#     ./SSNP -Snapshots 1 -E_number 80000000 ../wiki/wiki.adj
+#     ./SSNP -Snapshots 1 -E_number 20000000 ../wiki/wiki.adj
 #     echo "----------------------------------------------"    
 # done
 echo "Wiki start"
@@ -53,7 +53,7 @@ echo "Wiki start"
 # done
 for ((i=0; i<5; i ++))
 do
-    ./BFS -Snapshots 1 -E_number 8000000 ../wiki/wiki.adj
+    ./BFS -Snapshots 1 -E_number 2000000 ../wiki/wiki.adj
     echo "----------------------------------------------"    
 done
 echo "----------------------------------------------"    
@@ -64,7 +64,7 @@ echo "----------------------------------------------"
 # done
 for ((i=0; i<5; i ++))
 do
-    ./SSSP -Snapshots 1 -E_number 8000000 ../wiki/wiki.adj
+    ./SSSP -Snapshots 1 -E_number 2000000 ../wiki/wiki.adj
     echo "----------------------------------------------"    
 done
 echo "----------------------------------------------"    
@@ -75,7 +75,7 @@ echo "----------------------------------------------"
 # done
 for ((i=0; i<5; i ++))
 do
-    ./SSWP -Snapshots 1 -E_number 8000000 ../wiki/wiki.adj
+    ./SSWP -Snapshots 1 -E_number 2000000 ../wiki/wiki.adj
     echo "----------------------------------------------"    
 done
 echo "----------------------------------------------"    
@@ -86,7 +86,7 @@ echo "----------------------------------------------"
 # done
 for ((i=0; i<5; i ++))
 do
-    ./SSNP -Snapshots 1 -E_number 8000000 ../wiki/wiki.adj
+    ./SSNP -Snapshots 1 -E_number 2000000 ../wiki/wiki.adj
     echo "----------------------------------------------"    
 done
 # echo "TT start"
