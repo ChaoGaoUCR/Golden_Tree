@@ -1,0 +1,33 @@
+************  Using CILK ************
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  BFS.C -L../lib/mimalloc/out/release -lmimalloc  -o BFS
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSSP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSSP
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSWP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSWP
+g++ -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK  -DEDGELONG  SSNP.C -L../lib/mimalloc/out/release -lmimalloc  -o SSNP
+BFS start
+0.031900
+0.033161
+0.032631
+0.032402
+0.040322
+----------------------------------------------
+SSSP start
+0.041587
+0.042011
+0.031408
+0.032003
+0.033578
+----------------------------------------------
+SSWP start
+0.031301
+0.033155
+0.030667
+0.042872
+0.031295
+----------------------------------------------
+SSNP start
+0.033332
+0.032374
+0.033226
+0.051659
+0.044486
+----------------------------------------------

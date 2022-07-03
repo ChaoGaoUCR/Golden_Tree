@@ -26,7 +26,7 @@ GRAPHBOLT=../core/graphBolt/AdaptiveExecutor.h ../core/graphBolt/GraphBoltEngine
 OTHERS=../core/main.h
 
 # ALL=PageRank LabelPropagation CF COEM SSSP BFS SSWP WCC
-ALL = SSSP BFS SSWP SSNP
+ALL = SSSP BFS SSWP SSNP Viterbi
 
 # make
 

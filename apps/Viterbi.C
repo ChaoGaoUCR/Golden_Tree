@@ -19,31 +19,48 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#ifdef EDGEDATA
+// NOTE: The edge data type header file should then be included as the first header
+// file at the top of the user program.
+#include "Viterbi_edgeData.h"
+#endif
+
 #include "../core/common/utils.h"
 #include "../core/graphBolt/KickStarterEngine.h"
 #include "../core/main.h"
 #include <math.h>
-
-#define MAX_PARENT 4294967295
+// typedef  float  ufloat16_t;
+#define MAX_DISTANCE 65535
 
 // ======================================================================
-// WCCINFO
+// ViterbiINFO
 // ======================================================================
-class WccInfo {
+class SsspInfo {
 public:
   uintV source_vertex;
+  long weight_cap;
 
-  WccInfo() : source_vertex(0) {}
+  SsspInfo() : source_vertex(0), weight_cap(3) {}
 
-  WccInfo(uintV _source_vertex) : source_vertex(_source_vertex) {}
+  SsspInfo(uintV _source_vertex, long _weight_cap)
+      : source_vertex(_source_vertex), weight_cap(_weight_cap) {}
 
-  void copy(const WccInfo &object) { source_vertex = object.source_vertex; }
+#ifdef EDGEDATA
+#else
+  uint16_t getWeight(uintV u, uintV v) {
+    return (uint16_t)((u + v) % weight_cap + 1);
+  }
+#endif
+
+  void copy(const SsspInfo &object) {
+    source_vertex = object.source_vertex;
+    weight_cap = object.weight_cap;
+  }
+  void init() {}
 
   void processUpdates(edgeArray &edge_additions, edgeArray &edge_deletions) {}
 
   void cleanup() {}
-
-  void init() {}
 };
 
 // ======================================================================
@@ -53,16 +70,15 @@ template <class VertexValueType, class GlobalInfoType>
 inline void initializeVertexValue(const uintV &v,
                                   VertexValueType &v_vertex_value,
                                   const GlobalInfoType &global_info) {
-  // if (v != global_info.source_vertex) {
-  //   v_vertex_value = 0;
-  // } else {
-  //   v_vertex_value = 1;
-  // }
-  v_vertex_value = v;
+  if (v == global_info.source_vertex) { //v is not root
+    v_vertex_value = 1;
+  } else {
+    v_vertex_value = 0;
+  }
 }
 
 // ======================================================================
-// ACTIVATE VERTEX FOR FIRST ITERATION
+// ACTIVATE VERTEX/COMPUTE VERTEX FOR FIRST ITERATION
 // ======================================================================
 template <class GlobalInfoType>
 inline bool frontierVertex(const uintV &v, const GlobalInfoType &global_info) {
@@ -81,16 +97,16 @@ inline bool
 edgeFunction(const uintV &u, const uintV &v, const EdgeDataType &edge_weight,
              const VertexValueType &u_value, VertexValueType &v_value,
              GlobalInfoType &global_info) {
-
-  if (u_value == v_value)
-  {
+  if (u_value == 0) {
     return false;
-  }
-  else{
-    v_value = min(u_value, v_value);
+  } else {
+#ifdef EDGEDATA
+    v_value = u_value/edge_weight.weight;
+#else
+    v_value = u_value/global_info.getWeight(u, v);
+#endif
     return true;
   }
-  
 }
 
 // ======================================================================
@@ -102,10 +118,7 @@ template <class VertexValueType, class GlobalInfoType>
 inline bool shouldPropagate(const VertexValueType &old_value,
                             const VertexValueType &new_value,
                             GlobalInfoType &global_info) {
-  // return (old_value == 1) && (new_value == 0);
-  // return (old_value!=new_value);
-  // (old_value == )
-  return(new_value > old_value);
+  return (new_value < old_value);
 }
 
 // ======================================================================
@@ -119,27 +132,30 @@ void printAdditionalData(ofstream &output_file, const uintV &v,
 // COMPUTE FUNCTION
 // ======================================================================
 template <class vertex> void compute(graph<vertex> &G, commandLine config) {
-  double whole_time = 0;
+  //   srand(10);
+  // for (size_t i = 0; i < 10; i++)
+  // {
+  //   cout<< 0+rand()%100<<endl;
+  // }
   // for (size_t i = 0; i < 5; i++)
   // {
   long n = G.n;
   int source_vertex = config.getOptionLongValue("-source", 0);
-  WccInfo global_info(source_vertex);
+  int weight_cap = config.getOptionLongValue("-weight_cap", 5);
+  SsspInfo global_info(source_vertex, weight_cap);
 
   // cout << "Initializing engine ....\n";
-  KickStarterEngine<vertex, uint16_t, WccInfo> engine(G, global_info, config);
+  float a;
+  std::cout << sizeof(&a) << std::endl;
+  KickStarterEngine<vertex, uint16_t, SsspInfo> engine(G, global_info, config);
   engine.init();
   // cout << "Finished initializing engine\n";
-  // engine.run();
+  //  engine.run();
   uintE number = engine.ingestor.change_edge_number;
-    // uintE number;
-    // cout<<"enter the number for basic hop: ";
-    // cin>>number;  
-  whole_time += engine.test_run(number);
-  // ~engine();
-  // engine.del_KickStarterEngine();
-  // }
-  // cout<<whole_time/5<<endl;
+  // uintE number;
+  // cout<<"enter the number for basic hop: ";
+  // cin>>number;  
+  engine.test_run(number);
+  
 
- 
 }
